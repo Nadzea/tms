@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nea-TG-GmS">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About Chess View Controller-->
+        <scene sceneID="vJu-v4-83o">
+            <objects>
+                <viewController id="Nea-TG-GmS" customClass="AboutChessViewController" customModule="homeworkLesson13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Slv-ih-lFh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xtg-kn-PD8">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6P-3Q-bSp">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="2042"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhD-BQ-P1t">
+                                                <rect key="frame" x="4" y="4" width="191" height="122"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="  Шашки — одна из самых древних игр. Известно, что ими увлекались еще египетские фараоны. Древние египтяне счи-">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shais1" translatesAutoresizingMaskIntoConstraints="NO" id="r8B-Rp-qcq">
+                                                <rect key="frame" x="198.66666666666663" y="4" width="187.33333333333337" height="122"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="122" id="6WE-ru-jQ6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pex-jB-DLS">
+                                                <rect key="frame" x="4" y="126" width="382" height="81.333333333333314"/>
+                                                <string key="text">тали, что шашки изобрел бог мудрости Тот, а древние греки приписывали создание этой игры вестнику богов Гермесу, покровителю воров и торговцев.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7m-7X-KBk">
+                                                <rect key="frame" x="4" y="207.33333333333337" width="382" height="243.66666666666663"/>
+                                                <string key="text">   Игра, подобная шашкам была распространена в Древнем Египте и первые упоминания о ней относятся к 1600 году до н.э. При раскопках обнаружена древняя «шашечная» доска с похожими друг на друга фишками и несколько изображений, запечатлевших игроков в процессе игры. В «египетские шашки» (как назвали эту игру специалисты) играли и простые люди, и знать – вплоть до фараонов. Причем иногда за неимением доски игра велась прямо на земле, где от руки расчерчивали сетку.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <string key="userLabel">Игра, подобная шашкам была распространена в Древнем Египте и первые упоминания о ней относятся к 1600 году до н.э. При раскопках обнаружена древняя «шашечная» доска с похожими друг на друга фишками и несколько изображений, запечатлевших игроков в процессе игры. В «египетские шашки» (как назвали эту игру специалисты) играли и простые люди, и знать – вплоть до фараонов. Причем иногда за неимением доски игра велась прямо на земле, где от руки расчерчивали сетку.</string>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nii-z8-6Go">
+                                                <rect key="frame" x="4" y="450.99999999999994" width="382" height="223.33333333333331"/>
+                                                <string key="text">    Свои «шашки» были в древней Греции, Лидии, Фригии и др. местах. Чрезвычайно распространенная в древнем Риме игра «латрункули» (от «латро» – букв. воин, наемный солдат) относится к числу прямых предшественников европейских шашек. Упоминания о подобных играх можно найти в мировом фольклоре, литературных произведениях и трудах ученых (включая Одиссею Гомера, сочинения Геродота и римских авторов).</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <string key="userLabel">Свои «шашки» были в древней Греции, Лидии, Фригии и др. местах. Чрезвычайно распространенная в древнем Риме игра «латрункули» (от «латро» – букв. воин, наемный солдат) относится к числу прямых предшественников европейских шашек. Упоминания о подобных играх можно найти в мировом фольклоре, литературных произведениях и трудах ученых (включая Одиссею Гомера, сочинения Геродота и римских авторов).</string>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shais2" translatesAutoresizingMaskIntoConstraints="NO" id="Y0V-dN-STn">
+                                                <rect key="frame" x="35" y="676.33333333333337" width="320" height="180"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="Fau-HK-QSO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymx-I1-0Cr">
+                                                <rect key="frame" x="4" y="856.33333333333337" width="382" height="142.33333333333337"/>
+                                                <string key="text">   Метод передвижения шашек по полю (по диагонали) взят из правил передвижения королевы (ферзя) в шахматах. Именно этот факт в своё время был причиной того, что шашки в некоторых частях Англии до сих пор называют draughts - словом, обозначающим ход королевы в шахматах.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgH-hb-J2k">
+                                                <rect key="frame" x="4" y="998.66666666666663" width="382" height="182.66666666666663"/>
+                                                <string key="text">   Название одной из разновидностей шашек checkers появилось от слова, обозначающего шахматную доску - checkered - что в переводе означает клетчатый. Пилигримы, приплывшие в Северную Америку из тех областей Англии, где игру в шашки было принято называть на современный лад, стали причиной распространения слова checkers во всех англоязычных странах.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xb4-i0-68v">
+                                                <rect key="frame" x="4" y="1181.3333333333333" width="382" height="264"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">   Гарольд Мюррэй, занимавшийся изучением истории шахмат и шашек, пришёл к выводу, что шашки распространялись по миру очень медленно - гораздо медленнее других настольных игр. Об этой игре он нашёл всего несколько упоминаний в период 12-16 веков. Всё говорит о том, что игра в этот период была распространена только на территории Англии, Франции и, возможно, Испании (есть упоминания о труде первого пособия о шашкам А.Торквемада, вышедшего именно в Испании в 1547 году, но не сохранившегося до наших дней).</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ng-bO-83U">
+                                                <rect key="frame" x="4" y="1445.3333333333333" width="382" height="101.66666666666674"/>
+                                                <string key="text">   Не найдено было и информации о запретах игры в шашки со стороны церкви. Хотя в это время церковь запрещала многие старые и новые игры, включая азартные (карточные, кости) и шахматы.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0N-NX-csv">
+                                                <rect key="frame" x="4" y="1547" width="382" height="81.333333333333258"/>
+                                                <string key="text">   Исследования Гарольда Мюррэя говорят о том, что в 16-м веке с шашками что-то произошло и игра начала приобретать популярность и распространяться по Европе.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgB-3h-Vdj">
+                                                <rect key="frame" x="4" y="1628.3333333333333" width="382" height="101.66666666666674"/>
+                                                <string key="text">   В сентябре 1947 основана Всемирная федерация шашек (ФМЖД). В том же году Федерация учредила звание международного гроссмейстера (присваивается в разных видах шашек).</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzQ-UT-Ic0">
+                                                <rect key="frame" x="4" y="1730" width="382" height="122"/>
+                                                <string key="text">   Штаб-квартира ФМЖД располагается в Эстонии. В нее сейчас входят национальные федерации более 70 стран Азии, Африки, Америки и Европы. Федерация ведет работу по признанию шашек олимпийским видом спорта.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvn-9Y-CBA">
+                                                <rect key="frame" x="75" y="1852" width="240" height="128"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FMID" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-vM-Dzd">
+                                                        <rect key="frame" x="28" y="6" width="184" height="116"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="wD2-vM-Dzd" firstAttribute="leading" secondItem="jvn-9Y-CBA" secondAttribute="leading" constant="28" id="1gc-JO-dT9"/>
+                                                    <constraint firstItem="wD2-vM-Dzd" firstAttribute="top" secondItem="jvn-9Y-CBA" secondAttribute="top" constant="6" id="4sj-74-HCw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="wD2-vM-Dzd" secondAttribute="bottom" constant="6" id="9Q2-Md-ZsU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="wD2-vM-Dzd" secondAttribute="trailing" constant="28" id="D7L-9y-MYB"/>
+                                                    <constraint firstAttribute="width" constant="240" id="eos-L9-PEm"/>
+                                                    <constraint firstAttribute="height" constant="128" id="hM9-TJ-ulm"/>
+                                                </constraints>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJE-ke-roq">
+                                                <rect key="frame" x="145" y="1986" width="100" height="40"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="ZYt-Cg-k55">
+                                                        <rect key="frame" x="6" y="6" width="88" height="28"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbj-HL-B9g">
+                                                        <rect key="frame" x="31" y="9.6666666666667425" width="38" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix4-OZ-H43">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                                        <connections>
+                                                            <action selector="backAboutScreen:" destination="Nea-TG-GmS" eventType="touchUpInside" id="mys-kW-yRP"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="1Aw-2V-zOj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ZYt-Cg-k55" secondAttribute="bottom" constant="6" id="1J4-Es-YOl"/>
+                                                    <constraint firstItem="ZYt-Cg-k55" firstAttribute="top" secondItem="qJE-ke-roq" secondAttribute="top" constant="6" id="1kz-ce-ah0"/>
+                                                    <constraint firstItem="mbj-HL-B9g" firstAttribute="centerX" secondItem="qJE-ke-roq" secondAttribute="centerX" id="AuK-Ca-mMa"/>
+                                                    <constraint firstAttribute="width" constant="100" id="D5C-k6-LSY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ix4-OZ-H43" secondAttribute="bottom" id="Th0-F9-6Pl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ZYt-Cg-k55" secondAttribute="trailing" constant="6" id="iJp-a8-eVj"/>
+                                                    <constraint firstItem="Ix4-OZ-H43" firstAttribute="top" secondItem="qJE-ke-roq" secondAttribute="top" id="kkv-za-LCk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ix4-OZ-H43" secondAttribute="trailing" id="tYr-VP-eGf"/>
+                                                    <constraint firstItem="Ix4-OZ-H43" firstAttribute="leading" secondItem="qJE-ke-roq" secondAttribute="leading" id="u7M-25-Tfi"/>
+                                                    <constraint firstItem="ZYt-Cg-k55" firstAttribute="leading" secondItem="qJE-ke-roq" secondAttribute="leading" constant="6" id="vWA-Qt-4JD"/>
+                                                    <constraint firstItem="mbj-HL-B9g" firstAttribute="centerY" secondItem="qJE-ke-roq" secondAttribute="centerY" id="wZA-jM-KEA"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="jvn-9Y-CBA" firstAttribute="centerX" secondItem="n6P-3Q-bSp" secondAttribute="centerX" id="0Ow-dt-2NB"/>
+                                            <constraint firstItem="ymx-I1-0Cr" firstAttribute="leading" secondItem="n6P-3Q-bSp" secondAttribute="leading" constant="4" id="2VD-DJ-Rxp"/>
+                                            <constraint firstItem="jvn-9Y-CBA" firstAttribute="top" secondItem="dzQ-UT-Ic0" secondAttribute="bottom" id="2qM-VQ-pe6"/>
+                                            <constraint firstItem="V0N-NX-csv" firstAttribute="leading" secondItem="n6P-3Q-bSp" secondAttribute="leading" constant="4" id="33X-Z4-z2U"/>
+                                            <constraint firstItem="7ng-bO-83U" firstAttribute="top" secondItem="xb4-i0-68v" secondAttribute="bottom" id="3QF-po-NJf"/>
+                                            <constraint firstAttribute="trailing" secondItem="r8B-Rp-qcq" secondAttribute="trailing" constant="4" id="4qT-U2-9TH"/>
+                                            <constraint firstItem="pex-jB-DLS" firstAttribute="top" secondItem="bhD-BQ-P1t" secondAttribute="bottom" id="5Ii-qY-P0s"/>
+                                            <constraint firstItem="bgH-hb-J2k" firstAttribute="top" secondItem="ymx-I1-0Cr" secondAttribute="bottom" id="5mN-BF-ITK"/>
+                                            <constraint firstAttribute="trailing" secondItem="V0N-NX-csv" secondAttribute="trailing" constant="4" id="7zJ-2B-0Hy"/>
+                                            <constraint firstItem="QgB-3h-Vdj" firstAttribute="leading" secondItem="n6P-3Q-bSp" secondAttribute="leading" constant="4" id="87G-1K-kiK"/>
+                                            <constraint firstAttribute="trailing" secondItem="dzQ-UT-Ic0" secondAttribute="trailing" constant="4" id="9U6-Bm-gDk"/>
+                                            <constraint firstItem="bhD-BQ-P1t" firstAttribute="leading" secondItem="n6P-3Q-bSp" secondAttribute="leading" constant="4" id="9ko-t0-ohr"/>
+                                            <constraint firstItem="7ng-bO-83U" firstAttribute="leading" secondItem="n6P-3Q-bSp" secondAttribute="leading" constant="4" id="Cit-4y-TWe"/>
+                                            <constraint firstItem="bhD-BQ-P1t" firstAttribute="height" secondItem="r8B-Rp-qcq" secondAttribute="height" id="ESb-T7-BNF"/>
+                                            <constraint firstItem="pex-jB-DLS" firstAttribute="leading" secondItem="n6P-3Q-bSp" secondAttribute="leading" constant="4" id="Jkf-yi-UjT"/>
+                                            <constraint firstItem="QgB-3h-Vdj" firstAttribute="top" secondItem="V0N-NX-csv" secondAttribute="bottom" id="KWc-BT-aDL"/>
+                                            <constraint firstAttribute="trailing" secondItem="ymx-I1-0Cr" secondAttribute="trailing" constant="4" id="LCC-Ms-rr5"/>
+                                            <constraint firstItem="xb4-i0-68v" firstAttribute="leading" secondItem="n6P-3Q-bSp" secondAttribute="leading" constant="4" id="LH3-Uh-nd5"/>
+                                            <constraint firstAttribute="trailing" secondItem="7ng-bO-83U" secondAttribute="trailing" constant="4" id="N8t-oB-fwG"/>
+                                            <constraint firstItem="Nii-z8-6Go" firstAttribute="leading" secondItem="n6P-3Q-bSp" secondAttribute="leading" constant="4" id="PA2-pn-7Lz"/>
+                                            <constraint firstItem="V0N-NX-csv" firstAttribute="top" secondItem="7ng-bO-83U" secondAttribute="bottom" id="TFO-Pg-agX"/>
+                                            <constraint firstItem="ymx-I1-0Cr" firstAttribute="top" secondItem="Y0V-dN-STn" secondAttribute="bottom" id="UeE-ZI-Fe6"/>
+                                            <constraint firstItem="xb4-i0-68v" firstAttribute="top" secondItem="bgH-hb-J2k" secondAttribute="bottom" id="WCW-ag-D3U"/>
+                                            <constraint firstItem="r8B-Rp-qcq" firstAttribute="top" secondItem="n6P-3Q-bSp" secondAttribute="top" constant="4" id="Xhp-8s-0PD"/>
+                                            <constraint firstItem="Y0V-dN-STn" firstAttribute="centerX" secondItem="n6P-3Q-bSp" secondAttribute="centerX" id="Yvm-lx-o0o"/>
+                                            <constraint firstItem="r8B-Rp-qcq" firstAttribute="width" secondItem="n6P-3Q-bSp" secondAttribute="width" multiplier="0.48" id="Zfi-ot-kGh"/>
+                                            <constraint firstAttribute="trailing" secondItem="D7m-7X-KBk" secondAttribute="trailing" constant="4" id="Zrk-TA-d7i"/>
+                                            <constraint firstItem="D7m-7X-KBk" firstAttribute="top" secondItem="pex-jB-DLS" secondAttribute="bottom" id="avh-wi-GMu"/>
+                                            <constraint firstItem="bgH-hb-J2k" firstAttribute="leading" secondItem="n6P-3Q-bSp" secondAttribute="leading" constant="4" id="bYH-KA-cea"/>
+                                            <constraint firstItem="Nii-z8-6Go" firstAttribute="top" secondItem="D7m-7X-KBk" secondAttribute="bottom" id="dNa-uP-rfA"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nii-z8-6Go" secondAttribute="trailing" constant="4" id="dQl-hA-LzS"/>
+                                            <constraint firstAttribute="trailing" secondItem="QgB-3h-Vdj" secondAttribute="trailing" constant="4" id="jm0-Ui-cuf"/>
+                                            <constraint firstItem="dzQ-UT-Ic0" firstAttribute="leading" secondItem="n6P-3Q-bSp" secondAttribute="leading" constant="4" id="lBq-Ds-TtJ"/>
+                                            <constraint firstItem="qJE-ke-roq" firstAttribute="centerX" secondItem="n6P-3Q-bSp" secondAttribute="centerX" id="nuf-Ps-2FZ"/>
+                                            <constraint firstItem="qJE-ke-roq" firstAttribute="top" secondItem="jvn-9Y-CBA" secondAttribute="bottom" constant="6" id="oFk-al-6Dp"/>
+                                            <constraint firstAttribute="trailing" secondItem="pex-jB-DLS" secondAttribute="trailing" constant="4" id="qKq-j5-xN5"/>
+                                            <constraint firstItem="bhD-BQ-P1t" firstAttribute="width" secondItem="n6P-3Q-bSp" secondAttribute="width" multiplier="0.49" id="sSf-Yo-skj"/>
+                                            <constraint firstAttribute="trailing" secondItem="bgH-hb-J2k" secondAttribute="trailing" constant="4" id="skA-8A-rxe"/>
+                                            <constraint firstAttribute="trailing" secondItem="xb4-i0-68v" secondAttribute="trailing" constant="4" id="t2t-ek-gVn"/>
+                                            <constraint firstAttribute="bottom" secondItem="qJE-ke-roq" secondAttribute="bottom" constant="16" id="t5G-Zs-jYg"/>
+                                            <constraint firstItem="bhD-BQ-P1t" firstAttribute="top" secondItem="n6P-3Q-bSp" secondAttribute="top" constant="4" id="u5G-AC-T1i"/>
+                                            <constraint firstItem="D7m-7X-KBk" firstAttribute="leading" secondItem="n6P-3Q-bSp" secondAttribute="leading" constant="4" id="uVB-gQ-ejT"/>
+                                            <constraint firstItem="bhD-BQ-P1t" firstAttribute="bottom" secondItem="r8B-Rp-qcq" secondAttribute="bottom" id="uhP-w3-V9L"/>
+                                            <constraint firstItem="Y0V-dN-STn" firstAttribute="top" secondItem="Nii-z8-6Go" secondAttribute="bottom" constant="2" id="vET-6t-IHq"/>
+                                            <constraint firstItem="dzQ-UT-Ic0" firstAttribute="top" secondItem="QgB-3h-Vdj" secondAttribute="bottom" id="vkW-c0-2U6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="n6P-3Q-bSp" firstAttribute="leading" secondItem="Xtg-kn-PD8" secondAttribute="leading" id="6Yd-Pg-afC"/>
+                                    <constraint firstAttribute="trailing" secondItem="n6P-3Q-bSp" secondAttribute="trailing" id="9L0-AU-dmG"/>
+                                    <constraint firstItem="n6P-3Q-bSp" firstAttribute="centerX" secondItem="Xtg-kn-PD8" secondAttribute="centerX" id="PaH-o3-5vd"/>
+                                    <constraint firstItem="n6P-3Q-bSp" firstAttribute="top" secondItem="Xtg-kn-PD8" secondAttribute="top" id="kr8-Kr-b2b"/>
+                                    <constraint firstAttribute="bottom" secondItem="n6P-3Q-bSp" secondAttribute="bottom" id="r6K-Eb-vL1"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mzd-P4-mvL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xtg-kn-PD8" firstAttribute="top" secondItem="mzd-P4-mvL" secondAttribute="top" id="BV6-VH-bZu"/>
+                            <constraint firstItem="mzd-P4-mvL" firstAttribute="trailing" secondItem="Xtg-kn-PD8" secondAttribute="trailing" id="I4a-FG-tVI"/>
+                            <constraint firstItem="mzd-P4-mvL" firstAttribute="bottom" secondItem="Xtg-kn-PD8" secondAttribute="bottom" id="OVd-4r-1eM"/>
+                            <constraint firstItem="Xtg-kn-PD8" firstAttribute="leading" secondItem="mzd-P4-mvL" secondAttribute="leading" id="eWi-he-pcq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageViewButton" destination="ZYt-Cg-k55" id="H9p-hL-YD3"/>
+                        <outlet property="mainViewButton" destination="qJE-ke-roq" id="vJw-WU-8g5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yc5-jK-odr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573" y="-343"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FMID" width="1400" height="933"/>
+        <image name="green" width="1200" height="750"/>
+        <image name="shais1" width="366" height="246"/>
+        <image name="shais2" width="320" height="347"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
