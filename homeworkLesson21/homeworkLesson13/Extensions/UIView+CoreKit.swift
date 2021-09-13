@@ -36,12 +36,12 @@ extension UIView {
         let blurEffect = UIBlurEffect(style: .light)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = bounds
-        blurView.tag = 10
+        blurView.tag = 101
         addSubview(blurView)
     }
     
     func removeBlurView() {
-        self.subviews.first(where: {$0.tag == 10})?.removeFromSuperview()
+        self.subviews.first(where: {$0.tag == 101})?.removeFromSuperview()
     }
 }
 

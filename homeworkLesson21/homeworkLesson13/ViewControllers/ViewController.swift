@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         let currentStoryboard = UIStoryboard(name: storyboard, bundle: nil)
         let currentViewController = currentStoryboard.instantiateInitialViewController()
         currentViewController?.modalPresentationStyle = .fullScreen
-        currentViewController?.modalTransitionStyle = .flipHorizontal
+        currentViewController?.modalTransitionStyle = .coverVertical
         return currentViewController!
         
     }
@@ -45,37 +45,33 @@ class ViewController: UIViewController {
 }
 extension ViewController: CustomButtonMainViewDelegate {
     func buttonDidTap(_ sender: CustomButtonMainView) {
-        if sender.tag == 0 {
-            guard manager.fileExists(atPath: documentDirectory.appendingPathComponent("savedGame").path) else { present(getViewController(with: storyboards[sender.tag]), animated: true, completion: nil)
-                return
+        let vc = self.getViewController(with: storyboards[sender.tag])
+        
+        (vc as? PlayerNamesViewController)?.viewControllerDidDismiss = {
+            self.present(self.getViewController(with: "PlayViewController"), animated: true, completion: nil)
         }
+        
+        if sender.tag == 0 {
+            guard manager.fileExists(atPath: documentDirectory.appendingPathComponent("savedGame").path) else { present(vc, animated: true, completion: nil)
+                return
+            }
             presentAlertController(with: nil, message: "Do you want to continue the saved game?",
                                    actions: UIAlertAction(title: "New game",
                                                           style: .default,
                                                           handler: { _ in
                                                             SaveData.deleteSavedGame()
                                                             self.view.removeBlurView()
-                                                            self.present(self.getViewController(with: self.storyboards[sender.tag]), animated: true, completion: nil)}),
+                                                            self.present(vc, animated: true, completion: nil)}),
                                             UIAlertAction(title: "Saved game",
                                                           style: .default,
                                                           handler: { _ in
                                                             self.view.removeBlurView()
                                                             self.present(self.getViewController(with: "PlayViewController"), animated: true, completion: nil)}))
         } else {
-            present(getViewController(with: storyboards[sender.tag]), animated: true, completion: nil)
+            present(vc, animated: true, completion: nil)
         }
     }
 }
 
-//extension ViewController: PlayerNamesViewControllerDelegate {
-//    func presentPlayViewController() {
-//        let currentStoryboard = UIStoryboard(name: "PlayViewController", bundle: nil)
-//        let currentViewController = currentStoryboard.instantiateInitialViewController() as! PlayViewController
-//        
-//        currentViewController.modalPresentationStyle = .fullScreen
-//        currentViewController.modalTransitionStyle = .flipHorizontal
-//        present(currentViewController, animated: true, completion: nil)
-//    }
-//    
-//}
+
 

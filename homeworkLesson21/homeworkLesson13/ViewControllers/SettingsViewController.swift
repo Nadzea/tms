@@ -15,6 +15,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var styleLabel: UILabel!
     @IBOutlet weak var backgroundLabel: UILabel!
     @IBOutlet weak var chooseBackground: CustomButtonMainView!
+    @IBOutlet weak var soundsLabel: UILabel!
+    @IBOutlet weak var soundsSwitch: UISwitch!
     
     var dataSource: [StyleOfChecker] = [StyleOfChecker(whiteChecker: "style1WhiteChecker",
                                                        blackChecker: "style1BlackChecker",
@@ -51,12 +53,17 @@ class SettingsViewController: UIViewController {
     }
     
     func screenSettings() {
-        self.view.addGradient(with: #colorLiteral(red: 0.4588212766, green: 0.9733110408, blue: 0.9392217259, alpha: 1), #colorLiteral(red: 0.4803237184, green: 0.7373365856, blue: 0.8808781744, alpha: 1), #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
         
-        settingsLabel.addAttributedText(with: #colorLiteral(red: 0.2848508313, green: 0.5221149405, blue: 0.4490481728, alpha: 1), foregroundColor: #colorLiteral(red: 0.4627212955, green: 1, blue: 0.8430715997, alpha: 1), strokeWidth: -2, size: 48)
-        styleLabel.addAttributedText(with: .black, foregroundColor: .clear, strokeWidth: -2, size: 34)
-        backgroundLabel.addAttributedText(with: .black, foregroundColor: .clear, strokeWidth: -2, size: 34)
+        settingsLabel.addAttributedText(with: .black, foregroundColor: .white, strokeWidth: -2, size: 48)
+        styleLabel.addAttributedText(with: .black, foregroundColor: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), strokeWidth: -2, size: 40)
+        backgroundLabel.addAttributedText(with: .black, foregroundColor: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), strokeWidth: -2, size: 40)
         collectionView.layer.cornerRadius = 30
+        backSettingsScreen.addShadow(with: .black, opacity: 0.9, shadowOffset: CGSize(width: 10, height: 10))
+        chooseBackground.addShadow(with: .black, opacity: 0.9, shadowOffset: CGSize(width: 10, height: 10))
+        soundsLabel.addAttributedText(with: .black, foregroundColor: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), strokeWidth: -2, size: 40)
+        soundsSwitch.onTintColor = .black
+        soundsSwitch.thumbTintColor = .white
+        soundsSwitch.isOn = SaveData.getPlayMusicIsNeeded()
     }
     
     private func chooseScreenBackground() {
@@ -69,7 +76,7 @@ class SettingsViewController: UIViewController {
     private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UINib(nibName: "StyleOfCheckerCollectionViewCell", bundle: nil),            forCellWithReuseIdentifier: "StyleOfCheckerCollectionViewCell")
+        collectionView.register(UINib(nibName: "StyleOfCheckerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "StyleOfCheckerCollectionViewCell")
     }
 }
 
@@ -112,6 +119,7 @@ extension SettingsViewController: CustomButtonDelegate {
     func buttonDidTap(_ sender: CustomButton) {
         
         SaveData.saveStyleOfChecker(styleOfCheckers: dataSource)
+        SaveData.playMusicIsNeeded(musicSwitch: soundsSwitch.isOn)
     
         dismiss(animated: true, completion: nil)
     }

@@ -19,8 +19,8 @@ class StyleOfCheckerCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        checkerSwitch.onTintColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-        checkerSwitch.thumbTintColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+        checkerSwitch.onTintColor = .black
+        checkerSwitch.thumbTintColor = .white
     }
     
     func setData(with style: StyleOfChecker) {

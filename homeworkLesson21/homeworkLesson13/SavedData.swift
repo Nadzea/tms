@@ -21,9 +21,10 @@ class SaveData:  NSObject, NSCoding, NSSecureCoding {
     var nameOfPlayer1: String?
     var nameOfPlayer2: String?
     var savedDateOfStartGame: String?
+    var playMusic: Bool?
     
     
-    init(savedCheckersPosition: [Checker?], savedStyleOfCheckers: StyleOfChecker?, savedCountSeconds: Int?, savedCountMinutes: Int?, savedCurrentChecker: Int?, nameOfPlayer1: String?, nameOfPlayer2: String?) {
+    init(savedCheckersPosition: [Checker?], savedStyleOfCheckers: StyleOfChecker?, savedCountSeconds: Int?, savedCountMinutes: Int?, savedCurrentChecker: Int?, nameOfPlayer1: String?, nameOfPlayer2: String?, playMusic: Bool) {
         self.savedCheckersPosition = savedCheckersPosition
         self.savedStyleOfCheckers = savedStyleOfCheckers
         self.savedCountSeconds = savedCountSeconds
@@ -31,6 +32,7 @@ class SaveData:  NSObject, NSCoding, NSSecureCoding {
         self.savedCurrentChecker = savedCurrentChecker
         self.nameOfPlayer1 = nameOfPlayer1
         self.nameOfPlayer2 = nameOfPlayer2
+        self.playMusic = playMusic
     }
     
     init(savedCheckersPosition: [Checker?], savedCountSeconds: Int?, savedCountMinutes: Int?, savedCurrentChecker: Int?, nameOfPlayer1: String?, nameOfPlayer2: String?, date: String?) {
@@ -53,6 +55,7 @@ class SaveData:  NSObject, NSCoding, NSSecureCoding {
         coder.encode(nameOfPlayer1, forKey: "nameOfPlayer1")
         coder.encode(nameOfPlayer2, forKey: "nameOfPlayer2")
         coder.encode(savedDateOfStartGame, forKey: "date")
+        coder.encode(playMusic, forKey: "playMusic")
     }
     
     required init?(coder: NSCoder) { // ДЕКОДИРОВКА
@@ -64,6 +67,7 @@ class SaveData:  NSObject, NSCoding, NSSecureCoding {
         self.nameOfPlayer1 = coder.decodeObject(forKey: "nameOfPlayer1") as? String
         self.nameOfPlayer2 = coder.decodeObject(forKey: "nameOfPlayer2") as? String
         self.savedDateOfStartGame = coder.decodeObject(forKey: "date") as? String
+        self.playMusic = coder.decodeObject(forKey: "playMusic") as? Bool
     }
     
     
@@ -125,6 +129,21 @@ class SaveData:  NSObject, NSCoding, NSSecureCoding {
         try? data?.write(to: fileURL)
     }
     
+    static func playMusicIsNeeded(musicSwitch: Bool) {
+        let data = try? NSKeyedArchiver.archivedData(withRootObject: musicSwitch, requiringSecureCoding: true)
+        let fileURL = documentDirectory.appendingPathComponent("playMusic")
+        try? data?.write(to: fileURL)
+    }
+    
+    static func getPlayMusicIsNeeded() -> Bool {
+        let fileURL = documentDirectory.appendingPathComponent("playMusic")
+        
+        guard let data = FileManager.default.contents(atPath: fileURL.absoluteString.replacingOccurrences(of: "file://", with: "")) else { return true }
+        
+        let playSwitch = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? Bool
+        return playSwitch ?? true
+    }
+    
     static func getSaveGame() -> SaveData {
         let test = SaveData(savedCheckersPosition: [], savedCountSeconds: nil, savedCountMinutes: nil, savedCurrentChecker: nil, nameOfPlayer1: "", nameOfPlayer2: "", date: "")
         let fileURL = documentDirectory.appendingPathComponent("savedGame")
@@ -139,6 +158,4 @@ class SaveData:  NSObject, NSCoding, NSSecureCoding {
     static func deleteSavedGame() {
         try? manager.removeItem(atPath: documentDirectory.appendingPathComponent("savedGame").path)
     }
-
-    
 }

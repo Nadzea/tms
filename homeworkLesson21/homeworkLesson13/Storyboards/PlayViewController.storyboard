@@ -116,6 +116,26 @@
                                 <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZh-hW-PVH">
+                                <rect key="frame" x="207" y="448" width="0.0" height="0.0"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="48"/>
+                                <color key="textColor" red="0.37878685039999999" green="0.37211971529999999" blue="0.93662260450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF7-9K-Eg9">
+                                <rect key="frame" x="30" y="318" width="354" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="50"/>
+                                <color key="textColor" red="0.28170529049999998" green="0.62759358200000004" blue="0.6015647221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -128,16 +148,21 @@
                             <constraint firstItem="3Tg-yA-SeI" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="30" id="GYw-kM-O29"/>
                             <constraint firstItem="3Tg-yA-SeI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="IQ8-PA-4FI"/>
                             <constraint firstItem="inD-d6-A71" firstAttribute="top" secondItem="3Tg-yA-SeI" secondAttribute="bottom" constant="16" id="Ikc-mY-gAN"/>
+                            <constraint firstItem="xZh-hW-PVH" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Kgr-fc-aVH"/>
+                            <constraint firstItem="xZh-hW-PVH" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XBX-kx-MV1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2sd-zX-EGc" secondAttribute="trailing" id="YVg-B2-n0D"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hSn-b0-Jkb" secondAttribute="bottom" constant="20" id="d5a-ci-qSl"/>
                             <constraint firstItem="2sd-zX-EGc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hj7-Lj-HUR"/>
                             <constraint firstItem="bGj-J0-XG6" firstAttribute="centerX" secondItem="2sd-zX-EGc" secondAttribute="centerX" id="hri-ra-obN"/>
+                            <constraint firstItem="xZh-hW-PVH" firstAttribute="top" secondItem="FF7-9K-Eg9" secondAttribute="bottom" constant="50" id="kdZ-WF-CMw"/>
                             <constraint firstItem="2sd-zX-EGc" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="uNF-Wu-oO7"/>
                             <constraint firstAttribute="bottom" secondItem="2sd-zX-EGc" secondAttribute="bottom" id="v8y-Wa-nME"/>
+                            <constraint firstItem="FF7-9K-Eg9" firstAttribute="centerX" secondItem="2sd-zX-EGc" secondAttribute="centerX" id="w96-zm-tpN"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="hSn-b0-Jkb" id="l2q-Zc-E4V"/>
+                        <outlet property="congratulationsLabel" destination="FF7-9K-Eg9" id="mFl-28-zcp"/>
                         <outlet property="container" destination="3Tg-yA-SeI" id="2gS-lb-sgP"/>
                         <outlet property="dateLabel" destination="P9X-qL-kYV" id="Uqv-qZ-uve"/>
                         <outlet property="gameDate" destination="Z9W-Wb-x5B" id="oWa-1j-U9q"/>
@@ -147,6 +172,7 @@
                         <outlet property="timerMitutes" destination="Ge3-F0-kDv" id="UhY-bI-mwW"/>
                         <outlet property="timerSeconds" destination="bFg-4Y-NAY" id="c6w-93-RyS"/>
                         <outlet property="timerView" destination="inD-d6-A71" id="OJj-dG-Osb"/>
+                        <outlet property="winnerLabel" destination="xZh-hW-PVH" id="klc-p9-LBA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

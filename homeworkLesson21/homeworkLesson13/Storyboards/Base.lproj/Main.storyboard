@@ -47,7 +47,7 @@
                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="About"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="aboutButton2"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="aboutButton"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                         <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
@@ -166,7 +166,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="aboutButton2" width="486" height="514"/>
+        <image name="aboutButton" width="225" height="225"/>
         <image name="myPlayButton" width="225" height="225"/>
         <image name="myResultsButton" width="216" height="233"/>
         <image name="mySettingsButton" width="225" height="225"/>

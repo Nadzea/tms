@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="depositphotos_1107441-stock-photo-checkers-on-a-chess-board" translatesAutoresizingMaskIntoConstraints="NO" id="7WC-AE-Elf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fB3-ht-PfN">
                                 <rect key="frame" x="20" y="174" width="374" height="160"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,14 +50,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style of checkers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wl8-5d-Hyj">
-                                <rect key="frame" x="20" y="134" width="136" height="21"/>
+                                <rect key="frame" x="20" y="124" width="136" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCr-km-uag" customClass="CustomButton" customModule="homeworkLesson13" customModuleProvider="target">
                                 <rect key="frame" x="143" y="762" width="128" height="80"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="VTi-Mo-ccc"/>
                                     <constraint firstAttribute="height" constant="80" id="bvJ-mt-QhH"/>
@@ -64,7 +67,7 @@
                                         <real key="value" value="17"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.70871618690000004" green="0.99334673799999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAnimated" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -79,46 +82,66 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCI-sj-Jyn" customClass="CustomButtonMainView" customModule="homeworkLesson13" customModuleProvider="target">
-                                <rect key="frame" x="162" y="375" width="90" height="70"/>
+                                <rect key="frame" x="162" y="375" width="90" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="YNg-94-goN"/>
+                                    <constraint firstAttribute="height" constant="50" id="YNg-94-goN"/>
                                     <constraint firstAttribute="width" constant="90" id="gbO-9z-hDh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image">
-                                        <imageReference key="value" image="clickHere" symbolScale="small"/>
+                                        <imageReference key="value" image="click" symbolScale="small"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.70871618690000004" green="0.99334673799999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sounds:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8k-Dp-JAN">
+                                <rect key="frame" x="20" y="451" width="62.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Pf0-CZ-Z7b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yNP-6d-Apm">
+                                <rect key="frame" x="182.5" y="451" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="yNP-6d-Apm" firstAttribute="top" secondItem="E8k-Dp-JAN" secondAttribute="top" id="6zF-4v-QRu"/>
                             <constraint firstItem="WCI-sj-Jyn" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="7YJ-rF-B5t"/>
+                            <constraint firstAttribute="bottom" secondItem="7WC-AE-Elf" secondAttribute="bottom" id="8PS-r3-DfV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pCr-km-uag" secondAttribute="bottom" constant="20" id="Ezv-Ix-BEm"/>
+                            <constraint firstItem="E8k-Dp-JAN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Iz8-Hz-bmj"/>
+                            <constraint firstItem="E8k-Dp-JAN" firstAttribute="top" secondItem="k9C-6H-QTd" secondAttribute="bottom" constant="86" id="J3C-xX-dB2"/>
                             <constraint firstItem="fB3-ht-PfN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="130" id="KG8-VA-P9r"/>
+                            <constraint firstItem="7WC-AE-Elf" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="PIR-d6-XHZ"/>
                             <constraint firstItem="4pN-PY-7fO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="14" id="XgK-x5-3VV"/>
                             <constraint firstItem="wl8-5d-Hyj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="YvB-Dr-K7b"/>
+                            <constraint firstItem="7WC-AE-Elf" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="aPk-fW-o7I"/>
+                            <constraint firstItem="7WC-AE-Elf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ahB-Qc-3Bd"/>
+                            <constraint firstItem="yNP-6d-Apm" firstAttribute="centerX" secondItem="7WC-AE-Elf" secondAttribute="centerX" id="azK-Mq-6VX"/>
                             <constraint firstItem="fB3-ht-PfN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="bDc-N7-EIw"/>
                             <constraint firstItem="k9C-6H-QTd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="bd5-WU-aQV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fB3-ht-PfN" secondAttribute="trailing" constant="20" id="dsQ-wF-GzN"/>
                             <constraint firstItem="k9C-6H-QTd" firstAttribute="top" secondItem="fB3-ht-PfN" secondAttribute="bottom" constant="10" id="hLO-fV-nUo"/>
                             <constraint firstItem="pCr-km-uag" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="hdX-8Z-NvU"/>
                             <constraint firstItem="4pN-PY-7fO" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="nkw-aL-NeX"/>
-                            <constraint firstItem="wl8-5d-Hyj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="90" id="qQZ-uH-ZJg"/>
+                            <constraint firstItem="wl8-5d-Hyj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="qQZ-uH-ZJg"/>
                             <constraint firstItem="WCI-sj-Jyn" firstAttribute="top" secondItem="k9C-6H-QTd" secondAttribute="bottom" constant="10" id="sRL-Ns-lZa"/>
                         </constraints>
                     </view>
@@ -128,6 +151,8 @@
                         <outlet property="chooseBackground" destination="WCI-sj-Jyn" id="07H-rE-h2a"/>
                         <outlet property="collectionView" destination="fB3-ht-PfN" id="42t-fK-xhR"/>
                         <outlet property="settingsLabel" destination="4pN-PY-7fO" id="m61-Zi-9Nq"/>
+                        <outlet property="soundsLabel" destination="E8k-Dp-JAN" id="Zdb-i8-Iay"/>
+                        <outlet property="soundsSwitch" destination="yNP-6d-Apm" id="b7a-yW-BUb"/>
                         <outlet property="styleLabel" destination="wl8-5d-Hyj" id="roA-bl-xVd"/>
                     </connections>
                 </viewController>
@@ -137,7 +162,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clickHere" width="343" height="147"/>
+        <image name="click" width="218" height="231"/>
+        <image name="depositphotos_1107441-stock-photo-checkers-on-a-chess-board" width="389" height="600"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
