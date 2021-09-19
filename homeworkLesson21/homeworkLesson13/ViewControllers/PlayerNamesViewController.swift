@@ -12,6 +12,9 @@ class PlayerNamesViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var player1: UITextField!
     @IBOutlet weak var player2: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var helloLabel: UILabel!
     
     var viewControllerDidDismiss: (() -> ())?
     
@@ -35,12 +38,21 @@ class PlayerNamesViewController: UIViewController, UITextFieldDelegate {
                 self.errorLabel.text = ""
             }
         }
+        localized()
         
     }
     
-    @IBAction func submitButton() {
+    func localized() {
+        player1.placeholder = "player1_placeholder_text".localized
+        player2.placeholder = "player2_placeholder_text".localized
+        submitButton.setTitle("submit_button_text".localized, for: .normal)
+        cancelButton.setTitle("cancel_button_text".localized, for: .normal)
+        helloLabel.text = "helloLabel_text".localized
+    }
+    
+    @IBAction func submitButtonAction() {
         guard !player1.text!.isEmpty, !player2.text!.isEmpty else {
-            errorLabel.text = "You don't enter the names of players"
+            errorLabel.text = "error_label_text".localized
             errorLabel.textColor = .red
             return
         }
@@ -51,7 +63,7 @@ class PlayerNamesViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func cancelButton() {
+    @IBAction func cancelButtonAction() {
         dismiss(animated: true, completion: nil)
     }
     

@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>StyleScript-Regular.ttf</string>
+		<string>LavanderiaC.ttf</string>
 	</array>
 	<key>NSHumanReadableCopyright</key>
 	<string></string>

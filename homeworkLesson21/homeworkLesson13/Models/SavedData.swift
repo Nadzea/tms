@@ -22,9 +22,11 @@ class SaveData:  NSObject, NSCoding, NSSecureCoding {
     var nameOfPlayer2: String?
     var savedDateOfStartGame: String?
     var playMusic: Bool?
+    var language: Bool?
+    var currentLanguage: String?
     
     
-    init(savedCheckersPosition: [Checker?], savedStyleOfCheckers: StyleOfChecker?, savedCountSeconds: Int?, savedCountMinutes: Int?, savedCurrentChecker: Int?, nameOfPlayer1: String?, nameOfPlayer2: String?, playMusic: Bool) {
+    init(savedCheckersPosition: [Checker?], savedStyleOfCheckers: StyleOfChecker?, savedCountSeconds: Int?, savedCountMinutes: Int?, savedCurrentChecker: Int?, nameOfPlayer1: String?, nameOfPlayer2: String?, playMusic: Bool, language: Bool, currentLanguage: String) {
         self.savedCheckersPosition = savedCheckersPosition
         self.savedStyleOfCheckers = savedStyleOfCheckers
         self.savedCountSeconds = savedCountSeconds
@@ -33,6 +35,8 @@ class SaveData:  NSObject, NSCoding, NSSecureCoding {
         self.nameOfPlayer1 = nameOfPlayer1
         self.nameOfPlayer2 = nameOfPlayer2
         self.playMusic = playMusic
+        self.language = language
+        self.currentLanguage = currentLanguage
     }
     
     init(savedCheckersPosition: [Checker?], savedCountSeconds: Int?, savedCountMinutes: Int?, savedCurrentChecker: Int?, nameOfPlayer1: String?, nameOfPlayer2: String?, date: String?) {
@@ -56,6 +60,8 @@ class SaveData:  NSObject, NSCoding, NSSecureCoding {
         coder.encode(nameOfPlayer2, forKey: "nameOfPlayer2")
         coder.encode(savedDateOfStartGame, forKey: "date")
         coder.encode(playMusic, forKey: "playMusic")
+        coder.encode(language, forKey: "language")
+        coder.encode(currentLanguage, forKey: "currentLanguage")
     }
     
     required init?(coder: NSCoder) { // ДЕКОДИРОВКА
@@ -68,6 +74,8 @@ class SaveData:  NSObject, NSCoding, NSSecureCoding {
         self.nameOfPlayer2 = coder.decodeObject(forKey: "nameOfPlayer2") as? String
         self.savedDateOfStartGame = coder.decodeObject(forKey: "date") as? String
         self.playMusic = coder.decodeObject(forKey: "playMusic") as? Bool
+        self.language = coder.decodeObject(forKey: "language") as? Bool
+        self.currentLanguage = coder.decodeObject(forKey: "currentLanguage") as? String
     }
     
     
@@ -142,6 +150,36 @@ class SaveData:  NSObject, NSCoding, NSSecureCoding {
         
         let playSwitch = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? Bool
         return playSwitch ?? true
+    }
+    
+    static func saveSettingsOfLanguage(languages: [SettingsOfLanguage]) {
+        let data = try? NSKeyedArchiver.archivedData(withRootObject: languages, requiringSecureCoding: true)
+        let fileURL = documentDirectory.appendingPathComponent("settingsOfLanguage")
+        try? data?.write(to: fileURL)
+    }
+    
+    static func getSettingsOfLanguage() -> [SettingsOfLanguage] {
+        let fileURL = documentDirectory.appendingPathComponent("settingsOfLanguage")
+        
+        guard let data = FileManager.default.contents(atPath: fileURL.absoluteString.replacingOccurrences(of: "file://", with: "")) else { return [] }
+        
+        let settingsOfLanguage = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [SettingsOfLanguage]
+        return (settingsOfLanguage ?? [])
+    }
+    
+    static func saveCurrentLanguage(currentLanguageCode: String) {
+        let data = try? NSKeyedArchiver.archivedData(withRootObject: currentLanguageCode, requiringSecureCoding: true)
+        let fileURL = documentDirectory.appendingPathComponent("currentLanguageCode")
+        try? data?.write(to: fileURL)
+    }
+    
+    static func getSaveCurrentLanguage() -> String {
+        let fileURL = documentDirectory.appendingPathComponent("currentLanguageCode")
+        
+        guard let data = FileManager.default.contents(atPath: fileURL.absoluteString.replacingOccurrences(of: "file://", with: "")) else { return "" }
+        
+        let currentLanguageCode = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? String
+        return (currentLanguageCode ?? "")
     }
     
     static func getSaveGame() -> SaveData {

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Settings View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="NewSettingsViewController" customModule="homeworkLesson13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="depositphotos_1107441-stock-photo-checkers-on-a-chess-board" translatesAutoresizingMaskIntoConstraints="NO" id="gog-6k-kM5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBW-Ge-BPm" customClass="CustomButton" customModule="homeworkLesson13" customModuleProvider="target">
+                                <rect key="frame" x="143" y="782" width="128" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="FWT-CG-bZ4"/>
+                                    <constraint firstAttribute="width" constant="128" id="eRr-gC-yq5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAnimated" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oil-nt-ePM">
+                                <rect key="frame" x="152" y="58" width="110.5" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GDe-D2-1Ky">
+                                <rect key="frame" x="0.0" y="154" width="414" height="608"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gog-6k-kM5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="4DG-Jp-fqQ"/>
+                            <constraint firstItem="Oil-nt-ePM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="14" id="4zg-qz-LKr"/>
+                            <constraint firstAttribute="bottom" secondItem="gog-6k-kM5" secondAttribute="bottom" id="DED-is-DQE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GDe-D2-1Ky" secondAttribute="trailing" id="KQZ-aQ-Afr"/>
+                            <constraint firstItem="FBW-Ge-BPm" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="McY-L0-h0S"/>
+                            <constraint firstItem="FBW-Ge-BPm" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="PgW-Zz-qLX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="GDe-D2-1Ky" secondAttribute="bottom" constant="100" id="VWh-KY-tZN"/>
+                            <constraint firstItem="GDe-D2-1Ky" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="110" id="etO-Ko-Tj0"/>
+                            <constraint firstItem="gog-6k-kM5" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fkb-Eq-JAb"/>
+                            <constraint firstItem="gog-6k-kM5" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="gLw-kM-hUD"/>
+                            <constraint firstItem="GDe-D2-1Ky" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="t1U-Nj-BdQ"/>
+                            <constraint firstItem="Oil-nt-ePM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vVm-lV-Qkw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backSettingsScreen" destination="FBW-Ge-BPm" id="0iv-bl-hcF"/>
+                        <outlet property="settingsLabel" destination="Oil-nt-ePM" id="g5O-dk-KdV"/>
+                        <outlet property="tableView" destination="GDe-D2-1Ky" id="VCt-81-h47"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.521739130434788" y="50.892857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="depositphotos_1107441-stock-photo-checkers-on-a-chess-board" width="389" height="600"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

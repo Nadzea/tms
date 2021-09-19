@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  homeworkLesson13
+
+  Created by Надежда Клименко on 17.09.21.
+  
+*/
+
+"play_button_text" = "Play";
+"results_button_text" = "Results";
+"settings_button_text" = "Settings";
+"about_button_text" = "About";
+"player1_placeholder_text" = "Player1";
+"player2_placeholder_text" = "Player2";
+"error_label_text" = "You don't enter the names of players";
+"submit_button_text" = "Submit";
+"cancel_button_text" = "Cancel";
+"helloLabel_text" = "Enter the names of the players";
+"gameTime_text" = "Game time";
+"gameDate_ text" = "Today's date";
+"gameDate1_ text" = "The game started";
+"playHelloLabel1_text" = "Hello ";
+"playHelloLabel2_text" = " and ";
+"playHelloLabel3_text" = ", your move.";
+"playHelloLabel4_text" = "I am glad to see you again!";
+"type1_of_settings_screen" = "Style of checkers";
+"type2_of_settings_screen" = "Background of play screen";
+"type3_of_settings_screen" = "Music and sounds";
+"type4_of_settings_screen" = "Language";
+"settings_label_text" = "Settings";
+"type_of_settings_sounds" = "Music";
+"button_label" = "Back";
+"alert_message_text" = "Do you want to continue the saved game?";
+"alert_title1_text" = "New game";
+"alert_title2_text" = "Saved game";
+"alert_title3_text" = "Cancel";
+"alert_message_text_playScreen" = "Do you want to leave the game?";
+"alert_title1_text_playScreen" = "Save and leave the game";
+"alert_title2_text_playScreen" = "Leave the game";
+

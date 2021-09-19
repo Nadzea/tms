@@ -82,27 +82,11 @@ class PlayViewController: UIViewController {
         super.viewDidAppear(true)
         
         getNames()
-
-        UIView.animate(withDuration: 3, delay: 0, options: .curveEaseOut) {
-            self.helloLabel.center.x += self.view.bounds.width
-        } completion: { finished in
-            self.helloLabel.text = self.currentChecker == .white ? "\(self.playerWithWhiteChecker), your move." : "\(self.playerWithBlackChecker), your move."
-        }
         
-        UIView.animate(withDuration: 2, delay: 0, options: .curveEaseOut) {
-            self.container.center.y += self.view.bounds.height
-        }
-        
-        setDate()
-        timerSettings()
+        animate()
 
-        UIView.animate(withDuration: 2, delay: 0.3, options: .curveEaseOut) {
-            self.timerView.center.y += self.view.bounds.height
-            self.dateLabel.center.y += self.view.bounds.height
-        } completion: { finished in
-            self.timer = Timer(timeInterval: 1, target: self, selector: #selector(self.timerFunc), userInfo: nil, repeats: true)
-            RunLoop.main.add(self.timer!, forMode: .common)
-        }
+        screenSettingsForLabels()
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -112,28 +96,50 @@ class PlayViewController: UIViewController {
         timer = nil
     }
     
-    func setDate() {
-        gameDate.addAttributedText(with: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), foregroundColor: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), strokeWidth: -3, size: 39)
+    func animate() {
+        UIView.animate(withDuration: 3, delay: 0, options: .curveEaseOut) {
+            self.helloLabel.center.x += self.view.bounds.width
+        } completion: { finished in
+            self.helloLabel.text = self.currentChecker == .white ? self.playerWithWhiteChecker + "playHelloLabel3_text".localized : self.playerWithBlackChecker + "playHelloLabel3_text".localized
+        }
         
-        dateLabel.addAttributedText(with: .black, foregroundColor: .gray, strokeWidth: -3, size: 36)
-        dateLabel.addBorder(with: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), borderWidth: 3, cornerRadius: 10)
-    }
-    
-    func timerSettings() {
-        gameTime.text = "Game time"
-        gameTime.addAttributedText(with: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), foregroundColor: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), strokeWidth: -3, size: 39)
-        timerView.addBorder(with: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), borderWidth: 3, cornerRadius: 10)
+        UIView.animate(withDuration: 2, delay: 0, options: .curveEaseOut) {
+            self.container.center.y += self.view.bounds.height
+        }
         
-        timerSeconds.addAttributedText(with: .black, foregroundColor: .gray, strokeWidth: -3, size: 36)
-        timerMitutes.addAttributedText(with: .black, foregroundColor: .gray, strokeWidth: -3, size: 36)
+        UIView.animate(withDuration: 2, delay: 0.3, options: .curveEaseOut) {
+            self.timerView.center.y += self.view.bounds.height
+            self.dateLabel.center.y += self.view.bounds.height
+        } completion: { finished in
+            self.timer = Timer(timeInterval: 1, target: self, selector: #selector(self.timerFunc), userInfo: nil, repeats: true)
+            RunLoop.main.add(self.timer!, forMode: .common)
+        }
     }
     
     func screenSettings() {
-        self.view.addGradient(with: #colorLiteral(red: 0.4588212766, green: 0.9733110408, blue: 0.9392217259, alpha: 1), #colorLiteral(red: 0.4803237184, green: 0.7373365856, blue: 0.8808781744, alpha: 1), #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
 
         chessboard.addShadow(with: .black, opacity: 0.5, shadowOffset: CGSize(width: 4, height: 4))
         congratulationsLabel.textColor = #colorLiteral(red: 0.9919819609, green: 1, blue: 0.6366164679, alpha: 1)
         winnerLabel.textColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+    }
+    func screenSettingsForLabels() {
+        gameTime.text = "gameTime_text".localized
+        let currentLanguage = SaveData.getSaveCurrentLanguage()
+        if currentLanguage == "ru" {
+            helloLabel.addAttributedTextWithLavanderiaScript(with: .white, foregroundColor: .black, strokeWidth: -3, size: 40)
+            gameTime.addAttributedTextWithLavanderiaScript(with: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), foregroundColor: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), strokeWidth: -3, size: 39)
+            gameDate.addAttributedTextWithLavanderiaScript(with: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), foregroundColor: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), strokeWidth: -3, size: 39)
+        } else {
+            helloLabel.addAttributedText(with: .white, foregroundColor: .black, strokeWidth: -3, size: 40)
+            gameTime.addAttributedText(with: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), foregroundColor: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), strokeWidth: -3, size: 39)
+            gameDate.addAttributedText(with: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), foregroundColor: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), strokeWidth: -3, size: 39)
+        }
+        dateLabel.addAttributedText(with: .black, foregroundColor: .gray, strokeWidth: -3, size: 36)
+        dateLabel.addBorder(with: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), borderWidth: 3, cornerRadius: 10)
+        timerView.addBorder(with: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), borderWidth: 3, cornerRadius: 10)
+        
+        timerSeconds.addAttributedText(with: .black, foregroundColor: .gray, strokeWidth: -3, size: 36)
+        timerMitutes.addAttributedText(with: .black, foregroundColor: .gray, strokeWidth: -3, size: 36)
     }
     
     func createChessboard() {
@@ -200,8 +206,8 @@ class PlayViewController: UIViewController {
     func getNames() {
         if manager.fileExists(atPath: documentDirectory.appendingPathComponent("savedNames").path) {
             names = SaveData.getNamesOfPlayers()
-    
-            helloLabel.text = "Hello \(names[0]) and \(names[1])!!!!!"
+            
+            helloLabel.text = "playHelloLabel1_text".localized + names[0] + "playHelloLabel2_text".localized + names[1]
             
             playerWithWhiteChecker = names.randomElement()!
             names.forEach { player in
@@ -211,12 +217,11 @@ class PlayViewController: UIViewController {
             }
         } else {
             guard let name1 = saveData!.nameOfPlayer1, let name2 = saveData!.nameOfPlayer2 else { return }
-            helloLabel.text = "I am glad to see you again!"
+            helloLabel.text = "playHelloLabel4_text".localized
             playerWithWhiteChecker = name1
             playerWithBlackChecker = name2
             
         }
-        helloLabel.addAttributedText(with: .white, foregroundColor: .black, strokeWidth: -3, size: 40)
     }
     
     func getSaveData() {
@@ -230,7 +235,8 @@ class PlayViewController: UIViewController {
             timerSeconds.text = (countSecond % 60) < 10 ? "0\(countSecond % 60)" : "\(countSecond % 60)"
             timerMitutes.text = countMinute < 10 ? "0\(countMinute):" : "\(countMinute):"
             
-            gameDate.text = "The game started"
+            gameDate.text = "gameDate1_ text".localized
+            
             dateLabel.text = saveData?.savedDateOfStartGame
             
             currentChecker = saveData?.savedCurrentChecker == 0 ? .white : .black
@@ -239,7 +245,7 @@ class PlayViewController: UIViewController {
             timerMitutes.text = "0\(countMinute):"
             timerSeconds.text = "0\(countSecond)"
             
-            gameDate.text = "Today's date"
+            gameDate.text = "gameDate_ text".localized
             
             dateFormater.dateFormat = "dd.MM.yy"
             dateLabel.text = dateFormater.string(from: date)
@@ -610,8 +616,8 @@ extension PlayViewController: CustomButtonDelegate {
     func buttonDidTap(_ sender: CustomButton) {
         
         presentAlertController(with: nil,
-                               message: "Do you want to leave the game?",
-                               actions: UIAlertAction(title: "Save and leave the game",
+                               message: "alert_message_text_playScreen".localized,
+                               actions: UIAlertAction(title: "alert_title1_text_playScreen".localized,
                                style: .default,
                                handler: { _ in
                                 self.view.removeBlurView()
@@ -623,7 +629,7 @@ extension PlayViewController: CustomButtonDelegate {
                                 SaveData.deleteSavedNames()
                                 
                                 self.dismiss(animated: true, completion: nil)}),
-                                        UIAlertAction(title: "Leave the game",
+                               UIAlertAction(title: "alert_title2_text_playScreen".localized,
                                                       style: .default,
                                                       handler: { _ in
                                                         self.playerMusic?.pause()

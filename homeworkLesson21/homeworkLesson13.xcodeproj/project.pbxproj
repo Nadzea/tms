@@ -8,7 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		510C53A126EE3E8B0097AD22 /* musicForApp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 510C53A026EE3E8B0097AD22 /* musicForApp.mp3 */; };
-		510C53A526EE6ABE0097AD22 /* StyleScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 510C53A426EE6ABE0097AD22 /* StyleScript-Regular.ttf */; };
+		510C540726F0C59A0097AD22 /* NewSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C540626F0C59A0097AD22 /* NewSettingsViewController.swift */; };
+		510C540926F0C5CD0097AD22 /* NewSettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 510C540826F0C5CD0097AD22 /* NewSettingsViewController.storyboard */; };
+		510C540D26F0CAAC0097AD22 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C540B26F0CAAC0097AD22 /* SettingsTableViewCell.swift */; };
+		510C540E26F0CAAC0097AD22 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510C540C26F0CAAC0097AD22 /* SettingsTableViewCell.xib */; };
+		510C541826F0CCFB0097AD22 /* StyleScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 510C541726F0CCFB0097AD22 /* StyleScript-Regular.ttf */; };
+		510C541D26F0D4120097AD22 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C541C26F0D4120097AD22 /* Settings.swift */; };
+		510C541F26F14A6C0097AD22 /* StyleOfCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C541E26F14A6C0097AD22 /* StyleOfCheckerViewController.swift */; };
+		510C542126F14AEE0097AD22 /* StyleOfCheckerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 510C542026F14AEE0097AD22 /* StyleOfCheckerViewController.storyboard */; };
+		510C542526F215940097AD22 /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C542426F215940097AD22 /* SoundsViewController.swift */; };
+		510C542726F215AE0097AD22 /* SoundsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 510C542626F215AE0097AD22 /* SoundsViewController.storyboard */; };
+		510C542B26F218CA0097AD22 /* SoundsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C542926F218CA0097AD22 /* SoundsTableViewCell.swift */; };
+		510C542C26F218CA0097AD22 /* SoundsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510C542A26F218CA0097AD22 /* SoundsTableViewCell.xib */; };
+		510C542E26F21A690097AD22 /* SettingsOfSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C542D26F21A690097AD22 /* SettingsOfSounds.swift */; };
+		510C543026F2877C0097AD22 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C542F26F2877C0097AD22 /* LanguageViewController.swift */; };
+		510C543226F2882C0097AD22 /* LanguageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 510C543126F2882C0097AD22 /* LanguageViewController.storyboard */; };
+		510C543626F288980097AD22 /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C543426F288980097AD22 /* LanguageTableViewCell.swift */; };
+		510C543726F288980097AD22 /* LanguageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510C543526F288980097AD22 /* LanguageTableViewCell.xib */; };
+		510C543926F2899C0097AD22 /* SettingsOfLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C543826F2899C0097AD22 /* SettingsOfLanguage.swift */; };
+		510C544526F4CFDC0097AD22 /* UIView + Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C544426F4CFDC0097AD22 /* UIView + Localized.swift */; };
+		510C544D26F4D1F20097AD22 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 510C544826F4D1F20097AD22 /* Localizable.strings */; };
+		510C544E26F4D1F20097AD22 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 510C544B26F4D1F20097AD22 /* Localizable.strings */; };
+		510C545026F4D6980097AD22 /* String + Localazed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C544F26F4D6980097AD22 /* String + Localazed.swift */; };
+		510C545226F4F77E0097AD22 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C545126F4F77E0097AD22 /* SettingsManager.swift */; };
+		510C545826F550F80097AD22 /* LavanderiaC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 510C545726F550F80097AD22 /* LavanderiaC.ttf */; };
 		51122FA726D767990047E096 /* SavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51122FA626D767990047E096 /* SavedData.swift */; };
 		5146CB6826C6928E00DE16A9 /* UIFont+CoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5146CB6726C6928E00DE16A9 /* UIFont+CoreKit.swift */; };
 		5146CB6A26C6FB4F00DE16A9 /* StyleOfChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5146CB6926C6FB4F00DE16A9 /* StyleOfChecker.swift */; };
@@ -24,10 +47,8 @@
 		51970D1A26AC09D700D5B8D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51970D1826AC09D700D5B8D0 /* LaunchScreen.storyboard */; };
 		51970D2426AC0C5000D5B8D0 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51970D2326AC0C5000D5B8D0 /* PlayViewController.swift */; };
 		51970D2626AC0C6300D5B8D0 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51970D2526AC0C6300D5B8D0 /* ResultsViewController.swift */; };
-		51970D2826AC0C7300D5B8D0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51970D2726AC0C7300D5B8D0 /* SettingsViewController.swift */; };
 		51970D2A26AC0CAB00D5B8D0 /* PlayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51970D2926AC0CAB00D5B8D0 /* PlayViewController.storyboard */; };
 		51970D2C26AC0CC500D5B8D0 /* ResultsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51970D2B26AC0CC500D5B8D0 /* ResultsViewController.storyboard */; };
-		51970D2E26AC0CE000D5B8D0 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51970D2D26AC0CE000D5B8D0 /* SettingsViewController.storyboard */; };
 		51C58B1D26AD9EF600AABC86 /* UIView+CoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C58B1C26AD9EF600AABC86 /* UIView+CoreKit.swift */; };
 		51DDC7F226C464B000D5BB55 /* UILabel+CoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDC7F126C464B000D5BB55 /* UILabel+CoreKit.swift */; };
 		51DDC7F726C46BA400D5BB55 /* StyleOfCheckerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DDC7F526C46BA400D5BB55 /* StyleOfCheckerCollectionViewCell.swift */; };
@@ -42,7 +63,30 @@
 
 /* Begin PBXFileReference section */
 		510C53A026EE3E8B0097AD22 /* musicForApp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicForApp.mp3; sourceTree = "<group>"; };
-		510C53A426EE6ABE0097AD22 /* StyleScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "StyleScript-Regular.ttf"; path = "../../../../Style_Script/StyleScript-Regular.ttf"; sourceTree = "<group>"; };
+		510C540626F0C59A0097AD22 /* NewSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSettingsViewController.swift; sourceTree = "<group>"; };
+		510C540826F0C5CD0097AD22 /* NewSettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewSettingsViewController.storyboard; sourceTree = "<group>"; };
+		510C540B26F0CAAC0097AD22 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		510C540C26F0CAAC0097AD22 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		510C541726F0CCFB0097AD22 /* StyleScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "StyleScript-Regular.ttf"; sourceTree = "<group>"; };
+		510C541C26F0D4120097AD22 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		510C541E26F14A6C0097AD22 /* StyleOfCheckerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleOfCheckerViewController.swift; sourceTree = "<group>"; };
+		510C542026F14AEE0097AD22 /* StyleOfCheckerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StyleOfCheckerViewController.storyboard; sourceTree = "<group>"; };
+		510C542426F215940097AD22 /* SoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
+		510C542626F215AE0097AD22 /* SoundsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SoundsViewController.storyboard; sourceTree = "<group>"; };
+		510C542926F218CA0097AD22 /* SoundsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsTableViewCell.swift; sourceTree = "<group>"; };
+		510C542A26F218CA0097AD22 /* SoundsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundsTableViewCell.xib; sourceTree = "<group>"; };
+		510C542D26F21A690097AD22 /* SettingsOfSounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOfSounds.swift; sourceTree = "<group>"; };
+		510C542F26F2877C0097AD22 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		510C543126F2882C0097AD22 /* LanguageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LanguageViewController.storyboard; sourceTree = "<group>"; };
+		510C543426F288980097AD22 /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
+		510C543526F288980097AD22 /* LanguageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageTableViewCell.xib; sourceTree = "<group>"; };
+		510C543826F2899C0097AD22 /* SettingsOfLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOfLanguage.swift; sourceTree = "<group>"; };
+		510C544426F4CFDC0097AD22 /* UIView + Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Localized.swift"; sourceTree = "<group>"; };
+		510C544926F4D1F20097AD22 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Localizable.strings; sourceTree = "<group>"; };
+		510C544C26F4D1F20097AD22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
+		510C544F26F4D6980097AD22 /* String + Localazed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Localazed.swift"; sourceTree = "<group>"; };
+		510C545126F4F77E0097AD22 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		510C545726F550F80097AD22 /* LavanderiaC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LavanderiaC.ttf; sourceTree = "<group>"; };
 		51122FA626D767990047E096 /* SavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedData.swift; sourceTree = "<group>"; };
 		5146CB6726C6928E00DE16A9 /* UIFont+CoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CoreKit.swift"; sourceTree = "<group>"; };
 		5146CB6926C6FB4F00DE16A9 /* StyleOfChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleOfChecker.swift; sourceTree = "<group>"; };
@@ -60,10 +104,8 @@
 		51970D1B26AC09D700D5B8D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51970D2326AC0C5000D5B8D0 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		51970D2526AC0C6300D5B8D0 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		51970D2726AC0C7300D5B8D0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		51970D2926AC0CAB00D5B8D0 /* PlayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayViewController.storyboard; sourceTree = "<group>"; };
 		51970D2B26AC0CC500D5B8D0 /* ResultsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsViewController.storyboard; sourceTree = "<group>"; };
-		51970D2D26AC0CE000D5B8D0 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		51C58B1C26AD9EF600AABC86 /* UIView+CoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CoreKit.swift"; sourceTree = "<group>"; };
 		51DDC7F126C464B000D5BB55 /* UILabel+CoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+CoreKit.swift"; sourceTree = "<group>"; };
 		51DDC7F526C46BA400D5BB55 /* StyleOfCheckerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleOfCheckerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -87,6 +129,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		510C540A26F0CA050097AD22 /* SettingsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				510C540B26F0CAAC0097AD22 /* SettingsTableViewCell.swift */,
+				510C540C26F0CAAC0097AD22 /* SettingsTableViewCell.xib */,
+			);
+			path = SettingsTableViewCell;
+			sourceTree = "<group>";
+		};
+		510C541B26F0D3E00097AD22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				510C541C26F0D4120097AD22 /* Settings.swift */,
+				510C542D26F21A690097AD22 /* SettingsOfSounds.swift */,
+				510C543826F2899C0097AD22 /* SettingsOfLanguage.swift */,
+				516E3A5B26C1565200F288B4 /* Checker.swift */,
+				5146CB6926C6FB4F00DE16A9 /* StyleOfChecker.swift */,
+				51122FA626D767990047E096 /* SavedData.swift */,
+				510C545126F4F77E0097AD22 /* SettingsManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		510C542826F2189B0097AD22 /* SoundsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				510C542926F218CA0097AD22 /* SoundsTableViewCell.swift */,
+				510C542A26F218CA0097AD22 /* SoundsTableViewCell.xib */,
+			);
+			path = SoundsTableViewCell;
+			sourceTree = "<group>";
+		};
+		510C543326F2884E0097AD22 /* LanguageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				510C543426F288980097AD22 /* LanguageTableViewCell.swift */,
+				510C543526F288980097AD22 /* LanguageTableViewCell.xib */,
+			);
+			path = LanguageTableViewCell;
+			sourceTree = "<group>";
+		};
+		510C544626F4D1600097AD22 /* Localized */ = {
+			isa = PBXGroup;
+			children = (
+				510C544A26F4D1F20097AD22 /* en.lproj */,
+				510C544726F4D1F20097AD22 /* ru.lproj */,
+			);
+			path = Localized;
+			sourceTree = "<group>";
+		};
+		510C544726F4D1F20097AD22 /* ru.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				510C544826F4D1F20097AD22 /* Localizable.strings */,
+			);
+			name = ru.lproj;
+			path = homeworkLesson13/ru.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		510C544A26F4D1F20097AD22 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				510C544B26F4D1F20097AD22 /* Localizable.strings */,
+			);
+			name = en.lproj;
+			path = homeworkLesson13/en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
 		5146CB6B26C90F4400DE16A9 /* CustomButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +225,8 @@
 		51970D0C26AC09D600D5B8D0 /* homeworkLesson13 */ = {
 			isa = PBXGroup;
 			children = (
+				510C544626F4D1600097AD22 /* Localized */,
+				510C541B26F0D3E00097AD22 /* Models */,
 				51F391B326CC4E7D00FE3A4A /* CustomButtonMainView */,
 				5146CB6B26C90F4400DE16A9 /* CustomButton */,
 				51DDC7F326C46B0300D5BB55 /* Cells */,
@@ -127,10 +239,7 @@
 				51970D1626AC09D700D5B8D0 /* Assets.xcassets */,
 				51970D1826AC09D700D5B8D0 /* LaunchScreen.storyboard */,
 				51970D1B26AC09D700D5B8D0 /* Info.plist */,
-				516E3A5B26C1565200F288B4 /* Checker.swift */,
 				510C53A026EE3E8B0097AD22 /* musicForApp.mp3 */,
-				5146CB6926C6FB4F00DE16A9 /* StyleOfChecker.swift */,
-				51122FA626D767990047E096 /* SavedData.swift */,
 			);
 			path = homeworkLesson13;
 			sourceTree = "<group>";
@@ -139,11 +248,14 @@
 			isa = PBXGroup;
 			children = (
 				51970D1126AC09D600D5B8D0 /* ViewController.swift */,
+				51F8BFF526D65B9700B71E67 /* PlayerNamesViewController.swift */,
 				51970D2326AC0C5000D5B8D0 /* PlayViewController.swift */,
 				51970D2526AC0C6300D5B8D0 /* ResultsViewController.swift */,
-				51970D2726AC0C7300D5B8D0 /* SettingsViewController.swift */,
 				51FFC01826B5511900A83675 /* AboutChessViewController.swift */,
-				51F8BFF526D65B9700B71E67 /* PlayerNamesViewController.swift */,
+				510C540626F0C59A0097AD22 /* NewSettingsViewController.swift */,
+				510C541E26F14A6C0097AD22 /* StyleOfCheckerViewController.swift */,
+				510C542426F215940097AD22 /* SoundsViewController.swift */,
+				510C542F26F2877C0097AD22 /* LanguageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -152,11 +264,14 @@
 			isa = PBXGroup;
 			children = (
 				51970D1326AC09D600D5B8D0 /* Main.storyboard */,
+				51F8BFF726D65BC300B71E67 /* PlayerNamesViewController.storyboard */,
 				51970D2926AC0CAB00D5B8D0 /* PlayViewController.storyboard */,
 				51970D2B26AC0CC500D5B8D0 /* ResultsViewController.storyboard */,
-				51970D2D26AC0CE000D5B8D0 /* SettingsViewController.storyboard */,
 				51FFC01626B550C700A83675 /* AboutChessViewController.storyboard */,
-				51F8BFF726D65BC300B71E67 /* PlayerNamesViewController.storyboard */,
+				510C540826F0C5CD0097AD22 /* NewSettingsViewController.storyboard */,
+				510C542026F14AEE0097AD22 /* StyleOfCheckerViewController.storyboard */,
+				510C542626F215AE0097AD22 /* SoundsViewController.storyboard */,
+				510C543126F2882C0097AD22 /* LanguageViewController.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -164,7 +279,8 @@
 		5199028626B1FE5100FA281D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				510C53A426EE6ABE0097AD22 /* StyleScript-Regular.ttf */,
+				510C545726F550F80097AD22 /* LavanderiaC.ttf */,
+				510C541726F0CCFB0097AD22 /* StyleScript-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -176,6 +292,8 @@
 				5173F95C26AEF2E200BD586E /* UIViewController+CoreKit.swift */,
 				51DDC7F126C464B000D5BB55 /* UILabel+CoreKit.swift */,
 				5146CB6726C6928E00DE16A9 /* UIFont+CoreKit.swift */,
+				510C544426F4CFDC0097AD22 /* UIView + Localized.swift */,
+				510C544F26F4D6980097AD22 /* String + Localazed.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -183,6 +301,9 @@
 		51DDC7F326C46B0300D5BB55 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				510C543326F2884E0097AD22 /* LanguageTableViewCell */,
+				510C542826F2189B0097AD22 /* SoundsTableViewCell */,
+				510C540A26F0CA050097AD22 /* SettingsTableViewCell */,
 				51DDC7F426C46B0F00D5BB55 /* StyleOfCheckerCollectionViewCell */,
 			);
 			path = Cells;
@@ -247,6 +368,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 51970D0126AC09D600D5B8D0;
 			productRefGroup = 51970D0B26AC09D600D5B8D0 /* Products */;
@@ -263,19 +385,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				510C541826F0CCFB0097AD22 /* StyleScript-Regular.ttf in Resources */,
+				510C544E26F4D1F20097AD22 /* Localizable.strings in Resources */,
 				51970D1A26AC09D700D5B8D0 /* LaunchScreen.storyboard in Resources */,
 				51970D2A26AC0CAB00D5B8D0 /* PlayViewController.storyboard in Resources */,
 				51F8BFF826D65BC300B71E67 /* PlayerNamesViewController.storyboard in Resources */,
+				510C543226F2882C0097AD22 /* LanguageViewController.storyboard in Resources */,
+				510C542126F14AEE0097AD22 /* StyleOfCheckerViewController.storyboard in Resources */,
+				510C540E26F0CAAC0097AD22 /* SettingsTableViewCell.xib in Resources */,
 				510C53A126EE3E8B0097AD22 /* musicForApp.mp3 in Resources */,
+				510C545826F550F80097AD22 /* LavanderiaC.ttf in Resources */,
 				51F391B726CC4EF600FE3A4A /* CustomButtonMainView.xib in Resources */,
 				51DDC7F826C46BA400D5BB55 /* StyleOfCheckerCollectionViewCell.xib in Resources */,
 				51970D2C26AC0CC500D5B8D0 /* ResultsViewController.storyboard in Resources */,
+				510C542726F215AE0097AD22 /* SoundsViewController.storyboard in Resources */,
+				510C544D26F4D1F20097AD22 /* Localizable.strings in Resources */,
 				51970D1726AC09D700D5B8D0 /* Assets.xcassets in Resources */,
+				510C543726F288980097AD22 /* LanguageTableViewCell.xib in Resources */,
+				510C542C26F218CA0097AD22 /* SoundsTableViewCell.xib in Resources */,
 				51FFC01726B550C700A83675 /* AboutChessViewController.storyboard in Resources */,
-				51970D2E26AC0CE000D5B8D0 /* SettingsViewController.storyboard in Resources */,
-				510C53A526EE6ABE0097AD22 /* StyleScript-Regular.ttf in Resources */,
 				5146CB6F26C90FF500DE16A9 /* CustomButton.xib in Resources */,
 				51970D1526AC09D600D5B8D0 /* Main.storyboard in Resources */,
+				510C540926F0C5CD0097AD22 /* NewSettingsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,30 +417,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				510C544526F4CFDC0097AD22 /* UIView + Localized.swift in Sources */,
 				51FFC01926B5511900A83675 /* AboutChessViewController.swift in Sources */,
+				510C545026F4D6980097AD22 /* String + Localazed.swift in Sources */,
+				510C543926F2899C0097AD22 /* SettingsOfLanguage.swift in Sources */,
+				510C542E26F21A690097AD22 /* SettingsOfSounds.swift in Sources */,
 				51970D2426AC0C5000D5B8D0 /* PlayViewController.swift in Sources */,
 				51C58B1D26AD9EF600AABC86 /* UIView+CoreKit.swift in Sources */,
 				516E3A5C26C1565200F288B4 /* Checker.swift in Sources */,
 				5146CB6D26C90FC600DE16A9 /* CustomButton.swift in Sources */,
 				5173F95D26AEF2E200BD586E /* UIViewController+CoreKit.swift in Sources */,
+				510C540726F0C59A0097AD22 /* NewSettingsViewController.swift in Sources */,
 				51F391B926CC512200FE3A4A /* CustomButtonMainView.swift in Sources */,
 				51970D1226AC09D600D5B8D0 /* ViewController.swift in Sources */,
+				510C543026F2877C0097AD22 /* LanguageViewController.swift in Sources */,
 				51970D0E26AC09D600D5B8D0 /* AppDelegate.swift in Sources */,
+				510C543626F288980097AD22 /* LanguageTableViewCell.swift in Sources */,
 				5146CB6A26C6FB4F00DE16A9 /* StyleOfChecker.swift in Sources */,
+				510C542B26F218CA0097AD22 /* SoundsTableViewCell.swift in Sources */,
 				51970D2626AC0C6300D5B8D0 /* ResultsViewController.swift in Sources */,
 				51122FA726D767990047E096 /* SavedData.swift in Sources */,
+				510C541F26F14A6C0097AD22 /* StyleOfCheckerViewController.swift in Sources */,
 				51F8BFF626D65B9700B71E67 /* PlayerNamesViewController.swift in Sources */,
 				51DDC7F726C46BA400D5BB55 /* StyleOfCheckerCollectionViewCell.swift in Sources */,
 				5146CB6826C6928E00DE16A9 /* UIFont+CoreKit.swift in Sources */,
 				51970D1026AC09D600D5B8D0 /* SceneDelegate.swift in Sources */,
 				51DDC7F226C464B000D5BB55 /* UILabel+CoreKit.swift in Sources */,
-				51970D2826AC0C7300D5B8D0 /* SettingsViewController.swift in Sources */,
+				510C542526F215940097AD22 /* SoundsViewController.swift in Sources */,
+				510C541D26F0D4120097AD22 /* Settings.swift in Sources */,
+				510C545226F4F77E0097AD22 /* SettingsManager.swift in Sources */,
+				510C540D26F0CAAC0097AD22 /* SettingsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		510C544826F4D1F20097AD22 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				510C544926F4D1F20097AD22 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		510C544B26F4D1F20097AD22 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				510C544C26F4D1F20097AD22 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		51970D1326AC09D600D5B8D0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -333,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -394,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

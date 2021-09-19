@@ -43,7 +43,7 @@
                                         </constraints>
                                         <state key="normal" title="Submit"/>
                                         <connections>
-                                            <action selector="submitButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="giP-zZ-RXS"/>
+                                            <action selector="submitButtonAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7Nf-WT-eB4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLw-9Y-DCD">
@@ -55,7 +55,7 @@
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="cancelButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XB9-Cf-7fc"/>
+                                            <action selector="cancelButtonAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1rM-RX-ZXq"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djV-bR-gvL">
@@ -108,9 +108,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="gLw-9Y-DCD" id="GPO-l0-Yxn"/>
                         <outlet property="errorLabel" destination="DtD-7t-zDx" id="ZTS-ug-5DY"/>
+                        <outlet property="helloLabel" destination="8jy-Tg-uZc" id="Q3j-sO-cc1"/>
                         <outlet property="player1" destination="Agp-tT-SoO" id="Rtv-zd-nqG"/>
                         <outlet property="player2" destination="djV-bR-gvL" id="KVl-pb-MP6"/>
+                        <outlet property="submitButton" destination="9rq-bC-E2u" id="hBO-2J-F9l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

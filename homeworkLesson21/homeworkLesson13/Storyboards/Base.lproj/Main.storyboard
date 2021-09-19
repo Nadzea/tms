@@ -54,10 +54,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mv-OE-FYQ">
-                                <rect key="frame" x="20" y="302" width="350" height="240"/>
+                                <rect key="frame" x="0.0" y="302" width="390" height="240"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNv-yk-1V4" customClass="CustomButtonMainView" customModule="homeworkLesson13" customModuleProvider="target">
-                                        <rect key="frame" x="107.66666666666669" y="30" width="135" height="70"/>
+                                        <rect key="frame" x="127.66666666666669" y="30" width="135" height="70"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="135" id="Eyb-LZ-eby"/>
@@ -84,11 +84,11 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPt-7B-cQf" customClass="CustomButtonMainView" customModule="homeworkLesson13" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="150" width="170" height="70"/>
+                                        <rect key="frame" x="0.0" y="150" width="196" height="70"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="58f-Hh-g6G"/>
-                                            <constraint firstAttribute="width" constant="170" id="DPE-du-AmQ"/>
+                                            <constraint firstAttribute="width" constant="196" id="DPE-du-AmQ"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Results"/>
@@ -105,10 +105,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C25-cv-rIN" customClass="CustomButtonMainView" customModule="homeworkLesson13" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="150" width="170" height="70"/>
+                                        <rect key="frame" x="200" y="150" width="190" height="70"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="170" id="Qqr-Uk-KYC"/>
+                                            <constraint firstAttribute="width" constant="190" id="Qqr-Uk-KYC"/>
                                             <constraint firstAttribute="height" constant="70" id="cyc-uZ-hd9"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -134,7 +134,7 @@
                                     <constraint firstItem="rNv-yk-1V4" firstAttribute="top" secondItem="4mv-OE-FYQ" secondAttribute="top" constant="30" id="Qzt-qo-eRf"/>
                                     <constraint firstAttribute="height" constant="240" id="Ygm-eN-6Rh"/>
                                     <constraint firstAttribute="bottom" secondItem="LPt-7B-cQf" secondAttribute="bottom" constant="20" id="aky-AP-beP"/>
-                                    <constraint firstAttribute="width" constant="350" id="eKO-3Q-KBG"/>
+                                    <constraint firstAttribute="width" constant="390" id="eKO-3Q-KBG"/>
                                     <constraint firstItem="rNv-yk-1V4" firstAttribute="centerX" secondItem="4mv-OE-FYQ" secondAttribute="centerX" id="tdJ-8E-0KK"/>
                                 </constraints>
                             </view>

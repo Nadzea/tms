@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var settingsButton: CustomButtonMainView!
     @IBOutlet weak var aboutButton: CustomButtonMainView!
     
-    let storyboards: [String] = ["PlayerNamesViewController", "ResultsViewController", "SettingsViewController", "AboutChessViewController"]
+    let storyboards: [String] = ["PlayerNamesViewController", "ResultsViewController", "NewSettingsViewController", "AboutChessViewController"]
     let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     let manager = FileManager.default
 
@@ -25,21 +25,41 @@ class ViewController: UIViewController {
         resultsButton.delegate = self
         settingsButton.delegate = self
         aboutButton.delegate = self
+        //localized()
+        screenSettings()
         
+        
+    
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        localized()
+        attributed()
+    }
+    
+    func screenSettings() {
         playButton.addShadow(with: .black, opacity: 0.9, shadowOffset: CGSize(width: 10, height: 10))
         resultsButton.addShadow(with: .black, opacity: 0.9, shadowOffset: CGSize(width: 5, height: 5))
         settingsButton.addShadow(with: .black, opacity: 0.9, shadowOffset: CGSize(width: 5, height: 5))
-    
     }
     
-    func getViewController(with storyboard: String) -> UIViewController {
+    func attributed() {
         
-        let currentStoryboard = UIStoryboard(name: storyboard, bundle: nil)
-        let currentViewController = currentStoryboard.instantiateInitialViewController()
-        currentViewController?.modalPresentationStyle = .fullScreen
-        currentViewController?.modalTransitionStyle = .coverVertical
-        return currentViewController!
+            let currentLanguage = SaveData.getSaveCurrentLanguage()
+            
+            playButton.buttonLabel.font = currentLanguage == "ru" ? UIFont(name: "LavanderiaC", size: 30) : UIFont(name: "StyleScript-Regular", size: 35)
+            resultsButton.buttonLabel.font = currentLanguage == "ru" ? UIFont(name: "LavanderiaC", size: 30) : UIFont(name: "StyleScript-Regular", size: 35)
+            settingsButton.buttonLabel.font = currentLanguage == "ru" ? UIFont(name: "LavanderiaC", size: 30) : UIFont(name: "StyleScript-Regular", size: 35)
+            aboutButton.buttonLabel.font = currentLanguage == "ru" ? UIFont(name: "LavanderiaC", size: 30) : UIFont(name: "StyleScript-Regular", size: 35)
         
+    }
+    
+    func localized() {
+        playButton.buttonLabel.text = "play_button_text".localized
+        resultsButton.buttonLabel.text = "results_button_text".localized
+        settingsButton.buttonLabel.text = "settings_button_text".localized
+        aboutButton.buttonLabel.text = "about_button_text".localized
+
     }
     
 }
@@ -55,14 +75,14 @@ extension ViewController: CustomButtonMainViewDelegate {
             guard manager.fileExists(atPath: documentDirectory.appendingPathComponent("savedGame").path) else { present(vc, animated: true, completion: nil)
                 return
             }
-            presentAlertController(with: nil, message: "Do you want to continue the saved game?",
-                                   actions: UIAlertAction(title: "New game",
+            presentAlertController(with: nil, message: "alert_message_text".localized,
+                                   actions: UIAlertAction(title: "alert_title1_text".localized,
                                                           style: .default,
                                                           handler: { _ in
                                                             SaveData.deleteSavedGame()
                                                             self.view.removeBlurView()
                                                             self.present(vc, animated: true, completion: nil)}),
-                                            UIAlertAction(title: "Saved game",
+                                            UIAlertAction(title: "alert_title2_text".localized,
                                                           style: .default,
                                                           handler: { _ in
                                                             self.view.removeBlurView()

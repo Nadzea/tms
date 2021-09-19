@@ -17,4 +17,13 @@ extension UILabel {
                                                         .font: UIFont.styleScript(with: size)])
     }
     
+    func addAttributedTextWithLavanderiaScript(with strokeColor: UIColor, foregroundColor: UIColor, strokeWidth : Int, size: CGFloat) {
+        self.attributedText = NSAttributedString(string: self.text!,
+                                                     attributes: [
+                                                        .strokeColor : strokeColor,
+                                                        .foregroundColor : foregroundColor,
+                                                        .strokeWidth: strokeWidth,
+                                                        .font: UIFont.lavanderiaCFont(with: size)])
+    }
+    
 }
