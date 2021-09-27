@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LavanderiaC.ttf">
+            <string>LavanderiaC</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="180" id="KGk-i7-Jjw" customClass="ResultsTableViewCell" customModule="homeworkLesson13" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="458" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="458" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQ5-Cb-BeL">
+                        <rect key="frame" x="0.0" y="52" width="229" height="128"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecl-fS-3vn">
+                                <rect key="frame" x="4" y="79" width="48" height="45"/>
+                                <fontDescription key="fontDescription" name="LavanderiaC" family="LavanderiaC" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color of checkers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofC-im-GvQ">
+                                <rect key="frame" x="4" y="41.5" width="129.5" height="45"/>
+                                <fontDescription key="fontDescription" name="LavanderiaC" family="LavanderiaC" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The first player:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yB4-KV-wC6">
+                                <rect key="frame" x="4" y="4" width="118" height="45"/>
+                                <fontDescription key="fontDescription" name="LavanderiaC" family="LavanderiaC" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pki-tE-mRt">
+                                <rect key="frame" x="126" y="4" width="46" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="SwE-Tn-aQj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SB0-ww-UIk">
+                                <rect key="frame" x="137.5" y="53" width="46" height="22.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="SB0-ww-UIk" firstAttribute="centerY" secondItem="AQ5-Cb-BeL" secondAttribute="centerY" id="6p2-09-XL2"/>
+                            <constraint firstItem="SB0-ww-UIk" firstAttribute="leading" secondItem="ofC-im-GvQ" secondAttribute="trailing" constant="4" id="9fC-kM-neA"/>
+                            <constraint firstItem="Pki-tE-mRt" firstAttribute="leading" secondItem="yB4-KV-wC6" secondAttribute="trailing" constant="4" id="9zh-9m-8UQ"/>
+                            <constraint firstItem="yB4-KV-wC6" firstAttribute="top" secondItem="AQ5-Cb-BeL" secondAttribute="top" constant="4" id="DWL-NW-G4V"/>
+                            <constraint firstAttribute="height" constant="128" id="WCn-Si-svE"/>
+                            <constraint firstItem="Ecl-fS-3vn" firstAttribute="leading" secondItem="AQ5-Cb-BeL" secondAttribute="leading" constant="4" id="YiB-4b-PWV"/>
+                            <constraint firstItem="yB4-KV-wC6" firstAttribute="leading" secondItem="AQ5-Cb-BeL" secondAttribute="leading" constant="4" id="ccS-vV-edY"/>
+                            <constraint firstItem="ofC-im-GvQ" firstAttribute="centerY" secondItem="AQ5-Cb-BeL" secondAttribute="centerY" id="jaL-8y-BcV"/>
+                            <constraint firstItem="ofC-im-GvQ" firstAttribute="leading" secondItem="AQ5-Cb-BeL" secondAttribute="leading" constant="4" id="mJY-Oi-F5d"/>
+                            <constraint firstAttribute="bottom" secondItem="Ecl-fS-3vn" secondAttribute="bottom" constant="4" id="p57-bb-tt2"/>
+                            <constraint firstItem="Pki-tE-mRt" firstAttribute="top" secondItem="AQ5-Cb-BeL" secondAttribute="top" constant="4" id="yxd-bG-moX"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfw-SL-dCR">
+                        <rect key="frame" x="229" y="52" width="229" height="128"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMv-yq-Y4n">
+                                <rect key="frame" x="4" y="79" width="48" height="45"/>
+                                <fontDescription key="fontDescription" name="LavanderiaC" family="LavanderiaC" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color of checkers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dow-Qe-HOU">
+                                <rect key="frame" x="4" y="41.5" width="129.5" height="45"/>
+                                <fontDescription key="fontDescription" name="LavanderiaC" family="LavanderiaC" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The second player:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIw-Cs-yQ5">
+                                <rect key="frame" x="4" y="4" width="136.5" height="45"/>
+                                <fontDescription key="fontDescription" name="LavanderiaC" family="LavanderiaC" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9E-nG-LSF">
+                                <rect key="frame" x="144.5" y="4" width="46" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="HwL-tz-LUa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF9-p0-39o">
+                                <rect key="frame" x="137.5" y="53" width="46" height="22.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="DIw-Cs-yQ5" firstAttribute="leading" secondItem="Zfw-SL-dCR" secondAttribute="leading" constant="4" id="5Hh-ea-uBb"/>
+                            <constraint firstItem="O9E-nG-LSF" firstAttribute="top" secondItem="Zfw-SL-dCR" secondAttribute="top" constant="4" id="EAE-3N-K8X"/>
+                            <constraint firstItem="WF9-p0-39o" firstAttribute="leading" secondItem="dow-Qe-HOU" secondAttribute="trailing" constant="4" id="Jpa-wk-2Cw"/>
+                            <constraint firstItem="WF9-p0-39o" firstAttribute="centerY" secondItem="Zfw-SL-dCR" secondAttribute="centerY" id="JqO-Vz-9Nj"/>
+                            <constraint firstAttribute="bottom" secondItem="RMv-yq-Y4n" secondAttribute="bottom" constant="4" id="L12-u0-OI6"/>
+                            <constraint firstItem="dow-Qe-HOU" firstAttribute="centerY" secondItem="Zfw-SL-dCR" secondAttribute="centerY" id="Pcm-IX-Aj6"/>
+                            <constraint firstAttribute="height" constant="128" id="cDf-xr-25M"/>
+                            <constraint firstItem="O9E-nG-LSF" firstAttribute="leading" secondItem="DIw-Cs-yQ5" secondAttribute="trailing" constant="4" id="g1v-7c-XWI"/>
+                            <constraint firstItem="RMv-yq-Y4n" firstAttribute="leading" secondItem="Zfw-SL-dCR" secondAttribute="leading" constant="4" id="tY0-Bk-h8f"/>
+                            <constraint firstItem="dow-Qe-HOU" firstAttribute="leading" secondItem="Zfw-SL-dCR" secondAttribute="leading" constant="4" id="w6Y-3o-0Kq"/>
+                            <constraint firstItem="DIw-Cs-yQ5" firstAttribute="top" secondItem="Zfw-SL-dCR" secondAttribute="top" constant="4" id="zSA-N4-Hv7"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIh-do-vUb">
+                        <rect key="frame" x="169.5" y="2" width="119" height="55"/>
+                        <fontDescription key="fontDescription" name="LavanderiaC" family="LavanderiaC" pointSize="30"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" red="0.49247835089999997" green="0.46757653179999997" blue="0.90935154549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Zfw-SL-dCR" secondAttribute="bottom" id="3Nj-Ig-nCh"/>
+                    <constraint firstItem="AQ5-Cb-BeL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8Q4-Bk-mBm"/>
+                    <constraint firstAttribute="trailing" secondItem="Zfw-SL-dCR" secondAttribute="trailing" id="MLN-bG-Qmc"/>
+                    <constraint firstAttribute="bottom" secondItem="AQ5-Cb-BeL" secondAttribute="bottom" id="WS9-rO-cBQ"/>
+                    <constraint firstItem="Zfw-SL-dCR" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="Zpo-Ij-uf3"/>
+                    <constraint firstItem="HIh-do-vUb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="i78-t8-y9q"/>
+                    <constraint firstItem="HIh-do-vUb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="k2Y-tu-I5h"/>
+                    <constraint firstItem="AQ5-Cb-BeL" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="wBj-ia-Qxn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="colorOfCheckerPlayer1" destination="SB0-ww-UIk" id="RD6-Up-ObZ"/>
+                <outlet property="colorOfCheckerPlayer1Label" destination="ofC-im-GvQ" id="0DJ-A3-fww"/>
+                <outlet property="colorOfCheckerPlayer2" destination="WF9-p0-39o" id="E35-WX-msF"/>
+                <outlet property="colorOfCheckerPlayer2Label" destination="dow-Qe-HOU" id="xu3-Wd-cOW"/>
+                <outlet property="dateOfPlay" destination="HIh-do-vUb" id="bUa-ge-VgH"/>
+                <outlet property="nameOfPlayer1" destination="Pki-tE-mRt" id="5yt-Zp-8yM"/>
+                <outlet property="nameOfPlayer1Label" destination="yB4-KV-wC6" id="qSX-5T-bev"/>
+                <outlet property="nameOfPlayer2" destination="O9E-nG-LSF" id="V16-ub-LKJ"/>
+                <outlet property="nameOfPlayer2Label" destination="DIw-Cs-yQ5" id="VA9-hd-uub"/>
+                <outlet property="winnerPlayer1" destination="Ecl-fS-3vn" id="tcl-1O-QHM"/>
+                <outlet property="winnerPlayer2" destination="RMv-yq-Y4n" id="3am-Hf-xn6"/>
+            </connections>
+            <point key="canvasLocation" x="-301.44927536231887" y="42.1875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -14,8 +14,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "533"
-            endingLineNumber = "533"
+            startingLineNumber = "748"
+            endingLineNumber = "748"
             landmarkName = "panGesture(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "538"
-            endingLineNumber = "538"
+            startingLineNumber = "753"
+            endingLineNumber = "753"
             landmarkName = "panGesture(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "485"
-            endingLineNumber = "485"
+            startingLineNumber = "700"
+            endingLineNumber = "700"
             landmarkName = "timerFunc()"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,10 +142,10 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "484"
-            endingLineNumber = "484"
-            landmarkName = "timerFunc()"
-            landmarkType = "7">
+            startingLineNumber = "699"
+            endingLineNumber = "699"
+            landmarkName = "PlayViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -254,8 +254,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "createChessboard()"
             landmarkType = "7">
          </BreakpointContent>
@@ -334,10 +334,10 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "616"
-            endingLineNumber = "616"
-            landmarkName = "buttonDidTap(_:)"
-            landmarkType = "7">
+            startingLineNumber = "831"
+            endingLineNumber = "831"
+            landmarkName = "PlayViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -366,10 +366,10 @@
             filePath = "homeworkLesson13/ViewControllers/ResultsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "buttonDidTap(_:)"
-            landmarkType = "7">
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -382,8 +382,8 @@
             filePath = "homeworkLesson13/ViewControllers/ResultsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -462,8 +462,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "510"
-            endingLineNumber = "510"
+            startingLineNumber = "725"
+            endingLineNumber = "725"
             landmarkName = "longPressRecognizer(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -478,8 +478,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "548"
-            endingLineNumber = "548"
+            startingLineNumber = "763"
+            endingLineNumber = "763"
             landmarkName = "panGesture(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -624,8 +624,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
             endingLineNumber = "69"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
+            landmarkName = "PlayViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -640,8 +640,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
+            landmarkName = "PlayViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -702,8 +702,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "getNames()"
             landmarkType = "7">
          </BreakpointContent>
@@ -718,8 +718,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
             landmarkName = "getSaveData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -734,13 +734,13 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "getSaveData()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C2B37285-B1B2-4164-8C91-E665671904A0 - 50cf56a7c21ce018"
+                  uuid = "C2B37285-B1B2-4164-8C91-E665671904A0 - 50cf56a7c21ce1a5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -750,12 +750,12 @@
                   urlString = "file:///Volumes/Macintosh%20HD%C2%A0%E2%80%94%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0/homeworkLesson21/homeworkLesson13/ViewControllers/PlayViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "229"
-                  endingLineNumber = "229"
+                  startingLineNumber = "234"
+                  endingLineNumber = "234"
                   offsetFromSymbolStart = "1029">
                </Location>
                <Location
-                  uuid = "C2B37285-B1B2-4164-8C91-E665671904A0 - 50cf56a7c21ce018"
+                  uuid = "C2B37285-B1B2-4164-8C91-E665671904A0 - 50cf56a7c21ce1a5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -765,9 +765,9 @@
                   urlString = "file:///Volumes/Macintosh%20HD%C2%A0%E2%80%94%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0/homeworkLesson21/homeworkLesson13/ViewControllers/PlayViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "229"
-                  endingLineNumber = "229"
-                  offsetFromSymbolStart = "8710">
+                  startingLineNumber = "234"
+                  endingLineNumber = "234"
+                  offsetFromSymbolStart = "9352">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -814,8 +814,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "494"
-            endingLineNumber = "494"
+            startingLineNumber = "709"
+            endingLineNumber = "709"
             landmarkName = "longPressRecognizer(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -830,8 +830,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "502"
-            endingLineNumber = "502"
+            startingLineNumber = "717"
+            endingLineNumber = "717"
             landmarkName = "longPressRecognizer(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -846,41 +846,9 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "503"
-            endingLineNumber = "503"
+            startingLineNumber = "718"
+            endingLineNumber = "718"
             landmarkName = "longPressRecognizer(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "34D6A888-F1F6-457F-B51C-25D7A7045D5E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "363"
-            endingLineNumber = "363"
-            landmarkName = "findFight()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C11C0586-4454-4CBD-8EDE-AED79A24FE1C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "329"
-            endingLineNumber = "329"
-            landmarkName = "findFight()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -894,8 +862,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "517"
-            endingLineNumber = "517"
+            startingLineNumber = "732"
+            endingLineNumber = "732"
             landmarkName = "longPressRecognizer(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -910,8 +878,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "562"
-            endingLineNumber = "562"
+            startingLineNumber = "777"
+            endingLineNumber = "777"
             landmarkName = "panGesture(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -926,74 +894,10 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "501"
-            endingLineNumber = "501"
+            startingLineNumber = "716"
+            endingLineNumber = "716"
             landmarkName = "longPressRecognizer(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "55429FB1-D620-4AEC-9310-F27E8D8EBEE1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "355"
-            endingLineNumber = "355"
-            landmarkName = "findFight()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "39A2CFBC-F954-4107-BA98-AD4F7ECB7038"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "356"
-            endingLineNumber = "356"
-            landmarkName = "findFight()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "39A2CFBC-F954-4107-BA98-AD4F7ECB7038 - 9d38f3d3834d46c9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (homeworkLesson13.Checker) -&gt; () in closure #2 (homeworkLesson13.Checker) -&gt; () in homeworkLesson13.PlayViewController.findFight() -&gt; ()"
-                  moduleName = "homeworkLesson13"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Macintosh%20HD%C2%A0%E2%80%94%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0/homeworkLesson21/homeworkLesson13/ViewControllers/PlayViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "338"
-                  endingLineNumber = "338"
-                  offsetFromSymbolStart = "2252">
-               </Location>
-               <Location
-                  uuid = "39A2CFBC-F954-4107-BA98-AD4F7ECB7038 - f42fef41005b1328"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.UIView) -&gt; () in closure #1 (homeworkLesson13.Checker) -&gt; () in closure #2 (homeworkLesson13.Checker) -&gt; () in homeworkLesson13.PlayViewController.findFight() -&gt; ()"
-                  moduleName = "homeworkLesson13"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Macintosh%20HD%C2%A0%E2%80%94%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0/homeworkLesson21/homeworkLesson13/ViewControllers/PlayViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "339"
-                  endingLineNumber = "339"
-                  offsetFromSymbolStart = "266">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1006,8 +910,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "582"
-            endingLineNumber = "582"
+            startingLineNumber = "797"
+            endingLineNumber = "797"
             landmarkName = "panGesture(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1022,8 +926,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "598"
-            endingLineNumber = "598"
+            startingLineNumber = "812"
+            endingLineNumber = "812"
             landmarkName = "panGesture(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1038,8 +942,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "459"
-            endingLineNumber = "459"
+            startingLineNumber = "674"
+            endingLineNumber = "674"
             landmarkName = "checkerInLadies()"
             landmarkType = "7">
             <Locations>
@@ -1102,8 +1006,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "468"
-            endingLineNumber = "468"
+            startingLineNumber = "683"
+            endingLineNumber = "683"
             landmarkName = "playMusic()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1118,8 +1022,8 @@
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "624"
-            endingLineNumber = "624"
+            startingLineNumber = "846"
+            endingLineNumber = "846"
             landmarkName = "buttonDidTap(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1128,14 +1032,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DCDF702F-46EE-42A9-8315-7F2E0E5A3371"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "414"
-            endingLineNumber = "414"
+            startingLineNumber = "596"
+            endingLineNumber = "596"
             landmarkName = "congratulations()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1150,8 +1054,8 @@
             filePath = "homeworkLesson13/ViewControllers/NewSettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1166,8 +1070,8 @@
             filePath = "homeworkLesson13/ViewControllers/NewSettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "animate()"
             landmarkType = "7">
             <Locations>
@@ -1335,22 +1239,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1A87623F-807D-44D6-80B5-CCE18A3755CC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "homeworkLesson13/Models/SettingsManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "currentLanguageCode"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "82C0F77E-CCC6-43A3-B2DE-425FDF091AFF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1438,8 +1326,8 @@
             filePath = "homeworkLesson13/ViewControllers/NewSettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "animate()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1486,8 +1374,8 @@
             filePath = "homeworkLesson13/ViewControllers/NewSettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1534,8 +1422,8 @@
             filePath = "homeworkLesson13/ViewControllers/NewSettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "setupTableView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1550,8 +1438,8 @@
             filePath = "homeworkLesson13/ViewControllers/NewSettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1566,8 +1454,8 @@
             filePath = "homeworkLesson13/ViewControllers/NewSettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1582,8 +1470,8 @@
             filePath = "homeworkLesson13/ViewControllers/NewSettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "setupTableView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1598,8 +1486,8 @@
             filePath = "homeworkLesson13/ViewControllers/NewSettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1614,9 +1502,585 @@
             filePath = "homeworkLesson13/ViewControllers/NewSettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "tableView(_:heightForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B923B2B8-8C01-4815-A2D6-70CB00A1CEC6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "645"
+            endingLineNumber = "645"
+            landmarkName = "winner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "435415A5-8AB6-431F-9FF2-E8BD05AF4EB4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "644"
+            endingLineNumber = "644"
+            landmarkName = "winner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDF63A73-57D7-4D99-A7FE-FC2E4FB2E246"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "639"
+            endingLineNumber = "639"
+            landmarkName = "winner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5EE5236C-5045-4383-9834-9F3391740801"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "656"
+            endingLineNumber = "656"
+            landmarkName = "winner()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5EE5236C-5045-4383-9834-9F3391740801 - 72e1f40dd5e9a05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "homeworkLesson13.PlayViewController.winner() -&gt; Swift.String"
+                  moduleName = "homeworkLesson13"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Macintosh%20HD%C2%A0%E2%80%94%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0/homeworkLesson21/homeworkLesson13/ViewControllers/PlayViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "474"
+                  endingLineNumber = "474"
+                  offsetFromSymbolStart = "2426">
+               </Location>
+               <Location
+                  uuid = "5EE5236C-5045-4383-9834-9F3391740801 - 2675114e374bdff0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (homeworkLesson13.Player) -&gt; () in homeworkLesson13.PlayViewController.winner() -&gt; Swift.String"
+                  moduleName = "homeworkLesson13"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Macintosh%20HD%C2%A0%E2%80%94%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0/homeworkLesson21/homeworkLesson13/ViewControllers/PlayViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "475"
+                  endingLineNumber = "475"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4261E291-17CD-4ECD-9EC1-56AF19557411"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "650"
+            endingLineNumber = "650"
+            landmarkName = "winner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFB41117-35ED-4612-AB11-278C24B76B86"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/CoreData/CoreDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "getPlays()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A8AD15F7-E3A5-4908-8EFC-88357E77B59A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/ResultsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE6B1FC1-8714-479E-B347-3EE80B36A453"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/ResultsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "ResultsViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC19C1AC-6DA4-4AD2-9601-72EE507B65E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
+            landmarkName = "getSaveData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DC19C1AC-6DA4-4AD2-9601-72EE507B65E4 - 50cf56a7c21ce067"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "homeworkLesson13.PlayViewController.getSaveData() -&gt; ()"
+                  moduleName = "homeworkLesson13"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Macintosh%20HD%C2%A0%E2%80%94%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0/homeworkLesson21/homeworkLesson13/ViewControllers/PlayViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "232"
+                  endingLineNumber = "232"
+                  offsetFromSymbolStart = "771">
+               </Location>
+               <Location
+                  uuid = "DC19C1AC-6DA4-4AD2-9601-72EE507B65E4 - 50cf56a7c21ce067"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "homeworkLesson13.PlayViewController.getSaveData() -&gt; ()"
+                  moduleName = "homeworkLesson13"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Macintosh%20HD%C2%A0%E2%80%94%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0/homeworkLesson21/homeworkLesson13/ViewControllers/PlayViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "232"
+                  endingLineNumber = "232"
+                  offsetFromSymbolStart = "9334">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFFBA111-2766-43CF-8046-FE778AE698F4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "createChessboard()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A42AD83-755C-4FBD-B033-F57D244E69DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "515"
+            endingLineNumber = "515"
+            landmarkName = "findFightForWhiteChecker(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E663A382-66DA-481E-8F80-7FB7E5E17461"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "357"
+            endingLineNumber = "357"
+            landmarkName = "findFightForWhiteLady(ladyChecker:arrayOfChecker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "22D23673-4F36-4AA0-86B5-3C521EC1D8E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "372"
+            endingLineNumber = "372"
+            landmarkName = "findFightForWhiteLady(ladyChecker:arrayOfChecker:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "22D23673-4F36-4AA0-86B5-3C521EC1D8E8 - 4001c193826e7bb5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (homeworkLesson13.Checker) -&gt; () in homeworkLesson13.PlayViewController.findFightForWhiteLady(ladyChecker: homeworkLesson13.Checker, arrayOfChecker: Swift.Array&lt;homeworkLesson13.Checker&gt;) -&gt; ()"
+                  moduleName = "homeworkLesson13"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Macintosh%20HD%C2%A0%E2%80%94%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0/homeworkLesson21/homeworkLesson13/ViewControllers/PlayViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "338"
+                  endingLineNumber = "338"
+                  offsetFromSymbolStart = "5446">
+               </Location>
+               <Location
+                  uuid = "22D23673-4F36-4AA0-86B5-3C521EC1D8E8 - 21056245401fc7db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIView) -&gt; () in closure #1 (homeworkLesson13.Checker) -&gt; () in homeworkLesson13.PlayViewController.findFightForWhiteLady(ladyChecker: homeworkLesson13.Checker, arrayOfChecker: Swift.Array&lt;homeworkLesson13.Checker&gt;) -&gt; ()"
+                  moduleName = "homeworkLesson13"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Macintosh%20HD%C2%A0%E2%80%94%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0/homeworkLesson21/homeworkLesson13/ViewControllers/PlayViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "340"
+                  endingLineNumber = "340"
+                  offsetFromSymbolStart = "98">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76045D44-5242-4A00-AB23-2FF135674F25"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "455"
+            endingLineNumber = "455"
+            landmarkName = "findFightForBlackLady(ladyChecker:arrayOfChecker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BAABE19C-5C38-42CF-B141-E51D4EB1A65B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "637"
+            endingLineNumber = "637"
+            landmarkName = "winner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A81E2649-DCF9-4F79-88C8-6DE626763ACD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "333"
+            endingLineNumber = "333"
+            landmarkName = "findMoving(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEB642EC-CD2C-4540-A19E-B1C40A5B4B71"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "335"
+            endingLineNumber = "335"
+            landmarkName = "findMoving(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF963215-DC5B-4C24-A0CC-4DC9C0446DDA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "338"
+            endingLineNumber = "338"
+            landmarkName = "findMoving(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5092DF1-E7F5-4E6D-ACDB-A081889E7C29"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "339"
+            endingLineNumber = "339"
+            landmarkName = "findMoving(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F975CA40-E3B9-419A-AC0B-57704A9E2895"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B31C2D38-D7E4-4B7F-B7C1-0757711B07EA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "649"
+            endingLineNumber = "649"
+            landmarkName = "winner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C94115EF-13A3-473C-B24E-8CEC4B9FEE56"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A535572-712D-4A28-9B91-66CCE3FE5FF5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "587"
+            endingLineNumber = "587"
+            landmarkName = "congratulations()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9D29939-0818-4FDA-AB7C-A15381CB1541"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "589"
+            endingLineNumber = "589"
+            landmarkName = "congratulations()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4EE2B0E6-D452-464F-AA0E-3CABD74152DA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "311"
+            endingLineNumber = "311"
+            landmarkName = "findLadyMoving(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4EE2B0E6-D452-464F-AA0E-3CABD74152DA - d8dfaf7dd9d240c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIView) -&gt; () in homeworkLesson13.PlayViewController.findLadyMoving(for: __C.UIView) -&gt; ()"
+                  moduleName = "homeworkLesson13"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Macintosh%20HD%C2%A0%E2%80%94%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0/homeworkLesson21/homeworkLesson13/ViewControllers/PlayViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "313"
+                  endingLineNumber = "313"
+                  offsetFromSymbolStart = "1803">
+               </Location>
+               <Location
+                  uuid = "4EE2B0E6-D452-464F-AA0E-3CABD74152DA - 3d85e854964778c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIView) -&gt; () in closure #1 (__C.UIView) -&gt; () in homeworkLesson13.PlayViewController.findLadyMoving(for: __C.UIView) -&gt; ()"
+                  moduleName = "homeworkLesson13"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Macintosh%20HD%C2%A0%E2%80%94%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B0/homeworkLesson21/homeworkLesson13/ViewControllers/PlayViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "314"
+                  endingLineNumber = "314"
+                  offsetFromSymbolStart = "186">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B62983E3-0C19-4DF8-9B47-E9DDB5293DDF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "410"
+            endingLineNumber = "410"
+            landmarkName = "findFightForWhiteLady(ladyChecker:arrayOfChecker:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "984C84EB-1CC1-4A89-BA07-D16D0F058B5D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "669"
+            endingLineNumber = "669"
+            landmarkName = "checkerInLadies()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F487D36-C705-4143-B306-8BCF33F82642"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homeworkLesson13/ViewControllers/PlayViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "448"
+            endingLineNumber = "448"
+            landmarkName = "findFightForBlackLady(ladyChecker:arrayOfChecker:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -37,4 +37,14 @@
 "alert_message_text_playScreen" = "Do you want to leave the game?";
 "alert_title1_text_playScreen" = "Save and leave the game";
 "alert_title2_text_playScreen" = "Leave the game";
-
+"congratulationsLabel_text" = "Congratulations!";
+"winnerLabel_text" = ", you have won!";
+"winner_results" = "Winner";
+"loser_results" = "Loser";
+"nameOfPlayer1Label_text" = "The first player: ";
+"nameOfPlayer2Label_text" = "The second player: ";
+"colorOfCheckerPlayerLabel_text" = "Color of checker: ";
+"black_colorOfCheckerLabel_text" = "black";
+"white_colorOfCheckerLabel_text" = "white";
+"clearResultsButton_text" = "Clear results";
+"resultsLabel_text" = "Results";

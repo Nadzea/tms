@@ -14,7 +14,7 @@ class SettingsManager {
         set {
             
             SaveData.saveCurrentLanguage(currentLanguageCode: newValue)
-            //UserDefaults.standard.setValue(newValue, forKey: "currentLanguageCode")
+    
         }
         
         get {
@@ -24,7 +24,6 @@ class SettingsManager {
             }
             
             return lan
-//            return UserDefaults.standard.string(forKey: "currentLanguageCode") ?? Locale.current.languageCode ?? "en"
         }
     }
 }

@@ -33,9 +33,6 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5G8-RK-q8D">
                     <rect key="frame" x="0.0" y="0.0" width="149" height="80"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="80" id="28T-Ak-WxG"/>
-                    </constraints>
                     <connections>
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="Rxv-L8-lOL"/>
                     </connections>
@@ -53,7 +50,7 @@
                 <constraint firstAttribute="trailing" secondItem="5G8-RK-q8D" secondAttribute="trailing" id="tPt-Cd-JsD"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-32.608695652173914" y="-158.03571428571428"/>
+            <point key="canvasLocation" x="-183" y="-157"/>
         </view>
     </objects>
 </document>

@@ -37,3 +37,14 @@
 "alert_message_text_playScreen" = "Вы хотите выйти из игры?";
 "alert_title1_text_playScreen" = "Сохранить и выйти";
 "alert_title2_text_playScreen" = "Выйти";
+"congratulationsLabel_text" = "Поздравляем!";
+"winnerLabel_text" = ", вы выиграли!";
+"winner_results" = "Победитель";
+"loser_results" = "Проигравший";
+"nameOfPlayer1Label_text" = "Первый игрок: ";
+"nameOfPlayer2Label_text" = "Второй игрок: ";
+"colorOfCheckerPlayerLabel_text" = "Цвет шашек: ";
+"black_colorOfCheckerLabel_text" = "черные";
+"white_colorOfCheckerLabel_text" = "белые";
+"clearResultsButton_text" = "Очистить результаты";
+"resultsLabel_text" = "Результаты";

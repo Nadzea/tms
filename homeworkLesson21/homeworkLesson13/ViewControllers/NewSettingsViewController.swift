@@ -50,6 +50,7 @@ class NewSettingsViewController: UIViewController {
     }
     
     func animate() {
+        settingsLabel.transform = .identity
         UIView.animate(withDuration: 0.5, delay: 0.0, options: [.repeat, .autoreverse]) {
             self.settingsLabel.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }

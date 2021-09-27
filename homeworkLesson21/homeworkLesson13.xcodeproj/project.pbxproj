@@ -32,6 +32,16 @@
 		510C545026F4D6980097AD22 /* String + Localazed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C544F26F4D6980097AD22 /* String + Localazed.swift */; };
 		510C545226F4F77E0097AD22 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C545126F4F77E0097AD22 /* SettingsManager.swift */; };
 		510C545826F550F80097AD22 /* LavanderiaC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 510C545726F550F80097AD22 /* LavanderiaC.ttf */; };
+		510C548D26FB535B0097AD22 /* ResultsOfPlay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 510C548B26FB535A0097AD22 /* ResultsOfPlay.xcdatamodeld */; };
+		510C549026FB5A960097AD22 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C548F26FB5A960097AD22 /* CoreDataManager.swift */; };
+		510C549D26FC6BD50097AD22 /* PlayerDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C549926FC6BD50097AD22 /* PlayerDB+CoreDataClass.swift */; };
+		510C549E26FC6BD50097AD22 /* PlayerDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C549A26FC6BD50097AD22 /* PlayerDB+CoreDataProperties.swift */; };
+		510C549F26FC6BD50097AD22 /* PlayDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C549B26FC6BD50097AD22 /* PlayDB+CoreDataClass.swift */; };
+		510C54A026FC6BD50097AD22 /* PlayDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C549C26FC6BD50097AD22 /* PlayDB+CoreDataProperties.swift */; };
+		510C54A226FC6C370097AD22 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C54A126FC6C370097AD22 /* Player.swift */; };
+		510C54A426FC6C490097AD22 /* Play.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C54A326FC6C490097AD22 /* Play.swift */; };
+		510C54A826FE37980097AD22 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C54A626FE37980097AD22 /* ResultsTableViewCell.swift */; };
+		510C54A926FE37980097AD22 /* ResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 510C54A726FE37980097AD22 /* ResultsTableViewCell.xib */; };
 		51122FA726D767990047E096 /* SavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51122FA626D767990047E096 /* SavedData.swift */; };
 		5146CB6826C6928E00DE16A9 /* UIFont+CoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5146CB6726C6928E00DE16A9 /* UIFont+CoreKit.swift */; };
 		5146CB6A26C6FB4F00DE16A9 /* StyleOfChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5146CB6926C6FB4F00DE16A9 /* StyleOfChecker.swift */; };
@@ -87,6 +97,16 @@
 		510C544F26F4D6980097AD22 /* String + Localazed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Localazed.swift"; sourceTree = "<group>"; };
 		510C545126F4F77E0097AD22 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		510C545726F550F80097AD22 /* LavanderiaC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LavanderiaC.ttf; sourceTree = "<group>"; };
+		510C548C26FB535A0097AD22 /* ResultsOfPlay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ResultsOfPlay.xcdatamodel; sourceTree = "<group>"; };
+		510C548F26FB5A960097AD22 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		510C549926FC6BD50097AD22 /* PlayerDB+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		510C549A26FC6BD50097AD22 /* PlayerDB+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		510C549B26FC6BD50097AD22 /* PlayDB+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		510C549C26FC6BD50097AD22 /* PlayDB+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		510C54A126FC6C370097AD22 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		510C54A326FC6C490097AD22 /* Play.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play.swift; sourceTree = "<group>"; };
+		510C54A626FE37980097AD22 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
+		510C54A726FE37980097AD22 /* ResultsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsTableViewCell.xib; sourceTree = "<group>"; };
 		51122FA626D767990047E096 /* SavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedData.swift; sourceTree = "<group>"; };
 		5146CB6726C6928E00DE16A9 /* UIFont+CoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CoreKit.swift"; sourceTree = "<group>"; };
 		5146CB6926C6FB4F00DE16A9 /* StyleOfChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleOfChecker.swift; sourceTree = "<group>"; };
@@ -148,6 +168,8 @@
 				5146CB6926C6FB4F00DE16A9 /* StyleOfChecker.swift */,
 				51122FA626D767990047E096 /* SavedData.swift */,
 				510C545126F4F77E0097AD22 /* SettingsManager.swift */,
+				510C54A126FC6C370097AD22 /* Player.swift */,
+				510C54A326FC6C490097AD22 /* Play.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +219,27 @@
 			path = homeworkLesson13/en.lproj;
 			sourceTree = SOURCE_ROOT;
 		};
+		510C548E26FB5A740097AD22 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				510C548F26FB5A960097AD22 /* CoreDataManager.swift */,
+				510C549926FC6BD50097AD22 /* PlayerDB+CoreDataClass.swift */,
+				510C549A26FC6BD50097AD22 /* PlayerDB+CoreDataProperties.swift */,
+				510C549B26FC6BD50097AD22 /* PlayDB+CoreDataClass.swift */,
+				510C549C26FC6BD50097AD22 /* PlayDB+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		510C54A526FE375A0097AD22 /* ResultsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				510C54A626FE37980097AD22 /* ResultsTableViewCell.swift */,
+				510C54A726FE37980097AD22 /* ResultsTableViewCell.xib */,
+			);
+			path = ResultsTableViewCell;
+			sourceTree = "<group>";
+		};
 		5146CB6B26C90F4400DE16A9 /* CustomButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +268,7 @@
 		51970D0C26AC09D600D5B8D0 /* homeworkLesson13 */ = {
 			isa = PBXGroup;
 			children = (
+				510C548E26FB5A740097AD22 /* CoreData */,
 				510C544626F4D1600097AD22 /* Localized */,
 				510C541B26F0D3E00097AD22 /* Models */,
 				51F391B326CC4E7D00FE3A4A /* CustomButtonMainView */,
@@ -240,6 +284,7 @@
 				51970D1826AC09D700D5B8D0 /* LaunchScreen.storyboard */,
 				51970D1B26AC09D700D5B8D0 /* Info.plist */,
 				510C53A026EE3E8B0097AD22 /* musicForApp.mp3 */,
+				510C548B26FB535A0097AD22 /* ResultsOfPlay.xcdatamodeld */,
 			);
 			path = homeworkLesson13;
 			sourceTree = "<group>";
@@ -301,6 +346,7 @@
 		51DDC7F326C46B0300D5BB55 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				510C54A526FE375A0097AD22 /* ResultsTableViewCell */,
 				510C543326F2884E0097AD22 /* LanguageTableViewCell */,
 				510C542826F2189B0097AD22 /* SoundsTableViewCell */,
 				510C540A26F0CA050097AD22 /* SettingsTableViewCell */,
@@ -385,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				510C54A926FE37980097AD22 /* ResultsTableViewCell.xib in Resources */,
 				510C541826F0CCFB0097AD22 /* StyleScript-Regular.ttf in Resources */,
 				510C544E26F4D1F20097AD22 /* Localizable.strings in Resources */,
 				51970D1A26AC09D700D5B8D0 /* LaunchScreen.storyboard in Resources */,
@@ -419,24 +466,32 @@
 			files = (
 				510C544526F4CFDC0097AD22 /* UIView + Localized.swift in Sources */,
 				51FFC01926B5511900A83675 /* AboutChessViewController.swift in Sources */,
+				510C54A826FE37980097AD22 /* ResultsTableViewCell.swift in Sources */,
 				510C545026F4D6980097AD22 /* String + Localazed.swift in Sources */,
 				510C543926F2899C0097AD22 /* SettingsOfLanguage.swift in Sources */,
+				510C549F26FC6BD50097AD22 /* PlayDB+CoreDataClass.swift in Sources */,
 				510C542E26F21A690097AD22 /* SettingsOfSounds.swift in Sources */,
 				51970D2426AC0C5000D5B8D0 /* PlayViewController.swift in Sources */,
 				51C58B1D26AD9EF600AABC86 /* UIView+CoreKit.swift in Sources */,
+				510C549D26FC6BD50097AD22 /* PlayerDB+CoreDataClass.swift in Sources */,
 				516E3A5C26C1565200F288B4 /* Checker.swift in Sources */,
 				5146CB6D26C90FC600DE16A9 /* CustomButton.swift in Sources */,
+				510C54A426FC6C490097AD22 /* Play.swift in Sources */,
 				5173F95D26AEF2E200BD586E /* UIViewController+CoreKit.swift in Sources */,
 				510C540726F0C59A0097AD22 /* NewSettingsViewController.swift in Sources */,
 				51F391B926CC512200FE3A4A /* CustomButtonMainView.swift in Sources */,
 				51970D1226AC09D600D5B8D0 /* ViewController.swift in Sources */,
+				510C54A026FC6BD50097AD22 /* PlayDB+CoreDataProperties.swift in Sources */,
+				510C549E26FC6BD50097AD22 /* PlayerDB+CoreDataProperties.swift in Sources */,
 				510C543026F2877C0097AD22 /* LanguageViewController.swift in Sources */,
+				510C549026FB5A960097AD22 /* CoreDataManager.swift in Sources */,
 				51970D0E26AC09D600D5B8D0 /* AppDelegate.swift in Sources */,
 				510C543626F288980097AD22 /* LanguageTableViewCell.swift in Sources */,
 				5146CB6A26C6FB4F00DE16A9 /* StyleOfChecker.swift in Sources */,
 				510C542B26F218CA0097AD22 /* SoundsTableViewCell.swift in Sources */,
 				51970D2626AC0C6300D5B8D0 /* ResultsViewController.swift in Sources */,
 				51122FA726D767990047E096 /* SavedData.swift in Sources */,
+				510C548D26FB535B0097AD22 /* ResultsOfPlay.xcdatamodeld in Sources */,
 				510C541F26F14A6C0097AD22 /* StyleOfCheckerViewController.swift in Sources */,
 				51F8BFF626D65B9700B71E67 /* PlayerNamesViewController.swift in Sources */,
 				51DDC7F726C46BA400D5BB55 /* StyleOfCheckerCollectionViewCell.swift in Sources */,
@@ -447,6 +502,7 @@
 				510C541D26F0D4120097AD22 /* Settings.swift in Sources */,
 				510C545226F4F77E0097AD22 /* SettingsManager.swift in Sources */,
 				510C540D26F0CAAC0097AD22 /* SettingsTableViewCell.swift in Sources */,
+				510C54A226FC6C370097AD22 /* Player.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +720,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		510C548B26FB535A0097AD22 /* ResultsOfPlay.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				510C548C26FB535A0097AD22 /* ResultsOfPlay.xcdatamodel */,
+			);
+			currentVersion = 510C548C26FB535A0097AD22 /* ResultsOfPlay.xcdatamodel */;
+			path = ResultsOfPlay.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 51970D0226AC09D600D5B8D0 /* Project object */;
 }

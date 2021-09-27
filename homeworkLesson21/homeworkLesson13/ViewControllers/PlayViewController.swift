@@ -46,10 +46,10 @@ class PlayViewController: UIViewController {
     var playerWithWhiteChecker: String = ""
     var playerWithBlackChecker: String = ""
     var canFight: Bool = false
-    //var checkerBeaten: Checker? = nil
     var mass: [(checker: Int, cell: Int, checkerBeaten: Int)] = [] //шашка которая может бить и на какую позицию она после этого становиться и какую шашку бьет
     var playerMusic: AVPlayer?
-    
+    var players: [Player] = []
+    var gameOver: Bool = false
     
     override func viewDidLoad() {  //1
         super.viewDidLoad()
@@ -127,12 +127,12 @@ class PlayViewController: UIViewController {
         let currentLanguage = SaveData.getSaveCurrentLanguage()
         if currentLanguage == "ru" {
             helloLabel.addAttributedTextWithLavanderiaScript(with: .white, foregroundColor: .black, strokeWidth: -3, size: 40)
-            gameTime.addAttributedTextWithLavanderiaScript(with: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), foregroundColor: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), strokeWidth: -3, size: 39)
-            gameDate.addAttributedTextWithLavanderiaScript(with: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), foregroundColor: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), strokeWidth: -3, size: 39)
+            gameTime.addAttributedTextWithLavanderiaScript(with: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), foregroundColor: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), strokeWidth: -3, size: 39)
+            gameDate.addAttributedTextWithLavanderiaScript(with: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), foregroundColor: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), strokeWidth: -3, size: 39)
         } else {
             helloLabel.addAttributedText(with: .white, foregroundColor: .black, strokeWidth: -3, size: 40)
-            gameTime.addAttributedText(with: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), foregroundColor: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), strokeWidth: -3, size: 39)
-            gameDate.addAttributedText(with: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), foregroundColor: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), strokeWidth: -3, size: 39)
+            gameTime.addAttributedText(with: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), foregroundColor: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), strokeWidth: -3, size: 39)
+            gameDate.addAttributedText(with: #colorLiteral(red: 0.7087161869, green: 0.993346738, blue: 1, alpha: 1), foregroundColor: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), strokeWidth: -3, size: 39)
         }
         dateLabel.addAttributedText(with: .black, foregroundColor: .gray, strokeWidth: -3, size: 36)
         dateLabel.addBorder(with: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), borderWidth: 3, cornerRadius: 10)
@@ -193,7 +193,11 @@ class PlayViewController: UIViewController {
                     checkerImage.addShadow(with: .black, opacity: 0.9, shadowOffset: CGSize(width: 4, height: 4))
                     checkerImage.tag = checker.colorTag!// == 0 ? 0 : 1
                     cell.addSubview(checkerImage)
-                    
+                    if checker.lady == true {
+                        let tiaraImage = UIImageView(frame: CGRect(x: 0, y: 0, width: Int(checkerImage.frame.width), height: Int(checkerImage.frame.height)))
+                        tiaraImage.image = UIImage(named: "tiara")
+                        checkerImage.addSubview(tiaraImage)
+                    }
                 }
             }
         }
@@ -273,18 +277,58 @@ class PlayViewController: UIViewController {
         chessboard.subviews.forEach { cell in
             if !cell.subviews.isEmpty {
                 cell.subviews.forEach { checker in
-                    let savedChecker = Checker(colorTag: checker.tag, positionTag: cell.tag)
-                    savedCheckers.append(savedChecker)
+                    if !checker.subviews.isEmpty {
+                        let savedChecker = Checker(colorTag: checker.tag, positionTag: cell.tag, lady: true)
+                        savedCheckers.append(savedChecker)
+                    } else {
+                        let savedChecker = Checker(colorTag: checker.tag, positionTag: cell.tag, lady: false)
+                        savedCheckers.append(savedChecker)
+                    }
                 }
             }
         }
-        
         return savedCheckers
     }
     
-    func findMoving(for checker:UIView) {
-        
+    func findLadyMoving(for checker: UIView) {
         let cell = checker.superview
+        
+        let step1: Int = -7
+        let step2: Int = -9
+        let step3: Int = 7
+        let step4: Int = 9
+        
+        chessboard.subviews.forEach { cellForMove in
+            guard cellForMove.subviews.isEmpty, cellForMove.backgroundColor == #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1),  let startCell = cell else { return }
+            if cellForMove.tag == startCell.tag - step1 || cellForMove.tag == startCell.tag - step2 || cellForMove.tag == startCell.tag - step3 || cellForMove.tag == startCell.tag - step4 {
+                cellForMove.addBlurView()
+                cellsForMove.append(cellForMove)
+                let step: Int = startCell.tag - cellForMove.tag
+                var nextCell: Int = cellForMove.tag - step
+                
+                while nextCell > -1, nextCell < 64 {
+                    var findNextCell: Bool = false
+                    chessboard.subviews.forEach { cell in
+                        if cell.tag == nextCell, cell.subviews.isEmpty, cell.backgroundColor == #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1) {
+                            cell.addBlurView()
+                            cellsForMove.append(cell)
+                            findNextCell = true
+                            nextCell = nextCell - step
+                        }
+                    }
+                    if findNextCell == false {
+                        nextCell = 65
+                    }
+                }
+            }
+        }
+    }
+    
+    func findMoving(for checker: UIView) {
+       
+        let cell = checker.superview
+        guard checker.subviews.isEmpty else { findLadyMoving(for: checker)
+            return }
         chessboard.subviews.forEach { cellForMove in
             guard cellForMove.subviews.isEmpty, cellForMove.backgroundColor == #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), let startCell = cell else { return }
             
@@ -298,80 +342,218 @@ class PlayViewController: UIViewController {
         }
     }
     
-    func findFight()   {
-
-        let arrayOfChecker = saveChekers()
-
-        var startChecker: Checker? = nil
-        var checkerForFight: Checker? = nil //шашка которую бьем
-
-        if currentChecker == .white {
-
-            arrayOfChecker.forEach { checker in
-
-                if checker.colorTag! < 12 {
-                    startChecker = checker
-                }
-                arrayOfChecker.forEach { fightChecker in
-
-                    guard let startChecker = startChecker else { return }
-
-                    if fightChecker.colorTag! >= 12 && (fightChecker.positionTag == startChecker.positionTag! + 9 || fightChecker.positionTag == startChecker.positionTag! + 7 || fightChecker.positionTag == startChecker.positionTag! - 9 || fightChecker.positionTag == startChecker.positionTag! - 7 ) {
-
-                        checkerForFight = fightChecker
-
-                        chessboard.subviews.forEach { cell in
-
-                            guard let checkerForFight = checkerForFight else { return }
-
-                            if cell.subviews.isEmpty, cell.backgroundColor == #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), cell.tag == startChecker.positionTag! - 2 * (startChecker.positionTag! - fightChecker.positionTag!) {
-
-                                cell.addBlurView()
-                                cellsForMove.append(cell)
-                                canFight = true
-                                mass.append((checker: startChecker.colorTag!, cell: cell.tag, checkerBeaten: checkerForFight.colorTag!))
-                                
+    func findFightForWhiteLady(ladyChecker: Checker, arrayOfChecker: [Checker]) {
+    
+        var massForLady: [(lady: Int, checkerForFight: Int, cell: Int)] = []
+    
+        var a = ladyChecker.positionTag! - 9
+        var b = ladyChecker.positionTag! - 7
+        var c = ladyChecker.positionTag! + 7
+        var d = ladyChecker.positionTag! + 9
+        
+        while a > 0 || b > 0 || c < 63 || d < 63 {
+            
+            arrayOfChecker.forEach { checkerForFight in
+                if checkerForFight.colorTag! >= 12  && (checkerForFight.positionTag! == a || checkerForFight.positionTag! == b || checkerForFight.positionTag! == c || checkerForFight.positionTag! == d) {
+                    var step: Int = 0
+                    if (ladyChecker.positionTag! - checkerForFight.positionTag!) < 0, (ladyChecker.positionTag! - checkerForFight.positionTag!) % 7 == 0 {
+                        step = -7
+                    }
+                    if (ladyChecker.positionTag! - checkerForFight.positionTag!) > 0, (ladyChecker.positionTag! - checkerForFight.positionTag!) % 7 == 0 {
+                        step = 7
+                    }
+                    if (ladyChecker.positionTag! - checkerForFight.positionTag!) < 0, (ladyChecker.positionTag! - checkerForFight.positionTag!) % 9 == 0 {
+                        step = -9
+                    }
+                    if (ladyChecker.positionTag! - checkerForFight.positionTag!) > 0, (ladyChecker.positionTag! - checkerForFight.positionTag!) % 9 == 0 {
+                        step = 9
+                    }
+                    //var findFight: Bool = false
+                    chessboard.subviews.forEach { cell in
+                        
+                        if cell.subviews.isEmpty, cell.backgroundColor == #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), cell.tag == checkerForFight.positionTag! - step {
+                            
+                            //findFight = true
+                            cellsForMove.append(cell)
+                            canFight = true
+                            mass.append((checker: ladyChecker.colorTag!, cell: cell.tag, checkerBeaten: checkerForFight.colorTag!))
+                            massForLady.append((lady: ladyChecker.colorTag!, checkerForFight: checkerForFight.colorTag!, cell: cell.tag))
+                            
+                            var nextCell: Int = cell.tag - step
+                            
+                            while nextCell > -1, nextCell < 64 {
+                                var findNextCell: Bool = false
+                                chessboard.subviews.forEach { cell in
+                                    if cell.tag == nextCell, cell.subviews.isEmpty, cell.backgroundColor == #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1) {
+                                        cell.addBlurView()
+                                        cellsForMove.append(cell)
+                                        mass.append((checker: ladyChecker.colorTag!, cell: cell.tag, checkerBeaten: checkerForFight.colorTag!))
+                                        massForLady.append((lady: ladyChecker.colorTag!, checkerForFight: checkerForFight.colorTag!, cell: cell.tag))
+                                        findNextCell = true
+                                        nextCell = nextCell - step
+                                    }
+                                }
+                                if findNextCell == false {
+                                    nextCell = 65
+                                }
                             }
                         }
+//                        if findFight == false {
+//                            a = -1
+//                            b = -1
+//                            c = 64
+//                            d = 64
+//                        }
                     }
                 }
             }
-            //print(mass)
-
-        } else {
-
-            arrayOfChecker.forEach { checker in
-
-                if checker.colorTag! >= 12 {
-                    startChecker = checker
-                }
-
-                arrayOfChecker.forEach { fightChecker in
-
-                    guard let startChecker = startChecker else { return }
-
-                    if fightChecker.colorTag! < 12  && (fightChecker.positionTag == startChecker.positionTag! + 9 || fightChecker.positionTag == startChecker.positionTag! + 7 || fightChecker.positionTag == startChecker.positionTag! - 9 || fightChecker.positionTag == startChecker.positionTag! - 7 ) {
-
-                        checkerForFight = fightChecker
-
-                        chessboard.subviews.forEach { cell in
-
-                            guard let checkerForFight = checkerForFight else { return }
-
-                            if cell.subviews.isEmpty, cell.backgroundColor == #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), cell.tag == startChecker.positionTag! - 2 * (startChecker.positionTag! - checkerForFight.positionTag!) {
-
-                                cell.addBlurView()
-                                cellsForMove.append(cell)
-                                canFight = true
-                                mass.append((checker: startChecker.colorTag!, cell: cell.tag, checkerBeaten: checkerForFight.colorTag!))
-                                
-                            }
-                        }
-                    }
-                }
-            }
-            //print(mass)
+            
+            a -= 9
+            b -= 7
+            c += 7
+            d += 9
         }
+    
+        print(massForLady)
+}
+    
+    func findFightForBlackLady(ladyChecker: Checker, arrayOfChecker: [Checker]) {
+    
+        var massForLady: [(lady: Int, checkerForFight: Int, cell: Int)] = []
+        
+        var a = ladyChecker.positionTag! - 9
+        var b = ladyChecker.positionTag! - 7
+        var c = ladyChecker.positionTag! + 7
+        var d = ladyChecker.positionTag! + 9
+        
+        while a > 0 || b > 0 || c < 63 || d < 63 {
+            
+            arrayOfChecker.forEach { checkerForFight in
+                if checkerForFight.colorTag! < 12  && (checkerForFight.positionTag! == a || checkerForFight.positionTag! == b || checkerForFight.positionTag! == c || checkerForFight.positionTag! == d) {
+                    
+                    var step: Int = 0
+                    if (ladyChecker.positionTag! - checkerForFight.positionTag!) < 0, (ladyChecker.positionTag! - checkerForFight.positionTag!) % 7 == 0 {
+                        step = -7
+                    }
+                    if (ladyChecker.positionTag! - checkerForFight.positionTag!) > 0, (ladyChecker.positionTag! - checkerForFight.positionTag!) % 7 == 0 {
+                        step = 7
+                    }
+                    if (ladyChecker.positionTag! - checkerForFight.positionTag!) < 0, (ladyChecker.positionTag! - checkerForFight.positionTag!) % 9 == 0 {
+                        step = -9
+                    }
+                    if (ladyChecker.positionTag! - checkerForFight.positionTag!) > 0, (ladyChecker.positionTag! - checkerForFight.positionTag!) % 9 == 0 {
+                        step = 9
+                    }
+                    //var findFight: Bool = false
+                    chessboard.subviews.forEach { cell in
+                        
+                        if cell.subviews.isEmpty, cell.backgroundColor == #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), cell.tag == checkerForFight.positionTag! - step {
+                            //findFight = true
+                            cellsForMove.append(cell)
+                            canFight = true
+                            mass.append((checker: ladyChecker.colorTag!, cell: cell.tag, checkerBeaten: checkerForFight.colorTag!))
+                            massForLady.append((lady: ladyChecker.colorTag!, checkerForFight: checkerForFight.colorTag!, cell: cell.tag))
+                            
+                            var nextCell: Int = cell.tag - step
+                            
+                            while nextCell > -1, nextCell < 64 {
+                                var findNextCell: Bool = false
+                                chessboard.subviews.forEach { cell in
+                                    if cell.tag == nextCell, cell.subviews.isEmpty, cell.backgroundColor == #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1) {
+                                        cell.addBlurView()
+                                        cellsForMove.append(cell)
+                                        mass.append((checker: ladyChecker.colorTag!, cell: cell.tag, checkerBeaten: checkerForFight.colorTag!))
+                                        massForLady.append((lady: ladyChecker.colorTag!, checkerForFight: checkerForFight.colorTag!, cell: cell.tag))
+                                        findNextCell = true
+                                        nextCell = nextCell - step
+                                    }
+                                }
+                                if findNextCell == false {
+                                    nextCell = 65
+                                }
+                            }
+                        }
+//                        if findFight == false {
+//                            a = -1
+//                            b = -1
+//                            c = 64
+//                            d = 64
+//                        }
+                    }
+                }
+            }
+            a -= 9
+            b -= 7
+            c += 7
+            d += 9
+        }
+        print(massForLady)
+}
+    
+    func findFightForWhiteChecker(_ arrayOfChecker: [Checker]) {
+        arrayOfChecker.forEach { checker in
+
+            if checker.colorTag! < 12 {
+                if checker.lady == false {
+                    arrayOfChecker.forEach { fightChecker in
+
+                        if fightChecker.colorTag! >= 12 && (fightChecker.positionTag == checker.positionTag! + 9 || fightChecker.positionTag == checker.positionTag! + 7 || fightChecker.positionTag == checker.positionTag! - 9 || fightChecker.positionTag == checker.positionTag! - 7 ) {
+                
+                            chessboard.subviews.forEach { cell in
+
+                                if cell.subviews.isEmpty, cell.backgroundColor == #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), cell.tag == checker.positionTag! - 2 * (checker.positionTag! - fightChecker.positionTag!) {
+                            
+                                    cellsForMove.append(cell)
+                                    canFight = true
+                                    mass.append((checker: checker.colorTag!, cell: cell.tag, checkerBeaten: fightChecker.colorTag!))
+                                
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    findFightForWhiteLady(ladyChecker: checker, arrayOfChecker: arrayOfChecker)
+                }
+            }
+        }
+    }
+    
+    func findFightForBlackChecker(_ arrayOfChecker: [Checker]) {
+        arrayOfChecker.forEach { checker in
+
+            if checker.colorTag! >= 12 {
+                if checker.lady == false {
+                    arrayOfChecker.forEach { fightChecker in
+
+                        if fightChecker.colorTag! < 12 && (fightChecker.positionTag == checker.positionTag! + 9 || fightChecker.positionTag == checker.positionTag! + 7 || fightChecker.positionTag == checker.positionTag! - 9 || fightChecker.positionTag == checker.positionTag! - 7 ) {
+                
+                            chessboard.subviews.forEach { cell in
+
+                                if cell.subviews.isEmpty, cell.backgroundColor == #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), cell.tag == checker.positionTag! - 2 * (checker.positionTag! - fightChecker.positionTag!) {
+                            
+                                    cellsForMove.append(cell)
+                                    canFight = true
+                                    mass.append((checker: checker.colorTag!, cell: cell.tag, checkerBeaten: fightChecker.colorTag!))
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    findFightForBlackLady(ladyChecker: checker, arrayOfChecker: arrayOfChecker)
+                }
+            }
+        }
+    }
+    
+    func findFight() {
+        let arrayOfChecker = saveChekers()
+        
+        if currentChecker == .white {
+            findFightForWhiteChecker(arrayOfChecker)
+        } else {
+            findFightForBlackChecker(arrayOfChecker)
+        }
+        returnSmartBlur()
     }
     
     func smartBlur(for checker: UIView) {
@@ -411,16 +593,31 @@ class PlayViewController: UIViewController {
             timer?.invalidate()
             timer = nil
             
-            helloLabel.text = ""
+            congratulationsLabel.text = "congratulationsLabel_text".localized
         
             UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut) {
                 self.congratulationsLabel.center.y += self.view.bounds.height
             }
-            winnerLabel.text = "\(winner), you have won!"
+            winnerLabel.text = winner + "winnerLabel_text".localized
 
             UIView.animate(withDuration: 2, delay: 0.3, options: .curveEaseOut) {
                 self.winnerLabel.center.y += self.view.bounds.height
             }
+            
+            attributedCongratulation()
+            gameOver = true
+        }
+    }
+    
+    func attributedCongratulation() {
+        let currentLanguage = SaveData.getSaveCurrentLanguage()
+        
+        if currentLanguage == "ru" {
+            congratulationsLabel.addAttributedTextWithLavanderiaScript(with: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), foregroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), strokeWidth: -3, size: 48)
+            winnerLabel.addAttributedTextWithLavanderiaScript(with: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), foregroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), strokeWidth: -3, size: 40)
+        } else {
+            congratulationsLabel.addAttributedText(with: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), foregroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), strokeWidth: -3, size: 58)
+            winnerLabel.addAttributedText(with: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), foregroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), strokeWidth: -3, size: 48)
         }
     }
     
@@ -436,12 +633,29 @@ class PlayViewController: UIViewController {
                 blackCheckers += 1
             }
         }
+        
         if whiteCheckers == 0 {
             winner = playerWithBlackChecker
+            let player1 = Player(name: playerWithWhiteChecker, colorOfChecker: "white", winner: false)
+            let player2 = Player(name: playerWithBlackChecker, colorOfChecker: "black", winner: true)
+            players.append(player1)
+            players.append(player2)
+            let coreDataDate = dateFormater.date(from: dateLabel.text ?? "")
+            let play = Play(dateOfPlay: coreDataDate ?? Date(), players: players)
+            CoreDataManager.shared.savePlay(by: play)
         }
+        
         if blackCheckers == 0 {
             winner = playerWithWhiteChecker
+            let player1 = Player(name: playerWithWhiteChecker, colorOfChecker: "white", winner: true)
+            let player2 = Player(name: playerWithBlackChecker, colorOfChecker: "black", winner: false)
+            players.append(player1)
+            players.append(player2)
+            let coreDataDate = dateFormater.date(from: dateLabel.text ?? "")
+            let play = Play(dateOfPlay: coreDataDate ?? Date(), players: players)
+            CoreDataManager.shared.savePlay(by: play)
         }
+        
         return winner
     }
     
@@ -450,7 +664,8 @@ class PlayViewController: UIViewController {
         var number: Int? = nil
         
         massCheckers.forEach { checker in
-            if (checker.colorTag! < 12 && (checker.positionTag == 62 || checker.positionTag == 60 || checker.positionTag == 58 || checker.positionTag == 56)) || (checker.colorTag! >= 12 && (checker.positionTag == 1 || checker.positionTag == 3 || checker.positionTag == 5 || checker.positionTag == 7)) {
+            guard checker.lady == false else { return }
+            if (checker.colorTag! < 12 && (checker.positionTag == 62 || checker.positionTag == 60 || checker.positionTag! == 58 || checker.positionTag == 56)) || (checker.colorTag! >= 12 && (checker.positionTag == 1 || checker.positionTag == 3 || checker.positionTag! == 5 || checker.positionTag == 7)) {
                 number = checker.positionTag
             }
         }
@@ -586,7 +801,6 @@ class PlayViewController: UIViewController {
                 if canFight == true {
                     
                     mass.removeAll(where: {$0.checker != checker.tag })
-                    //print("2: \(mass)")
                     smartBlur(for: checker)
                     if mass.isEmpty {
                         canFight = false
@@ -599,6 +813,7 @@ class PlayViewController: UIViewController {
                 helloLabel.text = currentChecker == .white ? "\(playerWithWhiteChecker), your move." : "\(playerWithBlackChecker), your move."
                 findFight()
             }
+            
             
         default: break
         }
@@ -614,7 +829,14 @@ extension UIViewController: UIGestureRecognizerDelegate {
 
 extension PlayViewController: CustomButtonDelegate {
     func buttonDidTap(_ sender: CustomButton) {
-        
+        guard gameOver == false else {
+            presentAlertController(with: nil,
+                                   message: "",
+                                   actions: UIAlertAction(title: "alert_title2_text_playScreen".localized, style: .default,
+                                    handler: { _ in
+                                        self.dismiss(animated: true, completion: nil)}))
+            return
+        }
         presentAlertController(with: nil,
                                message: "alert_message_text_playScreen".localized,
                                actions: UIAlertAction(title: "alert_title1_text_playScreen".localized,
