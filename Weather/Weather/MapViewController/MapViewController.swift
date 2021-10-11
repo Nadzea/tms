@@ -7,7 +7,7 @@
 
 import UIKit
 import MapKit
-import CoreLocation
+//import CoreLocation
 
 class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -20,7 +20,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var feelLikesLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     
-    let locationManager = CLLocationManager()
+    //let locationManager = CLLocationManager()
     
     var weatherData = WeatherData() {
         didSet {
@@ -43,32 +43,32 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        setupLocation { result in
-            guard result else { return }
-            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest //задаем точность
-            self.locationManager.delegate = self
-            self.locationManager.startUpdatingLocation()
-        }
+//        setupLocation { result in
+//            guard result else { return }
+//            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest //задаем точность
+//            self.locationManager.delegate = self
+//            self.locationManager.startUpdatingLocation()
+//        }
         
         infoView.center.x -= view.bounds.width
     }
     
-    func setupLocation(_ completion: (Bool) ->()) {    //проверяем включена ли геолокация на телефоне
-        guard CLLocationManager.locationServicesEnabled() else {
-            completion(false)
-            return
-        }
-        
-        switch locationManager.authorizationStatus {
-        case .authorizedAlways, .authorizedWhenInUse:
-            completion(true)
-        case .denied:
-            completion(false)
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-        default: break
-        }
-    }
+//    func setupLocation(_ completion: (Bool) ->()) {    //проверяем включена ли геолокация на телефоне
+//        guard CLLocationManager.locationServicesEnabled() else {
+//            completion(false)
+//            return
+//        }
+//
+//        switch locationManager.authorizationStatus {
+//        case .authorizedAlways, .authorizedWhenInUse:
+//            completion(true)
+//        case .denied:
+//            completion(false)
+//        case .notDetermined:
+//            locationManager.requestWhenInUseAuthorization()
+//        default: break
+//        }
+//    }
     
     func updateView(weatherData: WeatherData) {
         
@@ -97,7 +97,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
                 HttpManager.shared.getWeatherData(url) { weatherData in
                     self.weatherData = weatherData
                 }
-                UIView.animate(withDuration: 2, delay: 0) {
+                UIView.animate(withDuration: 1, delay: 0) {
                     self.infoView.center.x += self.view.bounds.width
                 }
             }
@@ -111,10 +111,16 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @objc func foundTap(_ recognizer: UITapGestureRecognizer) {
+        if infoView.center.x > 0 {
+            UIView.animate(withDuration: 0.5, delay: 0) {
+                self.infoView.center.x -= self.view.bounds.width
+            }
+        }
+        
         
         let point: CGPoint = recognizer.location(in: mapView)
         print(point)
-        let tapPoint: CLLocationCoordinate2D = mapView.convert(point, toCoordinateFrom: view)
+        let tapPoint: CLLocationCoordinate2D = mapView.convert(point, toCoordinateFrom: mapView)
         print(tapPoint)
         let point1 = MKPointAnnotation()
         point1.coordinate = tapPoint
@@ -126,12 +132,12 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 }
 
-extension MapViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let coordinate = locations.first?.coordinate else { return }
-        print(coordinate.latitude)
-    }
-}
+//extension MapViewController: CLLocationManagerDelegate {
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        guard let coordinate = locations.first?.coordinate else { return }
+//        print(coordinate.latitude)
+//    }
+//}
 
 extension CLPlacemark {
     /// street name, eg. Infinite Loop

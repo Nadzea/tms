@@ -40,20 +40,16 @@ struct WeatherData: Codable {
     
 }
 
-struct Cnt: Codable {
-    var cnt: Int = 0
-}
-
 struct List: Codable {
     var main: Main = Main()
     var weather: [Weather] = []
     var wind: Wind = Wind()
     var dt: Int = 0
-    //var dt_txt: String = ""
+    var dt_txt: String = ""
 }
 
 struct WeatherDataForFiveDays: Codable {
-    var message: String = ""
+    var message: Int = 0
     var cod: String = ""
    // var cnt: Int = 0
     var list: [List] = []

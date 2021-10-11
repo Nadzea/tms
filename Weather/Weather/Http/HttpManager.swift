@@ -17,11 +17,11 @@ class HttpManager {
             guard let data = response.data else { return }
             onCompletion(ParseManager.shared.parseWeatherData(data))
         }
-        
     }
     
     func getWeatherDataFofFiveDays(_ URL: String, onCompletion: @escaping (WeatherDataForFiveDays) -> Void) {
         AF.request(URL, method: .get).response(queue: DispatchQueue.global(qos: .userInteractive)) { response in
+            guard (response.response?.statusCode) != 404 else { return }
             guard let data = response.data else { return }
             onCompletion(ParseManager.shared.parseWeatherDataForFiveDays(data))
         }

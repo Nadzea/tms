@@ -9,5 +9,7 @@ target 'Weather' do
   pod 'Alamofire', '~> 5.4'
   pod 'AlamofireNetworkActivityLogger', '~> 3.4'
   pod 'TextFieldEffects'
+  pod 'RealmSwift', '~>10'
+ 
 
 end

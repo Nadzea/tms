@@ -17,83 +17,96 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7K4-th-qCX">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWl-4J-60R">
                                 <rect key="frame" x="0.0" y="44" width="240" height="350"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="AVG-TR-NOM">
-                                        <rect key="frame" x="2" y="2" width="236" height="0.0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="AVG-TR-NOM">
+                                        <rect key="frame" x="2" y="2" width="196" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmz-B1-aMt">
-                                        <rect key="frame" x="4" y="60" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="4" y="86" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
                                         <color key="textColor" red="0.093494244589999997" green="0.075848895350000001" blue="0.1024872922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVH-sa-sQX">
-                                        <rect key="frame" x="4" y="84" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="4" y="110" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
                                         <color key="textColor" red="0.093494244589999997" green="0.075848895350000001" blue="0.1024872922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dZ-na-7gz">
-                                        <rect key="frame" x="4" y="108" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="4" y="134" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
                                         <color key="textColor" red="0.093494244589999997" green="0.075848895350000001" blue="0.1024872922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The weather is now:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Up2-vc-Uap">
-                                        <rect key="frame" x="25.5" y="28" width="189.5" height="26.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <rect key="frame" x="7.5" y="44" width="225" height="38"/>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="30"/>
                                         <color key="textColor" red="0.070416038479999998" green="0.10971233449999999" blue="0.60598768729999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeI-HH-Esa">
-                                        <rect key="frame" x="4" y="230.5" width="232" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="4" y="268" width="232" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
                                         <color key="textColor" red="0.10012872909999999" green="0.1024872922" blue="0.09332157479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifj-en-6y5">
-                                        <rect key="frame" x="100.5" y="238.5" width="39" height="30"/>
-                                        <state key="normal" title="Close"/>
-                                        <connections>
-                                            <action selector="closeInfoView:" destination="xYL-NE-45n" eventType="touchUpInside" id="dlb-mK-26b"/>
-                                        </connections>
-                                    </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ejl-r1-H66">
-                                        <rect key="frame" x="95" y="174.5" width="50" height="50"/>
+                                        <rect key="frame" x="95" y="212" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="f6M-1M-Jee"/>
                                             <constraint firstAttribute="width" constant="50" id="zNh-cS-cS8"/>
                                         </constraints>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="rGl-3F-C80">
+                                        <rect key="frame" x="200" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Mss-z6-vFA"/>
+                                            <constraint firstAttribute="width" constant="40" id="OdK-hp-PXq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxa-W6-XF4">
+                                        <rect key="frame" x="200" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Gtq-RI-dQz"/>
+                                            <constraint firstAttribute="width" constant="40" id="gzt-Uy-Abi"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="closeInfoView:" destination="xYL-NE-45n" eventType="touchUpInside" id="Q5M-NJ-AlY"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <color key="backgroundColor" red="0.8144606499" green="0.95136994379999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="AVG-TR-NOM" firstAttribute="top" secondItem="YWl-4J-60R" secondAttribute="top" constant="2" id="0F6-9d-Pzt"/>
                                     <constraint firstItem="8dZ-na-7gz" firstAttribute="leading" secondItem="YWl-4J-60R" secondAttribute="leading" constant="4" id="1iU-ua-mh8"/>
-                                    <constraint firstItem="qmz-B1-aMt" firstAttribute="top" secondItem="AVG-TR-NOM" secondAttribute="bottom" constant="58" id="326-v0-z2m"/>
-                                    <constraint firstItem="ejl-r1-H66" firstAttribute="top" secondItem="Up2-vc-Uap" secondAttribute="bottom" constant="120" id="3lE-dn-W5u"/>
+                                    <constraint firstItem="bxa-W6-XF4" firstAttribute="top" secondItem="YWl-4J-60R" secondAttribute="top" id="28W-zC-MyD"/>
+                                    <constraint firstItem="qmz-B1-aMt" firstAttribute="top" secondItem="AVG-TR-NOM" secondAttribute="bottom" constant="68" id="326-v0-z2m"/>
+                                    <constraint firstItem="ejl-r1-H66" firstAttribute="top" secondItem="Up2-vc-Uap" secondAttribute="bottom" constant="130" id="3lE-dn-W5u"/>
                                     <constraint firstItem="OVH-sa-sQX" firstAttribute="leading" secondItem="YWl-4J-60R" secondAttribute="leading" constant="4" id="4Yl-UP-XTw"/>
                                     <constraint firstItem="Up2-vc-Uap" firstAttribute="centerX" secondItem="YWl-4J-60R" secondAttribute="centerX" id="4nN-ED-nxF"/>
                                     <constraint firstItem="qmz-B1-aMt" firstAttribute="leading" secondItem="YWl-4J-60R" secondAttribute="leading" constant="4" id="5wT-fv-WYq"/>
-                                    <constraint firstAttribute="trailing" secondItem="AVG-TR-NOM" secondAttribute="trailing" constant="2" id="JUB-cN-PF4"/>
+                                    <constraint firstItem="rGl-3F-C80" firstAttribute="leading" secondItem="AVG-TR-NOM" secondAttribute="trailing" constant="2" id="EGS-F5-los"/>
                                     <constraint firstItem="8dZ-na-7gz" firstAttribute="top" secondItem="OVH-sa-sQX" secondAttribute="bottom" constant="24" id="Mvo-m1-Hlb"/>
                                     <constraint firstItem="OVH-sa-sQX" firstAttribute="top" secondItem="qmz-B1-aMt" secondAttribute="bottom" constant="24" id="U0V-xj-oGp"/>
                                     <constraint firstAttribute="width" constant="240" id="YRK-lS-J81"/>
                                     <constraint firstItem="ejl-r1-H66" firstAttribute="centerX" secondItem="YWl-4J-60R" secondAttribute="centerX" id="aPs-5z-9UV"/>
                                     <constraint firstItem="AVG-TR-NOM" firstAttribute="leading" secondItem="YWl-4J-60R" secondAttribute="leading" constant="2" id="eRI-Ch-ayR"/>
                                     <constraint firstAttribute="height" constant="350" id="gyF-c7-FdC"/>
-                                    <constraint firstItem="ifj-en-6y5" firstAttribute="centerX" secondItem="YWl-4J-60R" secondAttribute="centerX" id="iV4-iM-2Jz"/>
+                                    <constraint firstItem="AVG-TR-NOM" firstAttribute="leading" secondItem="YWl-4J-60R" secondAttribute="leading" constant="2" id="jEb-2r-YH9"/>
                                     <constraint firstItem="Up2-vc-Uap" firstAttribute="top" secondItem="AVG-TR-NOM" secondAttribute="bottom" constant="26" id="kI9-3j-UmZ"/>
                                     <constraint firstAttribute="trailing" secondItem="WeI-HH-Esa" secondAttribute="trailing" constant="4" id="kOY-dr-SkN"/>
-                                    <constraint firstItem="ifj-en-6y5" firstAttribute="top" secondItem="WeI-HH-Esa" secondAttribute="bottom" constant="8" id="qSK-MU-hKX"/>
+                                    <constraint firstItem="rGl-3F-C80" firstAttribute="top" secondItem="YWl-4J-60R" secondAttribute="top" id="kpH-Lq-Sas"/>
+                                    <constraint firstAttribute="trailing" secondItem="bxa-W6-XF4" secondAttribute="trailing" id="ljB-aF-x8P"/>
                                     <constraint firstItem="WeI-HH-Esa" firstAttribute="leading" secondItem="YWl-4J-60R" secondAttribute="leading" constant="4" id="rZh-DY-GK0"/>
+                                    <constraint firstAttribute="trailing" secondItem="rGl-3F-C80" secondAttribute="trailing" id="sZ3-4W-wS1"/>
                                     <constraint firstItem="WeI-HH-Esa" firstAttribute="top" secondItem="ejl-r1-H66" secondAttribute="bottom" constant="6" id="x50-yl-swM"/>
                                 </constraints>
                             </view>
@@ -101,12 +114,12 @@
                         <viewLayoutGuide key="safeArea" id="uWA-Ms-69l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uWA-Ms-69l" firstAttribute="trailing" secondItem="7K4-th-qCX" secondAttribute="trailing" id="Glw-vs-ARH"/>
                             <constraint firstItem="uWA-Ms-69l" firstAttribute="bottom" secondItem="7K4-th-qCX" secondAttribute="bottom" id="RF8-0K-mvo"/>
-                            <constraint firstItem="YWl-4J-60R" firstAttribute="leading" secondItem="uWA-Ms-69l" secondAttribute="leading" id="eLG-Vo-rg9"/>
+                            <constraint firstItem="7K4-th-qCX" firstAttribute="trailing" secondItem="S7T-cj-Zon" secondAttribute="trailing" id="Sit-r5-HDF"/>
+                            <constraint firstItem="YWl-4J-60R" firstAttribute="leading" secondItem="S7T-cj-Zon" secondAttribute="leading" id="eLG-Vo-rg9"/>
                             <constraint firstItem="YWl-4J-60R" firstAttribute="top" secondItem="uWA-Ms-69l" secondAttribute="top" id="fUa-nL-nos"/>
-                            <constraint firstItem="7K4-th-qCX" firstAttribute="leading" secondItem="uWA-Ms-69l" secondAttribute="leading" id="iwh-vD-WWY"/>
-                            <constraint firstItem="7K4-th-qCX" firstAttribute="top" secondItem="uWA-Ms-69l" secondAttribute="top" id="jme-2U-bEe"/>
+                            <constraint firstItem="7K4-th-qCX" firstAttribute="leading" secondItem="S7T-cj-Zon" secondAttribute="leading" id="iwh-vD-WWY"/>
+                            <constraint firstItem="7K4-th-qCX" firstAttribute="top" secondItem="S7T-cj-Zon" secondAttribute="top" id="jme-2U-bEe"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="ios-tab-bar-icons-map-geo-location-removebg-preview" id="9UN-zg-F8Y"/>
@@ -128,12 +141,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="225" height="225"/>
         <image name="ios-tab-bar-icons-map-geo-location-removebg-preview" width="47.333332061767578" height="42.333332061767578"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -19,28 +19,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Paf-Tw-Uau">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="448" id="9of-9L-hS8"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWH-kh-rIU">
-                                <rect key="frame" x="82" y="39" width="250" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWH-kh-rIU">
+                                <rect key="frame" x="82" y="100" width="250" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="l4t-SA-Vny"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Italic" family="Avenir Next Condensed" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Jd-rU-obB">
-                                <rect key="frame" x="20" y="94" width="374" height="205"/>
+                                <rect key="frame" x="20" y="100" width="374" height="205"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbz-G3-bE6">
-                                        <rect key="frame" x="166" y="107.5" width="42.5" height="23"/>
-                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbz-G3-bE6">
+                                        <rect key="frame" x="187" y="50" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcG-sb-Q1C">
-                                        <rect key="frame" x="134" y="40" width="106" height="57.5"/>
-                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcG-sb-Q1C">
+                                        <rect key="frame" x="187" y="40" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -51,27 +54,27 @@
                                             <constraint firstAttribute="width" constant="70" id="fab-Ri-9i0"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOC-Nd-eNk">
-                                        <rect key="frame" x="4" y="20" width="38.5" height="21"/>
-                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOC-Nd-eNk">
+                                        <rect key="frame" x="4" y="20" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EN-Q3-QAq">
-                                        <rect key="frame" x="-8.5" y="45" width="63.5" height="34.5"/>
-                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EN-Q3-QAq">
+                                        <rect key="frame" x="4" y="24" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfd-pP-v88">
-                                        <rect key="frame" x="303" y="80" width="32" height="17.5"/>
-                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfd-pP-v88">
+                                        <rect key="frame" x="319" y="80" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIo-NE-b5N">
-                                        <rect key="frame" x="2" y="162.5" width="370" height="23"/>
-                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIo-NE-b5N">
+                                        <rect key="frame" x="2" y="82" width="370" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -109,16 +112,15 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
-                            <constraint firstItem="7Jd-rU-obB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="3Sa-PV-gGc"/>
+                            <constraint firstItem="7Jd-rU-obB" firstAttribute="top" secondItem="Paf-Tw-Uau" secondAttribute="top" constant="100" id="3Sa-PV-gGc"/>
                             <constraint firstItem="7Jd-rU-obB" firstAttribute="top" secondItem="MWH-kh-rIU" secondAttribute="bottom" id="DTQ-Cd-GSl"/>
                             <constraint firstItem="7Jd-rU-obB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Ed9-J5-bf3"/>
                             <constraint firstItem="Paf-Tw-Uau" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="NwG-CR-YlK"/>
                             <constraint firstItem="pB0-Q2-VxS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bd2-6S-3Gi"/>
                             <constraint firstAttribute="bottom" secondItem="pB0-Q2-VxS" secondAttribute="bottom" constant="30" id="emj-Xz-mh5"/>
                             <constraint firstItem="MWH-kh-rIU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="lew-6B-Cv4"/>
-                            <constraint firstItem="Paf-Tw-Uau" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qGI-gH-4xX"/>
-                            <constraint firstItem="Paf-Tw-Uau" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="snd-AI-Juh"/>
-                            <constraint firstItem="Paf-Tw-Uau" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ujv-n7-f3n"/>
+                            <constraint firstItem="Paf-Tw-Uau" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="qGI-gH-4xX"/>
+                            <constraint firstItem="Paf-Tw-Uau" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="ujv-n7-f3n"/>
                         </constraints>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
