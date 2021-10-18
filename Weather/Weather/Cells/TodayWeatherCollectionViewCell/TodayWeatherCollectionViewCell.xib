@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TodayWeatherCollectionViewCell" customModule="Weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="99" height="128"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="99" height="128"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuv-fh-aZn">
+                        <rect key="frame" x="4" y="4" width="91" height="24"/>
+                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ex-gV-xbb">
+                        <rect key="frame" x="24.5" y="38" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="b3w-jY-zJF"/>
+                            <constraint firstAttribute="width" constant="50" id="hG5-vR-0q0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1R-Jc-xEw">
+                        <rect key="frame" x="0.0" y="98" width="99" height="24"/>
+                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="4Ex-gV-xbb" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="CPO-Bv-Fl0"/>
+                <constraint firstItem="O1R-Jc-xEw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="E1f-vB-gjj"/>
+                <constraint firstAttribute="trailing" secondItem="O1R-Jc-xEw" secondAttribute="trailing" id="XRB-Ha-maL"/>
+                <constraint firstItem="4Ex-gV-xbb" firstAttribute="top" secondItem="iuv-fh-aZn" secondAttribute="bottom" constant="10" id="dIk-CH-9Ex"/>
+                <constraint firstAttribute="trailing" secondItem="iuv-fh-aZn" secondAttribute="trailing" constant="4" id="dhv-bp-hY3"/>
+                <constraint firstItem="O1R-Jc-xEw" firstAttribute="top" secondItem="4Ex-gV-xbb" secondAttribute="bottom" constant="10" id="gHm-x0-byK"/>
+                <constraint firstItem="iuv-fh-aZn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="piB-uR-jkj"/>
+                <constraint firstItem="iuv-fh-aZn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="puu-0u-LFg"/>
+            </constraints>
+            <size key="customSize" width="99" height="128"/>
+            <connections>
+                <outlet property="tempLabel" destination="O1R-Jc-xEw" id="LvK-Dv-aWq"/>
+                <outlet property="timeLabel" destination="iuv-fh-aZn" id="pN3-0s-caY"/>
+                <outlet property="weatherIcon" destination="4Ex-gV-xbb" id="fEI-mf-aZ0"/>
+            </connections>
+            <point key="canvasLocation" x="76.08695652173914" y="87.723214285714278"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -19,12 +19,15 @@ class WeatherInfoViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
     @IBOutlet weak var videoView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var date = Date()
     let dateFormater = DateFormatter()
+    var dayAfterTommorrow: Double = 0
     var player: AVPlayer?
     
     var city: String = ""
+    var dataSource: [TodayWeather] = []
     
     var weatherData = WeatherData() {
         didSet {
@@ -38,12 +41,19 @@ class WeatherInfoViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.updateForecast()
+                self.setupCollectionView()
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cityName.center.x -= self.view.bounds.width
+        
+        collectionView.layer.cornerRadius = 30
+        
+        getDate()
         
         let url = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=bb3af6a661e716dc3b3bfab4c1c87d6c"
         let urlForFiveDays = "https://api.openweathermap.org/data/2.5/forecast?q=\(city)&appid=bb3af6a661e716dc3b3bfab4c1c87d6c"
@@ -53,22 +63,34 @@ class WeatherInfoViewController: UIViewController {
             self.weatherData = weatherData
         }
         
-        if weatherData.name == "" {
-            cityName.text = "City not found"
-        }
-        
         HttpManager.shared.getWeatherDataFofFiveDays(urlForFiveDays) { weatherDataForFiveDays in
             self.weatherDataForFiveDays = weatherDataForFiveDays
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         
-        getDate()
-        
+        UIView.animate(withDuration: 2, delay: 0, options: .curveEaseOut) {
+            self.cityName.center.x += self.view.bounds.width
+            
+        } completion: { finished in
+            if self.cityName.text == "" {
+                self.cityName.text = "City not found"
+            }
+        }
     }
     
     func getDate() {
         dateFormater.dateFormat = "dd MMM. yy"
         let today = dateFormater.string(from: date)
-        print(date)
+        
+        let calendar = Calendar.current
+        let currentdate = calendar.dateComponents(in: .current, from: date)
+        
+        let time = (currentdate.second ?? 0) + (currentdate.minute ?? 0) * 60 + (currentdate.hour ?? 0) * 60 * 60
+        dayAfterTommorrow = date.timeIntervalSince1970 + Double((86400 - time)) + 86400
+        
         dateFormater.dateFormat = "EEE"
         let dayOfWeek = dateFormater.string(from: date).capitalized
         dateLabel.text = "\(dayOfWeek) \(today) "
@@ -97,7 +119,6 @@ class WeatherInfoViewController: UIViewController {
         player.play()
     }
     
-        
     func updateView(_ weatherData: WeatherData) {
         
         self.cityName.text = "\(weatherData.name), \(weatherData.sys.country)"
@@ -109,96 +130,31 @@ class WeatherInfoViewController: UIViewController {
         self.feelLikesLabel.text = "Fell likes \(tempFeelLikes)°C"
         self.weatherIcon.image = UIImage(named: weatherData.weather[0].icon)
         
-        
-        switch weatherData.wind.deg {
-        case 0...11, 349...360:
-            self.windLabel.text = "Wind: north \(weatherData.wind.speed)m/s"
-        case 12...78:
-            self.windLabel.text = "Wind: northeast \(weatherData.wind.speed)m/s"
-        case 79...101:
-            self.windLabel.text = "Wind: east \(weatherData.wind.speed)m/s"
-        case 102...168:
-            self.windLabel.text = "Wind: southeast \(weatherData.wind.speed)m/s"
-        case 169...191:
-            self.windLabel.text = "Wind: south \(weatherData.wind.speed)m/s"
-        case 192...258:
-            self.windLabel.text = "Wind: southwest \(weatherData.wind.speed)m/s"
-        case 259...281:
-            self.windLabel.text = "Wind: west \(weatherData.wind.speed)m/s"
-        case 282...348:
-            self.windLabel.text = "Wind: northwest \(weatherData.wind.speed)m/s"
-        default:
-            self.windLabel.text = ""
-        }
-        
-        switch weatherData.weather[0].id {
-        case 200, 201, 210, 211, 230, 231:
-            let pathVideo = Bundle.main.path(forResource: "thunderstorm", ofType: "mp4")
-            self.playVideo(pathVideo)
-        case 202, 232:
-            let pathVideo = Bundle.main.path(forResource: "thunderstormWithRain", ofType: "mp4")
-            self.playVideo(pathVideo)
-        case 212, 221:
-            let pathVideo = Bundle.main.path(forResource: "heavyThunderstorm", ofType: "mp4")
-            self.playVideo(pathVideo)
-        case 501, 521, 531:
-            let pathVideo = Bundle.main.path(forResource: "rain", ofType: "mp4")
-            self.playVideo(pathVideo)
-        case 503, 502, 520, 522:
-            let pathVideo = Bundle.main.path(forResource: "veryHeavyRain", ofType: "mp4")
-            self.playVideo(pathVideo)
-        case 500:
-            let pathVideo = Bundle.main.path(forResource: "lightRain", ofType: "mp4")
-            self.playVideo(pathVideo)
-        case 800:
-            let pathVideo = Bundle.main.path(forResource: "clearSky", ofType: "mp4")
-            self.playVideo(pathVideo)
-        case 801:
-            let pathVideo = Bundle.main.path(forResource: "fewClouds 2", ofType: "mp4")
-            self.playVideo(pathVideo)
-        case 802:
-            let pathVideo = Bundle.main.path(forResource: "scatteredСlouds", ofType: "mp4")
-            self.playVideo(pathVideo)
-        case 803:
-            let pathVideo = Bundle.main.path(forResource: "brokenСlouds", ofType: "mp4")
-            self.playVideo(pathVideo)
-        case 804:
-            let pathVideo = Bundle.main.path(forResource: "overcastClouds", ofType: "mp4")
-            self.playVideo(pathVideo)
-            
-        default: break
-        }
+        windLabel.text = weatherData.wind.deg.typeOfWind() + "\(weatherData.wind.speed)m/s"
+        playVideo(weatherData.weather[0].id.typeOfVideo())
         
     }
     
     func updateForecast() {
-        let dateFormater = DateFormatter()
-        //dateFormater.dateFormat = "dd.MM.yy"
-        var tempMin: Double = 0
-        var tempMax: Double = 0
-        var dateSting: String = ""
-        var dayOfWeek: String = ""
-        for i in 0...8 {
-            print(weatherDataForFiveDays.list[0].weather[0].icon)
-            let date = dateFormater.date(from: weatherDataForFiveDays.list[0].dt_txt) ?? Date()
-            dateFormater.dateFormat = "dd.MM.yy"
-            dateSting = dateFormater.string(from: date)
-            dateFormater.dateFormat = "EEE"
-            dayOfWeek = dateFormater.string(from: date).capitalized
-            tempMin = weatherDataForFiveDays.list[0].main.temp
-            tempMax = weatherDataForFiveDays.list[0].main.temp
-            if weatherDataForFiveDays.list[i].main.temp < tempMin {
-                tempMin = weatherDataForFiveDays.list[i].main.temp
-            }
-            if weatherDataForFiveDays.list[i].main.temp > tempMax {
-                tempMax = weatherDataForFiveDays.list[i].main.temp
+        
+        for i in 0...16 {
+            
+            if weatherDataForFiveDays.list[i].dt <= Int(dayAfterTommorrow) {
+                
+                let nextTime = Date(timeIntervalSince1970: TimeInterval(weatherDataForFiveDays.list[i].dt))
+                dateFormater.dateFormat = "HH:mm"
+                let time = dateFormater.string(from: nextTime)
+                let tempC = Int(round(weatherDataForFiveDays.list[i].main.temp - 273.15))
+                let todayWeather = TodayWeather(time: time, imageName: weatherDataForFiveDays.list[i].weather[0].icon, temp: tempC)
+                dataSource.append(todayWeather)
             }
         }
-        print(dateSting)
-        print(dayOfWeek)
-        print(tempMin)
-        print(tempMax)
-        
+    }
+    
+    private func setupCollectionView() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(UINib(nibName: "TodayWeatherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TodayWeatherCollectionViewCell")
     }
     
     @IBAction func backScreen(_ senser: Any) {
@@ -206,5 +162,27 @@ class WeatherInfoViewController: UIViewController {
             RealmManager.shared.createRequest(weatherData: weatherData, date: date)
         }
         self.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension WeatherInfoViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodayWeatherCollectionViewCell", for: indexPath) as? TodayWeatherCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.setData(with: dataSource[indexPath.item])
+        
+        return cell
+    }
+}
+
+extension WeatherInfoViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 80, height: 130)
     }
 }

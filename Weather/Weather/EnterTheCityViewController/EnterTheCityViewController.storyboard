@@ -36,13 +36,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather" translatesAutoresizingMaskIntoConstraints="NO" id="F8M-fX-cY0">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" translatesAutoresizingMaskIntoConstraints="NO" id="5Au-ri-KTn">
-                                <rect key="frame" x="10" y="44" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="gqp-9g-Rgr"/>
-                                    <constraint firstAttribute="width" constant="50" id="uON-lT-d8V"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="enter the city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2bA-9h-7dG" customClass="AkiraTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="10" y="94" width="394" height="80"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,6 +109,13 @@
                                     <action selector="weatherInMyLocationButton:" destination="nMh-J7-eu2" eventType="touchUpInside" id="1z1-mL-Zib"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" translatesAutoresizingMaskIntoConstraints="NO" id="5Au-ri-KTn">
+                                <rect key="frame" x="10" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gqp-9g-Rgr"/>
+                                    <constraint firstAttribute="width" constant="50" id="uON-lT-d8V"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTD-Tq-6mx">
                                 <rect key="frame" x="10" y="44" width="50" height="50"/>
                                 <constraints>

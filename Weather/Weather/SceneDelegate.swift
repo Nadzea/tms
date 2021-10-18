@@ -13,6 +13,39 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        if let notification = connectionOptions.notificationResponse {
+            if let newVC = notification.notification.request.content.userInfo["current"] as? String {
+                SettingsManager.shared.pushVC = newVC
+            }
+        }
+        
+        RCManager.shared.remoteConfigConnected = {
+            
+        }
+        
+        RCManager.shared.connected()
+        let tabBarController = UITabBarController()
+        
+        guard let vc1 = UIViewController.getViewController(by: "EnterTheCityViewController"),
+              let vc2 = UIViewController.getViewController(by: "MapViewController1"),
+              let vc3 = UIViewController.getViewController(by: "MapViewController") else { return }
+        
+        if RCManager.shared.getBoolValue(from: .useGoogleMaps) {
+            print("Google")
+            tabBarController.viewControllers = [vc1, vc2]
+            window?.rootViewController = tabBarController
+            window?.makeKeyAndVisible()
+            //tabBarController.selectedViewController = vc2
+            //self.view.addSubview(tabBarController.view)
+        } else {
+            print("Apple")
+            tabBarController.viewControllers = [vc1, vc3]
+            window?.rootViewController = tabBarController
+            window?.makeKeyAndVisible()
+        }
+        
+        
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).

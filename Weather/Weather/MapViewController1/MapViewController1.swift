@@ -1,18 +1,17 @@
 //
-//  MapViewController.swift
+//  MapViewViewController1.swift
 //  Weather
 //
-//  Created by Надежда Клименко on 2.10.21.
+//  Created by Надежда Клименко on 18.10.21.
 //
 
 import UIKit
-import MapKit
 import GoogleMaps
 
-
-class MapViewController: UIViewController, UIGestureRecognizerDelegate {
+class MapViewController1: UIViewController {
     
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var markerImage: UIImageView!
     
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var infoView: UIView!
@@ -21,9 +20,6 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var feelLikesLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
-    
-    let anotationCenter = MKPointAnnotation()
-    var dispatchItem: DispatchWorkItem?
     
     var weatherData = WeatherData() {
         didSet {
@@ -35,16 +31,14 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        infoView.center.x -= view.bounds.width
         
-        mapView.showsUserLocation = true
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(foundTap(_:)))
-        tapGesture.delegate = self
-        mapView.addGestureRecognizer(tapGesture)
-        
+        mapView.isMyLocationEnabled = true
         mapView.delegate = self
-        anotationCenter.coordinate = mapView.centerCoordinate
-        mapView.addAnnotation(anotationCenter)
+        let marker = GMSMarker()
         
+        marker.iconView = markerImage
+        marker.map = mapView
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,6 +59,12 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func getAdressAndWeather(getLat: CLLocationDegrees, getLon: CLLocationDegrees) {
+        
+        if infoView.center.x > 0 {
+            UIView.animate(withDuration: 0.5, delay: 0) {
+                self.infoView.center.x -= self.view.bounds.width
+            }
+        }
         
         let locationTouch: CLLocation =  CLLocation(latitude: getLat, longitude: getLon)
         
@@ -92,47 +92,48 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
             self.infoView.center.x -= self.view.bounds.width
         }
     }
+}
+
+extension MapViewController1: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        UIView.animate(withDuration: 0.5, delay: 0) {
+            self.infoView.center.x -= self.view.bounds.width
+        }
+        print("willMove")
+    }
     
-    @objc func foundTap(_ recognizer: UITapGestureRecognizer) {
-        if infoView.center.x > 0 {
-            UIView.animate(withDuration: 0.5, delay: 0) {
-                self.infoView.center.x -= self.view.bounds.width
-            }
-        }
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        print("didChange position \(position.target)")
+    }
+    
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        print("idleAt \(position.target)")
         
-        let point: CGPoint = recognizer.location(in: mapView)
-        print(point)
-        let tapPoint: CLLocationCoordinate2D = mapView.convert(point, toCoordinateFrom: mapView)
-        print(tapPoint)
-        let point1 = MKPointAnnotation()
-        point1.coordinate = tapPoint
-        mapView.addAnnotation(point1)
-        let getLat: CLLocationDegrees = tapPoint.latitude
-        let getLon: CLLocationDegrees = tapPoint.longitude
+        getAdressAndWeather(getLat: position.target.latitude, getLon: position.target.longitude)
+    
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        let marker = GMSMarker(position: coordinate)
+             marker.map = mapView
         
-        getAdressAndWeather(getLat: getLat, getLon: getLon)
+        getAdressAndWeather(getLat: coordinate.latitude, getLon: coordinate.longitude)
     }
 }
 
-extension MapViewController: MKMapViewDelegate {
-    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
-        
-        if infoView.center.x > 0 {
-            UIView.animate(withDuration: 0.5, delay: 0) {
-                self.infoView.center.x -= self.view.bounds.width
-            }
-        }
-        anotationCenter.coordinate = mapView.centerCoordinate
-        
-        self.dispatchItem?.cancel()
-        self.dispatchItem = DispatchWorkItem {
-            guard self.dispatchItem?.isCancelled == false else { return }
-            
-            self.getAdressAndWeather(getLat: self.mapView.centerCoordinate.latitude, getLon: self.mapView.centerCoordinate.longitude)
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: self.dispatchItem!)
-    }
+extension CLPlacemark {
+    /// street name, eg. Infinite Loop
+    var streetName: String? { thoroughfare }
+    /// // eg. 1
+    var streetNumber: String? { subThoroughfare }
+    /// city, eg. Cupertino
+    var city: String? { locality }
+    /// neighborhood, common name, eg. Mission District
+    var neighborhood: String? { subLocality }
+    /// state, eg. CA
+    var state: String? { administrativeArea }
+    /// county, eg. Santa Clara
+    var county: String? { subAdministrativeArea }
+    /// zip code, eg. 95014
+    var zipCode: String? { postalCode }
 }
-
-

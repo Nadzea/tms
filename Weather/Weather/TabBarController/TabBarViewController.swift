@@ -7,14 +7,33 @@
 
 import UIKit
 import UserNotifications
-//import CoreLocation
 
 class TabBarViewController: UITabBarController {
-    
-    //let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        RCManager.shared.remoteConfigConnected = {
+//            
+//        }
+//        
+//        RCManager.shared.connected()
+//        
+//        let tabBarController = UITabBarController()
+//        
+//        guard let vc1 = UIViewController.getViewController(by: "EnterTheCityViewController"),
+//              let vc2 = UIViewController.getViewController(by: "MapViewController1"),
+//              let vc3 = UIViewController.getViewController(by: "MapViewController") else { return }
+//        
+//        if RCManager.shared.getBoolValue(from: .useGoogleMaps) {
+//            
+//            tabBarController.viewControllers = [vc1, vc2]
+//            //tabBarController.selectedViewController = vc2
+//            self.view.addSubview(tabBarController.view)
+//        }else {
+//            tabBarController.viewControllers = [vc1, vc3]
+//            tabBarController.selectedViewController = vc3
+//        }
 
         if #available(iOS 15.0, *) {
            let appearance = UITabBarAppearance()
@@ -44,8 +63,9 @@ class TabBarViewController: UITabBarController {
             content.sound = UNNotificationSound.default
             content.badge = 1
             content.body = "Hello) Find out what's going on in the world"
+            content.userInfo = ["current" : "WeatherInMyLocationViewController"]
             
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 432000, repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
             let request = UNNotificationRequest(identifier: "5days_notification", content: content, trigger: trigger)  
             notificationCenter.add(request) { error in
                 print(error?.localizedDescription ?? "")
@@ -53,38 +73,5 @@ class TabBarViewController: UITabBarController {
             print("add")
         }
     }
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(true)
-//        setupLocation { result in
-//            guard result else { return }
-//            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest //задаем точность
-//            self.locationManager.delegate = self
-//            self.locationManager.startUpdatingLocation()
-//        }
-//    }
-//
-//    func setupLocation(_ completion: (Bool) ->()) {    //проверяем включена ли геолокация на телефоне
-//        guard CLLocationManager.locationServicesEnabled() else {
-//            completion(false)
-//            return
-//        }
-//
-//        switch locationManager.authorizationStatus {
-//        case .authorizedAlways, .authorizedWhenInUse:
-//            completion(true)
-//        case .denied:
-//            completion(false)
-//        case .notDetermined:
-//            locationManager.requestWhenInUseAuthorization()
-//        default: break
-//        }
-//    }
-//
 }
-//extension TabBarViewController: CLLocationManagerDelegate {
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        guard let coordinate = locations.first?.coordinate else { return }
-//        print(coordinate.latitude)
-//    }
-//}
+

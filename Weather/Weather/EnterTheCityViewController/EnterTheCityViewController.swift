@@ -15,11 +15,12 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var menuView: UIView!
     
     let locationManager = CLLocationManager()
-    var lat: Double = 0.0
-    var lon: Double = 0.0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //locationManager.requestAlwaysAuthorization()
         
         textField.delegate = self
         
@@ -28,6 +29,26 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
                 self.errorLabel.text = ""
             }
         }
+        
+        let vc = UIStoryboard(name: "EnterTheCityViewController", bundle: nil).instantiateViewController(withIdentifier: "EnterTheCityViewController")
+        
+        guard let newVC = SettingsManager.shared.pushVC,
+              let vc2 = UIViewController.getViewController(by: "WeatherInMyLocationViewController") else { return }
+        
+        switch newVC {
+        case "EnterTheCityViewController":
+            navigationController?.setViewControllers([vc], animated: true)
+        case "WeatherInMyLocationViewController":
+            setupStatus(vc: vc, vc2: vc2)
+        default: break
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {  //2
+        super.viewWillAppear(true)
+        
+        //menuView.center.x -= self.view.bounds.width
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,19 +62,14 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
         menuView.center.x -= self.view.bounds.width
     }
     
-    func setupLocation(_ completion: (Bool) ->()) {    //проверяем включена ли геолокация на телефоне
-        guard CLLocationManager.locationServicesEnabled() else {
-            completion(false)
-            return
-        }
-        
+    func setupStatus(vc: UIViewController, vc2: UIViewController) {
         switch locationManager.authorizationStatus {
+        case .notDetermined:
+            locationManager.requestAlwaysAuthorization()
         case .authorizedAlways, .authorizedWhenInUse:
-            completion(true)
+            navigationController?.setViewControllers([vc, vc2], animated: true)
         case .denied, .restricted:
             showSettingsAlert()
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
         default: break
         }
     }
@@ -82,9 +98,7 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
         }
         let storyboard = UIStoryboard(name: "WeatherInfoViewController", bundle: nil)
         
-        guard let vc = storyboard.instantiateInitialViewController() as? WeatherInfoViewController else {
-            return
-        }
+        guard let vc = storyboard.instantiateInitialViewController() as? WeatherInfoViewController else { return }
         
         vc.city = cityName
         
@@ -96,15 +110,9 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
     func presentWeatherInMyLocation() {
         let storyboard = UIStoryboard(name: "WeatherInMyLocationViewController", bundle: nil)
         
-        guard let vc = storyboard.instantiateInitialViewController() as? WeatherInMyLocationViewController else {
-            return
-        }
-        
-        vc.latitude = lat
-        vc.longitude = lon
+        guard let vc = storyboard.instantiateInitialViewController() as? WeatherInMyLocationViewController else { return }
         
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -119,7 +127,7 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
         presentWeatherInfoScreen()
         
         textField.resignFirstResponder()
-            
+        
         return true
     }
     
@@ -134,11 +142,6 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
             return
         }
         self.navigationController?.pushViewController(vc, animated: true)
-//        let currentStoryboard = UIStoryboard(name: "RequestHistoryViewController", bundle: nil)
-//        let currentViewController = currentStoryboard.instantiateInitialViewController() as! RequestHistoryViewController
-//        currentViewController.modalPresentationStyle = .fullScreen
-//        currentViewController.modalTransitionStyle = .crossDissolve
-//        present(currentViewController, animated: true, completion: nil)
     }
     
     @IBAction func presentMenu(_ sender: Any) {
@@ -154,32 +157,19 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func weatherInMyLocationButton(_ sender: Any) {
-        setupLocation { result in
-            guard result else { return }
-            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest //задаем точность
-            self.locationManager.delegate = self
-            self.locationManager.startUpdatingLocation()
+        
+        locationManager.requestAlwaysAuthorization()
+        
+        switch locationManager.authorizationStatus {
+        case .notDetermined:
+            locationManager.requestAlwaysAuthorization()
+        case .authorizedAlways, .authorizedWhenInUse:
             presentWeatherInMyLocation()
+        case .denied, .restricted:
+            showSettingsAlert()
+        default: break
         }
-        
-        
-//        let currentStoryboard = UIStoryboard(name: "WeatherInMyLocationViewController", bundle: nil)
-//        let currentViewController = currentStoryboard.instantiateInitialViewController() as! WeatherInMyLocationViewController
-//        currentViewController.modalPresentationStyle = .fullScreen
-//        currentViewController.modalTransitionStyle = .crossDissolve
-//        present(currentViewController, animated: true, completion: nil)
-        
     }
-    
 }
 
-extension EnterTheCityViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let coordinate = locations.first?.coordinate else { return }
-        
-        lat = coordinate.latitude
-        lon = coordinate.longitude
-        
-    }
-}
 

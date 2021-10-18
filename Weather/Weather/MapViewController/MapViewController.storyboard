@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7K4-th-qCX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                            </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWl-4J-60R">
                                 <rect key="frame" x="0.0" y="44" width="240" height="350"/>
                                 <subviews>
@@ -110,6 +107,9 @@
                                     <constraint firstItem="WeI-HH-Esa" firstAttribute="top" secondItem="ejl-r1-H66" secondAttribute="bottom" constant="6" id="x50-yl-swM"/>
                                 </constraints>
                             </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7K4-th-qCX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uWA-Ms-69l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

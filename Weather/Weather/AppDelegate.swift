@@ -7,6 +7,8 @@
 
 import UIKit
 import AlamofireNetworkActivityLogger
+import Firebase
+import GoogleMaps
 
 
 @main
@@ -19,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = .red
         
         // Override point for customization after application launch.
-        NetworkActivityLogger.shared.startLogging()
+        NetworkActivityLogger.shared.startLogging() //регистрирует запросы и ответы, сделанные Alamofire
+        FirebaseApp.configure()
+        GMSServices.provideAPIKey("AIzaSyBy5JH7jXEve_Tgcl8aAD_rF4KOaBYNdJw")
 
         return true
     }
