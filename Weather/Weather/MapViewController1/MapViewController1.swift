@@ -35,10 +35,10 @@ class MapViewController1: UIViewController {
         
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
-        let marker = GMSMarker()
-        
-        marker.iconView = markerImage
-        marker.map = mapView
+//        let marker = GMSMarker()
+//        
+//        marker.iconView = markerImage
+//        marker.map = mapView
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -108,7 +108,9 @@ extension MapViewController1: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         print("idleAt \(position.target)")
-        
+//        let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: position.target.latitude, longitude: position.target.longitude))
+//
+//        marker.map = mapView
         getAdressAndWeather(getLat: position.target.latitude, getLon: position.target.longitude)
     
     }

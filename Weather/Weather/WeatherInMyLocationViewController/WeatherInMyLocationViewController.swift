@@ -99,7 +99,7 @@ class WeatherInMyLocationViewController: UIViewController {
     
     func updateView(_ weatherData: WeatherData) {
         
-        self.cityName.text = "\(weatherData.name), \(weatherData.sys.country)"
+        self.cityName.text = "\(weatherData.name), \(weatherData.sys.country ?? "")"
         
         self.descriptionLabel.text = weatherData.weather[0].description
         let tempC = Int(round(weatherData.main.temp - 273.15))

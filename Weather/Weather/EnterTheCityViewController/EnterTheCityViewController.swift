@@ -18,7 +18,7 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        menuView.center.x = -120
         
         //locationManager.requestAlwaysAuthorization()
         
@@ -31,10 +31,10 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
         }
         
         let vc = UIStoryboard(name: "EnterTheCityViewController", bundle: nil).instantiateViewController(withIdentifier: "EnterTheCityViewController")
-        
+
         guard let newVC = SettingsManager.shared.pushVC,
               let vc2 = UIViewController.getViewController(by: "WeatherInMyLocationViewController") else { return }
-        
+
         switch newVC {
         case "EnterTheCityViewController":
             navigationController?.setViewControllers([vc], animated: true)
@@ -48,17 +48,11 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(true)
         
         //menuView.center.x -= self.view.bounds.width
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        menuView.center.x -= self.view.bounds.width
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
         menuView.center.x -= self.view.bounds.width
     }
     
@@ -136,6 +130,7 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func presentRequestHistory(_ sender: Any) {
+        menuView.center.x -= self.view.bounds.width
         let storyboard = UIStoryboard(name: "RequestHistoryViewController", bundle: nil)
         
         guard let vc = storyboard.instantiateInitialViewController() as? RequestHistoryViewController else {
@@ -151,7 +146,7 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func closeMenuView(_ sender: Any) {
-        UIView.animate(withDuration: 2, delay: 0) {
+        UIView.animate(withDuration: 1.5, delay: 0) {
             self.menuView.center.x -= self.view.bounds.width
         }
     }

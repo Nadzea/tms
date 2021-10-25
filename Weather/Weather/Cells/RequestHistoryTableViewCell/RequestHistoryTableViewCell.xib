@@ -121,7 +121,7 @@
                 <outlet property="tempLabel" destination="WuQ-XW-6qL" id="I4u-bP-1uN"/>
                 <outlet property="windLabel" destination="EFV-dg-L5y" id="CEb-JU-3bl"/>
             </connections>
-            <point key="canvasLocation" x="17.39130434782609" y="85.714285714285708"/>
+            <point key="canvasLocation" x="20" y="71"/>
         </tableViewCell>
     </objects>
 </document>

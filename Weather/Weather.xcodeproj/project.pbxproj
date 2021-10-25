@@ -40,6 +40,15 @@
 		5119D53126E41E2600DF8567 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5119D53026E41E2600DF8567 /* Assets.xcassets */; };
 		5119D53426E41E2600DF8567 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5119D53226E41E2600DF8567 /* LaunchScreen.storyboard */; };
 		5119D53C26E55C6E00DF8567 /* WeatherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5119D53B26E55C6E00DF8567 /* WeatherModels.swift */; };
+		5124BF9F272424AD00C2D551 /* News_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5124BF9E272424AD00C2D551 /* News_.swift */; };
+		5124BFA32724258B00C2D551 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5124BFA12724258B00C2D551 /* NewsTableViewCell.swift */; };
+		5124BFA42724258B00C2D551 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5124BFA22724258B00C2D551 /* NewsTableViewCell.xib */; };
+		5124BFA72724B6B500C2D551 /* FullNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5124BFA62724B6B500C2D551 /* FullNewsViewController.swift */; };
+		5124BFA92724B6C400C2D551 /* FullNewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5124BFA82724B6C400C2D551 /* FullNewsViewController.storyboard */; };
+		5131BD2F2721A7570038FD96 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5131BD2E2721A7570038FD96 /* LoadingViewController.swift */; };
+		513A276B2722EC4100E717DC /* NewsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513A276A2722EC4100E717DC /* NewsModels.swift */; };
+		513A276E2722F8FE00E717DC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513A276D2722F8FE00E717DC /* NewsViewController.swift */; };
+		513A27702722F91700E717DC /* NewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513A276F2722F91700E717DC /* NewsViewController.storyboard */; };
 		51475A7A271B049000F09F19 /* TodayWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51475A78271B049000F09F19 /* TodayWeatherCollectionViewCell.swift */; };
 		51475A7B271B049000F09F19 /* TodayWeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51475A79271B049000F09F19 /* TodayWeatherCollectionViewCell.xib */; };
 		51475A7D271B089E00F09F19 /* TodayWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51475A7C271B089E00F09F19 /* TodayWeather.swift */; };
@@ -92,6 +101,15 @@
 		5119D53326E41E2600DF8567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5119D53526E41E2600DF8567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5119D53B26E55C6E00DF8567 /* WeatherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModels.swift; sourceTree = "<group>"; };
+		5124BF9E272424AD00C2D551 /* News_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News_.swift; sourceTree = "<group>"; };
+		5124BFA12724258B00C2D551 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		5124BFA22724258B00C2D551 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		5124BFA62724B6B500C2D551 /* FullNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNewsViewController.swift; sourceTree = "<group>"; };
+		5124BFA82724B6C400C2D551 /* FullNewsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FullNewsViewController.storyboard; sourceTree = "<group>"; };
+		5131BD2E2721A7570038FD96 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		513A276A2722EC4100E717DC /* NewsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModels.swift; sourceTree = "<group>"; };
+		513A276D2722F8FE00E717DC /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		513A276F2722F91700E717DC /* NewsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsViewController.storyboard; sourceTree = "<group>"; };
 		51475A78271B049000F09F19 /* TodayWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		51475A79271B049000F09F19 /* TodayWeatherCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayWeatherCollectionViewCell.xib; sourceTree = "<group>"; };
 		51475A7C271B089E00F09F19 /* TodayWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeather.swift; sourceTree = "<group>"; };
@@ -172,6 +190,8 @@
 				5119D53B26E55C6E00DF8567 /* WeatherModels.swift */,
 				51003FE1270F2F6600215D0B /* Request.swift */,
 				51475A7C271B089E00F09F19 /* TodayWeather.swift */,
+				513A276A2722EC4100E717DC /* NewsModels.swift */,
+				5124BF9E272424AD00C2D551 /* News_.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +253,8 @@
 		5119D52626E41E2100DF8567 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				5124BFA52724B67E00C2D551 /* FullNewsViewController */,
+				513A276C2722F8DF00E717DC /* NewsViewController */,
 				51475A85271CD30800F09F19 /* MapViewController1 */,
 				51475A82271CB8D700F09F19 /* Managers */,
 				51475A81271CB87C00F09F19 /* Cells */,
@@ -256,6 +278,33 @@
 			path = Weather;
 			sourceTree = "<group>";
 		};
+		5124BFA02724252F00C2D551 /* NewsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5124BFA12724258B00C2D551 /* NewsTableViewCell.swift */,
+				5124BFA22724258B00C2D551 /* NewsTableViewCell.xib */,
+			);
+			path = NewsTableViewCell;
+			sourceTree = "<group>";
+		};
+		5124BFA52724B67E00C2D551 /* FullNewsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5124BFA62724B6B500C2D551 /* FullNewsViewController.swift */,
+				5124BFA82724B6C400C2D551 /* FullNewsViewController.storyboard */,
+			);
+			path = FullNewsViewController;
+			sourceTree = "<group>";
+		};
+		513A276C2722F8DF00E717DC /* NewsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				513A276D2722F8FE00E717DC /* NewsViewController.swift */,
+				513A276F2722F91700E717DC /* NewsViewController.storyboard */,
+			);
+			path = NewsViewController;
+			sourceTree = "<group>";
+		};
 		51475A77271B042B00F09F19 /* TodayWeatherCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +317,7 @@
 		51475A81271CB87C00F09F19 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5124BFA02724252F00C2D551 /* NewsTableViewCell */,
 				51003FE82711977E00215D0B /* RequestHistoryTableViewCell */,
 				51475A77271B042B00F09F19 /* TodayWeatherCollectionViewCell */,
 			);
@@ -298,6 +348,7 @@
 			children = (
 				514FC10D270ED2FD00DA3555 /* TabBarViewController.swift */,
 				5119D52D26E41E2100DF8567 /* Main.storyboard */,
+				5131BD2E2721A7570038FD96 /* LoadingViewController.swift */,
 			);
 			path = TabBarController;
 			sourceTree = "<group>";
@@ -397,6 +448,8 @@
 				510C548726FA67DD0097AD22 /* WeatherInfoViewController.storyboard in Resources */,
 				510C54B2270748F60097AD22 /* thunderstorm.mp4 in Resources */,
 				510C54BD270866D50097AD22 /* brokenСlouds.mp4 in Resources */,
+				513A27702722F91700E717DC /* NewsViewController.storyboard in Resources */,
+				5124BFA42724258B00C2D551 /* NewsTableViewCell.xib in Resources */,
 				510C54B1270748F60097AD22 /* thunderstormWithRain.mp4 in Resources */,
 				5119D53126E41E2600DF8567 /* Assets.xcassets in Resources */,
 				51003FE72710859800215D0B /* RequestHistoryViewController.storyboard in Resources */,
@@ -410,6 +463,7 @@
 				51475A89271CD34E00F09F19 /* MapViewController1.storyboard in Resources */,
 				510C54B827074D6E0097AD22 /* ightRain.mp4 in Resources */,
 				510C54AC2704AEA20097AD22 /* rain.mp4 in Resources */,
+				5124BFA92724B6C400C2D551 /* FullNewsViewController.storyboard in Resources */,
 				5119D52F26E41E2100DF8567 /* Main.storyboard in Resources */,
 				51A29FC92718671200E57EEC /* GoogleService-Info.plist in Resources */,
 			);
@@ -501,9 +555,12 @@
 				5119D52C26E41E2100DF8567 /* EnterTheCityViewController.swift in Sources */,
 				510C547F26F7D96E0097AD22 /* APIConstants.swift in Sources */,
 				51A29FCE271894E300E57EEC /* UIViewController + Storyboard.swift in Sources */,
+				513A276E2722F8FE00E717DC /* NewsViewController.swift in Sources */,
 				51475A7A271B049000F09F19 /* TodayWeatherCollectionViewCell.swift in Sources */,
+				513A276B2722EC4100E717DC /* NewsModels.swift in Sources */,
 				514FC110270F242B00DA3555 /* RealmManager.swift in Sources */,
 				51003FE52710858800215D0B /* RequestHistoryViewController.swift in Sources */,
+				5124BFA32724258B00C2D551 /* NewsTableViewCell.swift in Sources */,
 				51475A7D271B089E00F09F19 /* TodayWeather.swift in Sources */,
 				51475A7F271C1F1400F09F19 /* Int.swift in Sources */,
 				510C548526FA67B10097AD22 /* WeatherInfoViewController.swift in Sources */,
@@ -511,6 +568,7 @@
 				510C547D26F7D8520097AD22 /* ParseManager.swift in Sources */,
 				510C54D52708CE740097AD22 /* MapViewController.swift in Sources */,
 				51475A87271CD33A00F09F19 /* MapViewController1.swift in Sources */,
+				5131BD2F2721A7570038FD96 /* LoadingViewController.swift in Sources */,
 				510C547B26F7D7C40097AD22 /* HttpManager.swift in Sources */,
 				51003FEB2711980400215D0B /* RequestHistoryTableViewCell.swift in Sources */,
 				5119D52826E41E2100DF8567 /* AppDelegate.swift in Sources */,
@@ -519,6 +577,8 @@
 				51475A84271CB91100F09F19 /* RCManager.swift in Sources */,
 				51003FE2270F2F6600215D0B /* Request.swift in Sources */,
 				514FC10E270ED2FD00DA3555 /* TabBarViewController.swift in Sources */,
+				5124BF9F272424AD00C2D551 /* News_.swift in Sources */,
+				5124BFA72724B6B500C2D551 /* FullNewsViewController.swift in Sources */,
 				5119D52A26E41E2100DF8567 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,6 +728,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 47422ZQC7L;
 				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -687,6 +748,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 47422ZQC7L;
 				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

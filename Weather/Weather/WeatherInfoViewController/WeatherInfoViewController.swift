@@ -46,6 +46,8 @@ class WeatherInfoViewController: UIViewController {
         }
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,6 +60,8 @@ class WeatherInfoViewController: UIViewController {
         let url = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=bb3af6a661e716dc3b3bfab4c1c87d6c"
         let urlForFiveDays = "https://api.openweathermap.org/data/2.5/forecast?q=\(city)&appid=bb3af6a661e716dc3b3bfab4c1c87d6c"
         
+        
+        
         HttpManager.shared.getWeatherData(url) { weatherData in
             
             self.weatherData = weatherData
@@ -66,6 +70,7 @@ class WeatherInfoViewController: UIViewController {
         HttpManager.shared.getWeatherDataFofFiveDays(urlForFiveDays) { weatherDataForFiveDays in
             self.weatherDataForFiveDays = weatherDataForFiveDays
         }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -121,7 +126,7 @@ class WeatherInfoViewController: UIViewController {
     
     func updateView(_ weatherData: WeatherData) {
         
-        self.cityName.text = "\(weatherData.name), \(weatherData.sys.country)"
+        self.cityName.text = "\(weatherData.name), \(weatherData.sys.country ?? "")"
         
         self.descriptionLabel.text = weatherData.weather[0].description
         let tempC = Int(round(weatherData.main.temp - 273.15))

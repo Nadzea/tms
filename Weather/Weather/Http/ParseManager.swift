@@ -22,6 +22,12 @@ class ParseManager {
         return weatherDataForFiveDays
     }
     
+    func parseNews(_ data: Data) -> News {
+        var news = News()
+        news = try! JSONDecoder().decode(News.self, from: data)
+        return news
+    }
+    
     
 }
 

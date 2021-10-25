@@ -6,50 +6,41 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class RequestHistoryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var dataSource: [Request] = []
+    var dataSource = BehaviorSubject<[Request]>(value: [])
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupTableView()
         
-        dataSource = RealmManager.shared.getAllRequest()
+        let requests: [Request] = RealmManager.shared.getAllRequest()
+        
+        tableView.register(UINib(nibName: "RequestHistoryTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "RequestHistoryTableViewCell")
+        dataSource.bind(to: tableView.rx.items(cellIdentifier: "RequestHistoryTableViewCell", cellType: RequestHistoryTableViewCell.self)) { index, request, cell in
+            cell.setData(with: request)
+        }.disposed(by: disposeBag)
+        
+        tableView
+            .rx.setDelegate(self)
+            .disposed(by: disposeBag)
+ 
+        dataSource
+            .onNext(requests)
     }
-    
-    private func setupTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UINib(nibName: "RequestHistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "RequestHistoryTableViewCell")
-        tableView.tableFooterView = UIView()
-    }
-    
 
     @IBAction func backScreen(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
 }
-extension RequestHistoryViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RequestHistoryTableViewCell") as? RequestHistoryTableViewCell  else {
-            return UITableViewCell()
-        }
-        
-        cell.setData(with: dataSource[indexPath.row])
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
-    }
-}
 
 extension RequestHistoryViewController: UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200.0
     }

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,43 +17,70 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="dvy-TG-qAx" kind="relationship" relationship="viewControllers" id="n5f-qu-4hK"/>
-                        <segue destination="Soh-7K-jrd" kind="relationship" relationship="viewControllers" id="BYd-VB-Meq"/>
+                        <segue destination="VEE-zs-dao" kind="relationship" relationship="viewControllers" id="Tix-oy-2QX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odq-hD-QHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1588" y="32"/>
         </scene>
-        <!--MapViewController-->
-        <scene sceneID="LEk-yn-Edn">
+        <!--Loading View Controller-->
+        <scene sceneID="f2f-tc-qrI">
             <objects>
-                <viewControllerPlaceholder storyboardName="MapViewController" id="Soh-7K-jrd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Szf-ts-OLM"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HYw-W7-1a9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="VEE-zs-dao" customClass="LoadingViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RXW-yh-W6x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen-4" translatesAutoresizingMaskIntoConstraints="NO" id="Wp2-Gf-XHb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4X-jE-Cpz" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="143" y="384" width="128" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="KOH-cJ-3Oo"/>
+                                    <constraint firstAttribute="width" constant="128" id="fhn-N0-Y1d"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballClipRotateMultiple"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XND-He-MWA">
+                                <rect key="frame" x="135" y="300" width="144" height="48"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JyP-x6-mFB"/>
+                        <color key="backgroundColor" red="0.87045809470000002" green="0.86419770299999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p4X-jE-Cpz" firstAttribute="top" secondItem="XND-He-MWA" secondAttribute="bottom" constant="36" id="8OB-XJ-dQn"/>
+                            <constraint firstItem="p4X-jE-Cpz" firstAttribute="centerY" secondItem="RXW-yh-W6x" secondAttribute="centerY" id="G4L-DA-NoL"/>
+                            <constraint firstItem="Wp2-Gf-XHb" firstAttribute="top" secondItem="RXW-yh-W6x" secondAttribute="top" id="Kzr-T4-tuy"/>
+                            <constraint firstItem="Wp2-Gf-XHb" firstAttribute="leading" secondItem="JyP-x6-mFB" secondAttribute="leading" id="OYd-F2-ZKz"/>
+                            <constraint firstItem="XND-He-MWA" firstAttribute="centerX" secondItem="RXW-yh-W6x" secondAttribute="centerX" id="Uwg-MD-BeK"/>
+                            <constraint firstItem="JyP-x6-mFB" firstAttribute="trailing" secondItem="Wp2-Gf-XHb" secondAttribute="trailing" id="dFx-tg-3Q4"/>
+                            <constraint firstItem="p4X-jE-Cpz" firstAttribute="centerX" secondItem="RXW-yh-W6x" secondAttribute="centerX" id="fJ5-Bj-q3A"/>
+                            <constraint firstAttribute="bottom" secondItem="Wp2-Gf-XHb" secondAttribute="bottom" id="xz9-ZK-3pP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="OMO-fp-cIn">
+                        <color key="badgeColor" red="0.87045809470000002" green="0.86419770299999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="p4X-jE-Cpz" id="jb4-8k-I6R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oUO-cq-96h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-716" y="176"/>
-        </scene>
-        <!--MapViewController1-->
-        <scene sceneID="BRd-jA-RHi">
-            <objects>
-                <viewControllerPlaceholder storyboardName="MapViewController1" id="1aq-JG-pqi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vMw-Ve-CHb"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="an0-Ln-h9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-950" y="251"/>
-        </scene>
-        <!--EnterTheCityViewController-->
-        <scene sceneID="x33-Hc-P5d">
-            <objects>
-                <viewControllerPlaceholder storyboardName="EnterTheCityViewController" id="dvy-TG-qAx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FCb-dy-PnV"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R67-Cb-5bk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-677" y="-275"/>
+            <point key="canvasLocation" x="-752.17391304347836" y="30.803571428571427"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="screen-4" width="1280" height="1024"/>
+    </resources>
 </document>

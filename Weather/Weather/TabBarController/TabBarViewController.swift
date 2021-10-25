@@ -13,27 +13,21 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        RCManager.shared.remoteConfigConnected = {
-//            
-//        }
-//        
-//        RCManager.shared.connected()
-//        
-//        let tabBarController = UITabBarController()
-//        
-//        guard let vc1 = UIViewController.getViewController(by: "EnterTheCityViewController"),
-//              let vc2 = UIViewController.getViewController(by: "MapViewController1"),
-//              let vc3 = UIViewController.getViewController(by: "MapViewController") else { return }
-//        
-//        if RCManager.shared.getBoolValue(from: .useGoogleMaps) {
-//            
-//            tabBarController.viewControllers = [vc1, vc2]
-//            //tabBarController.selectedViewController = vc2
-//            self.view.addSubview(tabBarController.view)
-//        }else {
-//            tabBarController.viewControllers = [vc1, vc3]
-//            tabBarController.selectedViewController = vc3
-//        }
+        RCManager.shared.remoteConfigConnected = {
+            DispatchQueue.main.async {
+                guard let vc1 = UIViewController.getViewController(by: "EnterTheCityViewController"),
+                      let vc2 = UIViewController.getViewController(by: "MapViewController1"),
+                      let vc3 = UIViewController.getViewController(by: "MapViewController"),
+                      let vc4 = UIViewController.getViewController(by: "NewsViewController") else { return }
+                if RCManager.shared.getBoolValue(from: .useGoogleMaps) {
+                    self.viewControllers = [vc1, vc2, vc4]
+                }else {
+                    self.viewControllers = [vc1, vc3, vc4]
+                }
+            }
+        }
+        
+        RCManager.shared.connected()
 
         if #available(iOS 15.0, *) {
            let appearance = UITabBarAppearance()
@@ -62,10 +56,10 @@ class TabBarViewController: UITabBarController {
             content.title = "Weather"
             content.sound = UNNotificationSound.default
             content.badge = 1
-            content.body = "Hello) Find out what's going on in the world"
+            content.body = "Hello) Find out what's the weather like today"
             content.userInfo = ["current" : "WeatherInMyLocationViewController"]
             
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: false)
             let request = UNNotificationRequest(identifier: "5days_notification", content: content, trigger: trigger)  
             notificationCenter.add(request) { error in
                 print(error?.localizedDescription ?? "")

@@ -20,30 +20,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
         
-        RCManager.shared.remoteConfigConnected = {
-            
-        }
-        
-        RCManager.shared.connected()
-        let tabBarController = UITabBarController()
-        
-        guard let vc1 = UIViewController.getViewController(by: "EnterTheCityViewController"),
-              let vc2 = UIViewController.getViewController(by: "MapViewController1"),
-              let vc3 = UIViewController.getViewController(by: "MapViewController") else { return }
-        
-        if RCManager.shared.getBoolValue(from: .useGoogleMaps) {
-            print("Google")
-            tabBarController.viewControllers = [vc1, vc2]
-            window?.rootViewController = tabBarController
-            window?.makeKeyAndVisible()
-            //tabBarController.selectedViewController = vc2
-            //self.view.addSubview(tabBarController.view)
-        } else {
-            print("Apple")
-            tabBarController.viewControllers = [vc1, vc3]
-            window?.rootViewController = tabBarController
-            window?.makeKeyAndVisible()
-        }
+//        RCManager.shared.remoteConfigConnected = {
+//            
+//        }
+//        
+//        RCManager.shared.connected()
+//        let tabBarController = UITabBarController()
+//        
+//        guard let vc1 = UIViewController.getViewController(by: "EnterTheCityViewController"),
+//              let vc2 = UIViewController.getViewController(by: "MapViewController1"),
+//              let vc3 = UIViewController.getViewController(by: "MapViewController") else { return }
+//        
+//        if RCManager.shared.getBoolValue(from: .useGoogleMaps) {
+//            print("Google")
+//            tabBarController.viewControllers = [vc1, vc2]
+//            window?.rootViewController = tabBarController
+//            window?.makeKeyAndVisible()
+//            //tabBarController.selectedViewController = vc2
+//            //self.view.addSubview(tabBarController.view)
+//        } else {
+//            print("Apple")
+//            tabBarController.viewControllers = [vc1, vc3]
+//            window?.rootViewController = tabBarController
+//            window?.makeKeyAndVisible()
+//        }
         
         
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.

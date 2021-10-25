@@ -23,7 +23,7 @@ struct Main: Codable {
 }
 
 struct Sys: Codable {
-    var country: String = ""
+    var country: String? = ""
 }
 
 struct Wind: Codable {
