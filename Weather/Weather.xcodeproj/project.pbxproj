@@ -61,6 +61,10 @@
 		51A29FC92718671200E57EEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51A29FC82718671200E57EEC /* GoogleService-Info.plist */; };
 		51A29FCB2718728B00E57EEC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A29FCA2718728B00E57EEC /* SettingsManager.swift */; };
 		51A29FCE271894E300E57EEC /* UIViewController + Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A29FCD271894E300E57EEC /* UIViewController + Storyboard.swift */; };
+		51B607DE272992D300902DC9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B607DD272992D300902DC9 /* ViewModel.swift */; };
+		51B607E0272C11F200902DC9 /* ModelVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B607DF272C11F200902DC9 /* ModelVVM.swift */; };
+		51B607E2272EC36D00902DC9 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B607E1272EC36D00902DC9 /* TestView.swift */; };
+		51B607E4272EE8C400902DC9 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B607E3272EE8C400902DC9 /* TestView.xib */; };
 		5736878A1C081460AE581237 /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FE74A8ACF3689448FACE65 /* Pods_Weather.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +126,10 @@
 		51A29FC82718671200E57EEC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		51A29FCA2718728B00E57EEC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		51A29FCD271894E300E57EEC /* UIViewController + Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Storyboard.swift"; sourceTree = "<group>"; };
+		51B607DD272992D300902DC9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		51B607DF272C11F200902DC9 /* ModelVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelVVM.swift; sourceTree = "<group>"; };
+		51B607E1272EC36D00902DC9 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		51B607E3272EE8C400902DC9 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		C7271A491ADAE9B47E2C6B92 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		DC933F6A4115EBCB5EACFB8B /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -253,6 +261,7 @@
 		5119D52626E41E2100DF8567 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				51B607DC272992A800902DC9 /* Model-View-ViewModel */,
 				5124BFA52724B67E00C2D551 /* FullNewsViewController */,
 				513A276C2722F8DF00E717DC /* NewsViewController */,
 				51475A85271CD30800F09F19 /* MapViewController1 */,
@@ -362,6 +371,17 @@
 			path = Extention;
 			sourceTree = "<group>";
 		};
+		51B607DC272992A800902DC9 /* Model-View-ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				51B607DF272C11F200902DC9 /* ModelVVM.swift */,
+				51B607DD272992D300902DC9 /* ViewModel.swift */,
+				51B607E1272EC36D00902DC9 /* TestView.swift */,
+				51B607E3272EE8C400902DC9 /* TestView.xib */,
+			);
+			path = "Model-View-ViewModel";
+			sourceTree = "<group>";
+		};
 		E42EA5307223242873031E02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,6 +484,7 @@
 				510C54B827074D6E0097AD22 /* ightRain.mp4 in Resources */,
 				510C54AC2704AEA20097AD22 /* rain.mp4 in Resources */,
 				5124BFA92724B6C400C2D551 /* FullNewsViewController.storyboard in Resources */,
+				51B607E4272EE8C400902DC9 /* TestView.xib in Resources */,
 				5119D52F26E41E2100DF8567 /* Main.storyboard in Resources */,
 				51A29FC92718671200E57EEC /* GoogleService-Info.plist in Resources */,
 			);
@@ -552,12 +573,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B607E2272EC36D00902DC9 /* TestView.swift in Sources */,
 				5119D52C26E41E2100DF8567 /* EnterTheCityViewController.swift in Sources */,
 				510C547F26F7D96E0097AD22 /* APIConstants.swift in Sources */,
 				51A29FCE271894E300E57EEC /* UIViewController + Storyboard.swift in Sources */,
 				513A276E2722F8FE00E717DC /* NewsViewController.swift in Sources */,
 				51475A7A271B049000F09F19 /* TodayWeatherCollectionViewCell.swift in Sources */,
 				513A276B2722EC4100E717DC /* NewsModels.swift in Sources */,
+				51B607DE272992D300902DC9 /* ViewModel.swift in Sources */,
 				514FC110270F242B00DA3555 /* RealmManager.swift in Sources */,
 				51003FE52710858800215D0B /* RequestHistoryViewController.swift in Sources */,
 				5124BFA32724258B00C2D551 /* NewsTableViewCell.swift in Sources */,
@@ -566,6 +589,7 @@
 				510C548526FA67B10097AD22 /* WeatherInfoViewController.swift in Sources */,
 				5114E5AC27143D640060291E /* WeatherInMyLocationViewController.swift in Sources */,
 				510C547D26F7D8520097AD22 /* ParseManager.swift in Sources */,
+				51B607E0272C11F200902DC9 /* ModelVVM.swift in Sources */,
 				510C54D52708CE740097AD22 /* MapViewController.swift in Sources */,
 				51475A87271CD33A00F09F19 /* MapViewController1.swift in Sources */,
 				5131BD2F2721A7570038FD96 /* LoadingViewController.swift in Sources */,

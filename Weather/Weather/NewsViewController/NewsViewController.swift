@@ -17,28 +17,13 @@ class NewsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var dataSource: [[News_]] = [[]]
+    var dataSource: [[News_]] = []
     
     var news = News()
     
     var news1 = News()
 
-    var news2 = News() {
-        didSet {
-            DispatchQueue.main.sync {
-                self.updateNews(news: news)
-                self.updateNews(news: news1)
-                self.updateNews(news: self.news2)
-                self.setupTableView()
-            }
-        }
-    }
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        getNews()
-    }
+    var news2 = News()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -47,16 +32,31 @@ class NewsViewController: UIViewController {
     }
     
     func getNews() {
+        let group = DispatchGroup()
+        
+        group.enter()
         HttpManager.shared.getNews(APIConstants.newsOfRussia.rawValue) { news in
             self.news = news
+            group.leave()
         }
         
+        group.enter()
         HttpManager.shared.getNews(APIConstants.newsOfUSA.rawValue) { news in
             self.news1 = news
+            group.leave()
         }
         
+        group.enter()
         HttpManager.shared.getNews(APIConstants.newsAboutBitcoin.rawValue) { news in
             self.news2 = news
+            group.leave()
+        }
+        
+        group.notify(queue: .main) {
+            self.updateNews(news: self.news)
+            self.updateNews(news: self.news1)
+            self.updateNews(news: self.news2)
+            self.setupTableView()
         }
     }
     
@@ -87,9 +87,9 @@ extension NewsViewController: UITableViewDataSource {
         
         switch section {
         
-        case .newsOfRussia: return dataSource[1].count
-        case .newsOfUSA: return dataSource[2].count
-        case .aboutBitcoin: return dataSource[3].count
+        case .newsOfRussia: return dataSource[0].count
+        case .newsOfUSA: return dataSource[1].count
+        case .aboutBitcoin: return dataSource[2].count
             
         }
     }
@@ -115,9 +115,9 @@ extension NewsViewController: UITableViewDataSource {
         }
         
         switch section {
-        case .newsOfRussia: cell.setData(with: dataSource[1][indexPath.row])
-        case .newsOfUSA: cell.setData(with: dataSource[2][indexPath.row])
-        case .aboutBitcoin: cell.setData(with: dataSource[3][indexPath.row])
+        case .newsOfRussia: cell.setData(with: dataSource[0][indexPath.row])
+        case .newsOfUSA: cell.setData(with: dataSource[1][indexPath.row])
+        case .aboutBitcoin: cell.setData(with: dataSource[2][indexPath.row])
         }
         
         return cell
@@ -133,15 +133,11 @@ extension NewsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { //ячейка которая выбрана
         tableView.deselectRow(at: indexPath, animated: true) //анимационно подсвечивается серым потом этот фон исчезает
         
-        print(indexPath.row)
-        print(indexPath.section)
-        print(dataSource[indexPath.section + 1][indexPath.row].url)
-        
         let storyboard = UIStoryboard(name: "FullNewsViewController", bundle: nil)
         
         guard let vc = storyboard.instantiateInitialViewController() as? FullNewsViewController else { return }
         
-        vc.url = dataSource[indexPath.section + 1][indexPath.row].url
+        vc.url = dataSource[indexPath.section][indexPath.row].url
         
         self.navigationController?.pushViewController(vc, animated: true)
     }

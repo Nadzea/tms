@@ -21,6 +21,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var feelLikesLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var infoViewLeadingConstraint: NSLayoutConstraint!
     
     let anotationCenter = MKPointAnnotation()
     var dispatchItem: DispatchWorkItem?
@@ -50,7 +51,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        infoView.center.x -= view.bounds.width
+        infoViewLeadingConstraint.constant = -self.view.bounds.width
     }
     
     func updateView(weatherData: WeatherData) {
@@ -76,12 +77,12 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
                 let info = "\(place.country ?? "") \(place.city ?? "") \(place.streetName ?? "") \(place.streetNumber ?? "")"
                 self.infoLabel.text = info
                 
-                let url = "http://api.openweathermap.org/data/2.5/weather?lat=\(getLat)&lon=\(getLon)&appid=bb3af6a661e716dc3b3bfab4c1c87d6c"
-                HttpManager.shared.getWeatherData(url) { weatherData in
+                HttpManager.shared.getWeatherData("", latitude: getLat, longitude: getLon) { weatherData in
                     self.weatherData = weatherData
                 }
                 UIView.animate(withDuration: 1, delay: 0) {
-                    self.infoView.center.x += self.view.bounds.width
+                    self.infoViewLeadingConstraint.constant = 0
+                    self.view.layoutIfNeeded()
                 }
             }
         }
@@ -89,14 +90,16 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBAction func closeInfoView(_ sender: Any) {
         UIView.animate(withDuration: 2, delay: 0) {
-            self.infoView.center.x -= self.view.bounds.width
+            self.infoViewLeadingConstraint.constant = -self.view.bounds.width
+            self.view.layoutIfNeeded()
         }
     }
     
     @objc func foundTap(_ recognizer: UITapGestureRecognizer) {
-        if infoView.center.x > 0 {
+        if infoViewLeadingConstraint.constant == 0 {
             UIView.animate(withDuration: 0.5, delay: 0) {
-                self.infoView.center.x -= self.view.bounds.width
+                self.infoViewLeadingConstraint.constant = -self.view.bounds.width
+                self.view.layoutIfNeeded()
             }
         }
         
@@ -117,9 +120,10 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
 extension MapViewController: MKMapViewDelegate {
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
         
-        if infoView.center.x > 0 {
+        if infoViewLeadingConstraint.constant == 0 {
             UIView.animate(withDuration: 0.5, delay: 0) {
-                self.infoView.center.x -= self.view.bounds.width
+                self.infoViewLeadingConstraint.constant = -self.view.bounds.width
+                self.view.layoutIfNeeded()
             }
         }
         anotationCenter.coordinate = mapView.centerCoordinate

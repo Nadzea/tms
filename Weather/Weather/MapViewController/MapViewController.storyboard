@@ -130,6 +130,7 @@
                         <outlet property="humidityLabel" destination="8dZ-na-7gz" id="t3d-iT-IV3"/>
                         <outlet property="infoLabel" destination="AVG-TR-NOM" id="G69-Ed-L7U"/>
                         <outlet property="infoView" destination="YWl-4J-60R" id="gwJ-Z6-Tr0"/>
+                        <outlet property="infoViewLeadingConstraint" destination="eLG-Vo-rg9" id="BCx-65-wYl"/>
                         <outlet property="mapView" destination="7K4-th-qCX" id="dlb-dc-FVm"/>
                         <outlet property="temperature" destination="qmz-B1-aMt" id="JLt-VD-wm6"/>
                         <outlet property="weatherIcon" destination="ejl-r1-H66" id="Stk-fK-ApD"/>

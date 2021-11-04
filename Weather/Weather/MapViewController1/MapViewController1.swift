@@ -20,6 +20,7 @@ class MapViewController1: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var feelLikesLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var infoViewLeadingConstraint: NSLayoutConstraint!
     
     var weatherData = WeatherData() {
         didSet {
@@ -31,20 +32,15 @@ class MapViewController1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        infoView.center.x -= view.bounds.width
         
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
-//        let marker = GMSMarker()
-//        
-//        marker.iconView = markerImage
-//        marker.map = mapView
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        infoView.center.x -= view.bounds.width
+        infoViewLeadingConstraint.constant = -self.view.bounds.width
     }
     
     func updateView(weatherData: WeatherData) {
@@ -60,9 +56,10 @@ class MapViewController1: UIViewController {
     
     func getAdressAndWeather(getLat: CLLocationDegrees, getLon: CLLocationDegrees) {
         
-        if infoView.center.x > 0 {
+        if infoViewLeadingConstraint.constant == 0 {
             UIView.animate(withDuration: 0.5, delay: 0) {
-                self.infoView.center.x -= self.view.bounds.width
+                self.infoViewLeadingConstraint.constant = -self.view.bounds.width
+                self.view.layoutIfNeeded()
             }
         }
         
@@ -76,12 +73,12 @@ class MapViewController1: UIViewController {
                 let info = "\(place.country ?? "") \(place.city ?? "") \(place.streetName ?? "") \(place.streetNumber ?? "")"
                 self.infoLabel.text = info
                 
-                let url = "http://api.openweathermap.org/data/2.5/weather?lat=\(getLat)&lon=\(getLon)&appid=bb3af6a661e716dc3b3bfab4c1c87d6c"
-                HttpManager.shared.getWeatherData(url) { weatherData in
+                HttpManager.shared.getWeatherData("", latitude: getLat, longitude: getLon) { weatherData in
                     self.weatherData = weatherData
                 }
                 UIView.animate(withDuration: 1, delay: 0) {
-                    self.infoView.center.x += self.view.bounds.width
+                    self.infoViewLeadingConstraint.constant = 0
+                    self.view.layoutIfNeeded()
                 }
             }
         }
@@ -89,15 +86,18 @@ class MapViewController1: UIViewController {
     
     @IBAction func closeInfoView(_ sender: Any) {
         UIView.animate(withDuration: 2, delay: 0) {
-            self.infoView.center.x -= self.view.bounds.width
+            self.infoViewLeadingConstraint.constant = -self.view.bounds.width
+            self.view.layoutIfNeeded()
         }
     }
 }
 
 extension MapViewController1: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        
         UIView.animate(withDuration: 0.5, delay: 0) {
-            self.infoView.center.x -= self.view.bounds.width
+            self.infoViewLeadingConstraint.constant = -self.view.bounds.width
+            self.view.layoutIfNeeded()
         }
         print("willMove")
     }

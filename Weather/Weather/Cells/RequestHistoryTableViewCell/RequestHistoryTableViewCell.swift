@@ -25,7 +25,7 @@ class RequestHistoryTableViewCell: UITableViewCell {
         dateFormater.dateFormat = "dd.MM.yy"
         self.dateLabel.text = dateFormater.string(from: request.dateOfRequest)
         self.cityLabel.text = request.cityName
-        self.tempLabel.text = "\(String(request.temperature))°C, feel likes \(String(request.tempFeelLikes))°C"
+        self.tempLabel.text = "\(request.temperature), \(request.tempFeelLikes)"
         self.descriptionLabel.text = request.descriptionLabel
         self.windLabel.text = request.wind
     }

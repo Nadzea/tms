@@ -230,6 +230,7 @@
                     <connections>
                         <outlet property="errorLabel" destination="uMi-Oo-ovA" id="Dzz-H7-IUb"/>
                         <outlet property="menuView" destination="QVX-OX-7JL" id="exz-rh-6nc"/>
+                        <outlet property="menuViewLeadingConstraint" destination="k6w-T6-Yk0" id="9vN-2S-lBX"/>
                         <outlet property="textField" destination="2bA-9h-7dG" id="Lb1-Xx-aR6"/>
                     </connections>
                 </viewController>

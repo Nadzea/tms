@@ -140,25 +140,22 @@ class WeatherInMyLocationViewController: UIViewController {
         
         self.navigationController?.popViewController(animated: true)
     }
-    
 }
+
 extension WeatherInMyLocationViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let coordinate = locations.first?.coordinate else { return }
         
-        let url = "http://api.openweathermap.org/data/2.5/weather?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&appid=bb3af6a661e716dc3b3bfab4c1c87d6c"
-        let urlForFiveDays = "http://api.openweathermap.org/data/2.5/forecast?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&appid=bb3af6a661e716dc3b3bfab4c1c87d6c"
-        
-        HttpManager.shared.getWeatherData(url) { weatherData in
-            
+        HttpManager.shared.getWeatherData("", latitude: coordinate.latitude, longitude: coordinate.longitude) { weatherData in
             self.weatherData = weatherData
         }
-        
-        HttpManager.shared.getWeatherDataFofFiveDays(urlForFiveDays) { weatherDataForFiveDays in
+
+        HttpManager.shared.getWeatherDataFofFiveDays("", latitude: coordinate.latitude, longitude: coordinate.longitude) { weatherDataForFiveDays in
             self.weatherDataForFiveDays = weatherDataForFiveDays
         }
     }
 }
+
 extension WeatherInMyLocationViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.count

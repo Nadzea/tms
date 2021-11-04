@@ -7,6 +7,13 @@
 
 import Foundation
 
+//enum ViewData {
+//    case initial
+//    case loading(WeatherData)
+//    case success(WeatherData)
+//    case failure(WeatherData)
+//}
+
 struct Weather: Codable {
     var id: Int
     var main: String
@@ -31,14 +38,14 @@ struct Wind: Codable {
     var deg: Int = 0
 }
 
-struct WeatherData: Codable {
-    var weather: [Weather] = []
-    var main: Main = Main()
-    var name: String = ""
-    var sys: Sys = Sys()
-    var wind: Wind = Wind()
-    
-}
+//struct WeatherData: Codable {
+//    var weather: [Weather] = []
+//    var main: Main = Main()
+//    var name: String = ""
+//    var sys: Sys = Sys()
+//    var wind: Wind = Wind()
+//    
+//}
 
 struct List: Codable {
     var main: Main = Main()

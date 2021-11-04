@@ -14,11 +14,12 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var menuView: UIView!
     
+    @IBOutlet weak var menuViewLeadingConstraint: NSLayoutConstraint!
+    
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuView.center.x = -120
         
         //locationManager.requestAlwaysAuthorization()
         
@@ -47,13 +48,7 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {  //2
         super.viewWillAppear(true)
         
-        //menuView.center.x -= self.view.bounds.width
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-        menuView.center.x -= self.view.bounds.width
+        menuViewLeadingConstraint.constant = -self.view.bounds.width
     }
     
     func setupStatus(vc: UIViewController, vc2: UIViewController) {
@@ -93,7 +88,7 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
         let storyboard = UIStoryboard(name: "WeatherInfoViewController", bundle: nil)
         
         guard let vc = storyboard.instantiateInitialViewController() as? WeatherInfoViewController else { return }
-        
+        //let viewModel = ViewModel(city: cityName)
         vc.city = cityName
         
         textField.text = ""
@@ -130,7 +125,7 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func presentRequestHistory(_ sender: Any) {
-        menuView.center.x -= self.view.bounds.width
+        menuViewLeadingConstraint.constant = -self.view.bounds.width
         let storyboard = UIStoryboard(name: "RequestHistoryViewController", bundle: nil)
         
         guard let vc = storyboard.instantiateInitialViewController() as? RequestHistoryViewController else {
@@ -141,13 +136,15 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func presentMenu(_ sender: Any) {
         UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut) {
-            self.menuView.center.x += self.view.bounds.width
+            self.menuViewLeadingConstraint.constant = 0
+            self.view.layoutIfNeeded()
         }
     }
     
     @IBAction func closeMenuView(_ sender: Any) {
         UIView.animate(withDuration: 1.5, delay: 0) {
-            self.menuView.center.x -= self.view.bounds.width
+            self.menuViewLeadingConstraint.constant = -self.view.bounds.width
+            self.view.layoutIfNeeded()
         }
     }
     
