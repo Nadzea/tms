@@ -140,6 +140,7 @@
                         <outlet property="humidityLabel" destination="2PU-oD-Xdy" id="Ilw-lK-G0P"/>
                         <outlet property="infoLabel" destination="gCS-Qq-OKw" id="9Qq-48-4To"/>
                         <outlet property="infoView" destination="UNp-Y4-3uB" id="aGl-vo-MAK"/>
+                        <outlet property="infoViewLeadingConstraint" destination="sjS-eK-v1c" id="KId-NH-3qh"/>
                         <outlet property="mapView" destination="1DP-zA-hCk" id="jgZ-4e-tvb"/>
                         <outlet property="markerImage" destination="lRY-3H-Guh" id="5dX-LV-I08"/>
                         <outlet property="temperature" destination="vfB-cV-K7W" id="5Kw-Xx-gGn"/>

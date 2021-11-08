@@ -25,8 +25,6 @@ class ViewModel: ViewModelProtocol {
     
     public var didUpdateViewData: ((ViewData) -> ())?
     
-    var city: String = ""
-    
     init(cityName: String, temperature: String, weatherIcon: String, descriptionLabel: String, feelLikesLabel: String, windLabel: String, pathVideo: String) {
         self.cityName = cityName
         self.temperature = temperature
@@ -46,6 +44,7 @@ class ViewModel: ViewModelProtocol {
     }
     
     weak private var view: WeatherInfoViewController?
+    weak private var viewMyLocation: WeatherInMyLocationViewController?
     
     deinit {
         didUpdateViewData = nil
@@ -55,17 +54,28 @@ class ViewModel: ViewModelProtocol {
         self.view = view
     }
     
+    init(view: WeatherInMyLocationViewController) {
+        self.viewMyLocation = view
+    }
+    
     func getData(city: String?, latitude: Double?, longitude: Double? ) {
         
-        DispatchQueue.main.async {
-            HttpManager.shared.getWeatherData(city, latitude: latitude, longitude: longitude) { weatherData in
-                self.model = weatherData
-            }
-            
-            HttpManager.shared.getWeatherDataFofFiveDays(city, latitude: latitude, longitude: longitude) { weatherDataForFiveDays in
-                self.forecast = weatherDataForFiveDays
-                self.didUpdateViewData?(.success(self.giveData(model: self.model), self.updateForecast(weatherDataForFiveDays: self.forecast)))
-            }
+        let group = DispatchGroup()
+        
+        group.enter()
+        HttpManager.shared.getWeatherData(city, latitude: latitude, longitude: longitude) { weatherData in
+            self.model = weatherData
+            group.leave()
+        }
+        
+        group.enter()
+        HttpManager.shared.getWeatherDataFofFiveDays(city, latitude: latitude, longitude: longitude) { weatherDataForFiveDays in
+            self.forecast = weatherDataForFiveDays
+            group.leave()
+        }
+        
+        group.notify(queue: .main) {
+            self.didUpdateViewData?(.success(self.giveData(model: self.model), self.updateForecast(weatherDataForFiveDays: self.forecast)))
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -77,6 +87,7 @@ class ViewModel: ViewModelProtocol {
     
     func giveData(model: WeatherData) -> ViewModel {
         let viewModel = getDate()
+        
         viewModel.cityName = "\(model.name), \(model.sys.country ?? "")"
         
         viewModel.descriptionLabel = model.weather[0].description

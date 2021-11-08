@@ -29,14 +29,14 @@ class TabBarViewController: UITabBarController {
         
         RCManager.shared.connected()
 
-        if #available(iOS 15.0, *) {
-           let appearance = UITabBarAppearance()
-           appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = .black
-           
-           self.tabBar.standardAppearance = appearance
-            //self.tabBar.scrollEdgeAppearance = self.tabBar.standardAppearance
-        }
+//        if #available(iOS 15.0, *) {
+//           let appearance = UITabBarAppearance()
+//           appearance.configureWithOpaqueBackground()
+//            appearance.backgroundColor = .black
+//           
+//           self.tabBar.standardAppearance = appearance
+//            self.tabBar.scrollEdgeAppearance = self.tabBar.standardAppearance
+//        }
         
         UIApplication.shared.applicationIconBadgeNumber = 0 //чтобы убирался badge
         

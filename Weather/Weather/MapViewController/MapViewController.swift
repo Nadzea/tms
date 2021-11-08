@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 import GoogleMaps
-
+import RxSwift
 
 class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -23,6 +23,8 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var infoViewLeadingConstraint: NSLayoutConstraint!
     
+    let coordinate = BehaviorSubject<CLLocationCoordinate2D>(value: CLLocationCoordinate2D())
+    let disposeBag = DisposeBag()
     let anotationCenter = MKPointAnnotation()
     var dispatchItem: DispatchWorkItem?
     
@@ -36,6 +38,14 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        coordinate
+            .debounce(DispatchTimeInterval.seconds(5), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { coordinate in
+                print(coordinate)
+                self.getAdressAndWeather(getLat: self.mapView.centerCoordinate.latitude, getLon: self.mapView.centerCoordinate.longitude)
+            })
+            .disposed(by: disposeBag)
         
         mapView.showsUserLocation = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(foundTap(_:)))
@@ -77,7 +87,7 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
                 let info = "\(place.country ?? "") \(place.city ?? "") \(place.streetName ?? "") \(place.streetNumber ?? "")"
                 self.infoLabel.text = info
                 
-                HttpManager.shared.getWeatherData("", latitude: getLat, longitude: getLon) { weatherData in
+                HttpManager.shared.getWeatherData(nil, latitude: getLat, longitude: getLon) { weatherData in
                     self.weatherData = weatherData
                 }
                 UIView.animate(withDuration: 1, delay: 0) {
@@ -128,14 +138,8 @@ extension MapViewController: MKMapViewDelegate {
         }
         anotationCenter.coordinate = mapView.centerCoordinate
         
-        self.dispatchItem?.cancel()
-        self.dispatchItem = DispatchWorkItem {
-            guard self.dispatchItem?.isCancelled == false else { return }
-            
-            self.getAdressAndWeather(getLat: self.mapView.centerCoordinate.latitude, getLon: self.mapView.centerCoordinate.longitude)
-        }
+        coordinate.onNext(mapView.centerCoordinate)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: self.dispatchItem!)
     }
 }
 

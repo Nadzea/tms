@@ -22,7 +22,7 @@
 		510C54B2270748F60097AD22 /* thunderstorm.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 510C54B0270748F60097AD22 /* thunderstorm.mp4 */; };
 		510C54B427074B460097AD22 /* heavyThunderstorm.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 510C54B327074B450097AD22 /* heavyThunderstorm.mp4 */; };
 		510C54B627074CBD0097AD22 /* veryHeavyRain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 510C54B527074CBD0097AD22 /* veryHeavyRain.mp4 */; };
-		510C54B827074D6E0097AD22 /* ightRain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 510C54B727074D6E0097AD22 /* ightRain.mp4 */; };
+		510C54B827074D6E0097AD22 /* lightRain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 510C54B727074D6E0097AD22 /* lightRain.mp4 */; };
 		510C54BA2708657E0097AD22 /* scatteredСlouds.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 510C54B92708657D0097AD22 /* scatteredСlouds.mp4 */; };
 		510C54BD270866D50097AD22 /* brokenСlouds.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 510C54BB270866D50097AD22 /* brokenСlouds.mp4 */; };
 		510C54BE270866D50097AD22 /* overcastClouds.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 510C54BC270866D50097AD22 /* overcastClouds.mp4 */; };
@@ -85,7 +85,7 @@
 		510C54B0270748F60097AD22 /* thunderstorm.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = thunderstorm.mp4; sourceTree = "<group>"; };
 		510C54B327074B450097AD22 /* heavyThunderstorm.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = heavyThunderstorm.mp4; sourceTree = "<group>"; };
 		510C54B527074CBD0097AD22 /* veryHeavyRain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = veryHeavyRain.mp4; sourceTree = "<group>"; };
-		510C54B727074D6E0097AD22 /* ightRain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ightRain.mp4; sourceTree = "<group>"; };
+		510C54B727074D6E0097AD22 /* lightRain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lightRain.mp4; sourceTree = "<group>"; };
 		510C54B92708657D0097AD22 /* scatteredСlouds.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "scatteredСlouds.mp4"; sourceTree = "<group>"; };
 		510C54BB270866D50097AD22 /* brokenСlouds.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "brokenСlouds.mp4"; sourceTree = "<group>"; };
 		510C54BC270866D50097AD22 /* overcastClouds.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = overcastClouds.mp4; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 			children = (
 				510C54B327074B450097AD22 /* heavyThunderstorm.mp4 */,
 				510C54B0270748F60097AD22 /* thunderstorm.mp4 */,
-				510C54B727074D6E0097AD22 /* ightRain.mp4 */,
+				510C54B727074D6E0097AD22 /* lightRain.mp4 */,
 				510C54BF270867700097AD22 /* fewClouds 2.mp4 */,
 				510C54B92708657D0097AD22 /* scatteredСlouds.mp4 */,
 				510C54BB270866D50097AD22 /* brokenСlouds.mp4 */,
@@ -261,22 +261,22 @@
 		5119D52626E41E2100DF8567 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				510C548A26FA78B10097AD22 /* Models */,
 				51B607DC272992A800902DC9 /* Model-View-ViewModel */,
-				5124BFA52724B67E00C2D551 /* FullNewsViewController */,
-				513A276C2722F8DF00E717DC /* NewsViewController */,
-				51475A85271CD30800F09F19 /* MapViewController1 */,
+				510C547926F7D7A50097AD22 /* Http */,
 				51475A82271CB8D700F09F19 /* Managers */,
 				51475A81271CB87C00F09F19 /* Cells */,
-				51A29FCC271894AB00E57EEC /* Extention */,
-				510C54AA2704AA5C0097AD22 /* Video */,
-				510C547926F7D7A50097AD22 /* Http */,
-				510C548A26FA78B10097AD22 /* Models */,
 				514FC10C270ED2A700DA3555 /* TabBarController */,
 				510C548926FA788A0097AD22 /* EnterTheCityViewController */,
-				5114E5AA27143CD00060291E /* WeatherInMyLocationViewController */,
 				51003FE3271084D500215D0B /* RequestHistoryViewController */,
 				510C548826FA78610097AD22 /* WeatherInfoViewController */,
+				5114E5AA27143CD00060291E /* WeatherInMyLocationViewController */,
+				51475A85271CD30800F09F19 /* MapViewController1 */,
 				510C54D32708CE470097AD22 /* MapViewController */,
+				513A276C2722F8DF00E717DC /* NewsViewController */,
+				5124BFA52724B67E00C2D551 /* FullNewsViewController */,
+				51A29FCC271894AB00E57EEC /* Extention */,
+				510C54AA2704AA5C0097AD22 /* Video */,
 				5119D52926E41E2100DF8567 /* SceneDelegate.swift */,
 				5119D52726E41E2100DF8567 /* AppDelegate.swift */,
 				5119D53026E41E2600DF8567 /* Assets.xcassets */,
@@ -376,10 +376,18 @@
 			children = (
 				51B607DF272C11F200902DC9 /* ModelVVM.swift */,
 				51B607DD272992D300902DC9 /* ViewModel.swift */,
+				51B607E527355F6600902DC9 /* View */,
+			);
+			path = "Model-View-ViewModel";
+			sourceTree = "<group>";
+		};
+		51B607E527355F6600902DC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				51B607E1272EC36D00902DC9 /* TestView.swift */,
 				51B607E3272EE8C400902DC9 /* TestView.xib */,
 			);
-			path = "Model-View-ViewModel";
+			path = View;
 			sourceTree = "<group>";
 		};
 		E42EA5307223242873031E02 /* Frameworks */ = {
@@ -481,7 +489,7 @@
 				510C54C0270867700097AD22 /* fewClouds 2.mp4 in Resources */,
 				51475A7B271B049000F09F19 /* TodayWeatherCollectionViewCell.xib in Resources */,
 				51475A89271CD34E00F09F19 /* MapViewController1.storyboard in Resources */,
-				510C54B827074D6E0097AD22 /* ightRain.mp4 in Resources */,
+				510C54B827074D6E0097AD22 /* lightRain.mp4 in Resources */,
 				510C54AC2704AEA20097AD22 /* rain.mp4 in Resources */,
 				5124BFA92724B6C400C2D551 /* FullNewsViewController.storyboard in Resources */,
 				51B607E4272EE8C400902DC9 /* TestView.xib in Resources */,

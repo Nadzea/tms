@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rI0-sw-qHQ" customClass="TestView" customModule="Weather" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="778"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2S-Re-6ZK">
@@ -64,8 +64,8 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.72115561564677344" green="0.8902726730381062" blue="0.98103870664048676" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="u2S-Re-6ZK" firstAttribute="top" secondItem="rI0-sw-qHQ" secondAttribute="bottom" constant="20" id="GUz-8W-UvM"/>
                             <constraint firstItem="u2S-Re-6ZK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="M2Q-zl-Gk6"/>
-                            <constraint firstAttribute="bottom" secondItem="rI0-sw-qHQ" secondAttribute="bottom" id="Rto-1D-r2P"/>
                             <constraint firstItem="rI0-sw-qHQ" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="UiT-vM-L7r"/>
                             <constraint firstAttribute="bottom" secondItem="u2S-Re-6ZK" secondAttribute="bottom" constant="25" id="fza-fV-abH"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rI0-sw-qHQ" secondAttribute="trailing" id="jVM-Lh-OrW"/>

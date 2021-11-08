@@ -40,7 +40,7 @@ class TestView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+        collectionView.layer.cornerRadius = 30
         switch viewData {
         case .initial:
             activityIndicator.isHidden = false
@@ -135,6 +135,6 @@ extension TestView: UICollectionViewDataSource {
 
 extension TestView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 70, height: 130)
+        return CGSize(width: 60, height: 130)
     }
 }

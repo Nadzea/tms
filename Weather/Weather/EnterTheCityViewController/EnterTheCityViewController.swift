@@ -88,7 +88,7 @@ class EnterTheCityViewController: UIViewController, UITextFieldDelegate {
         let storyboard = UIStoryboard(name: "WeatherInfoViewController", bundle: nil)
         
         guard let vc = storyboard.instantiateInitialViewController() as? WeatherInfoViewController else { return }
-        //let viewModel = ViewModel(city: cityName)
+        
         vc.city = cityName
         
         textField.text = ""

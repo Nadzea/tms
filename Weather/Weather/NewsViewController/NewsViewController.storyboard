@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W0k-d4-1eq">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mfx-AV-Hgz">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -43,21 +43,21 @@
                         <viewLayoutGuide key="safeArea" id="sN4-EG-8Dd"/>
                         <color key="backgroundColor" red="0.87045809468823654" green="0.86419770295761278" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="mfx-AV-Hgz" firstAttribute="top" secondItem="sN4-EG-8Dd" secondAttribute="top" id="LE4-n0-T8G"/>
                             <constraint firstItem="SIR-Ub-LI5" firstAttribute="top" secondItem="doF-48-UCt" secondAttribute="top" id="LPV-w3-l8F"/>
-                            <constraint firstItem="W0k-d4-1eq" firstAttribute="leading" secondItem="sN4-EG-8Dd" secondAttribute="leading" id="N7J-7Q-yN3"/>
                             <constraint firstItem="sN4-EG-8Dd" firstAttribute="trailing" secondItem="SIR-Ub-LI5" secondAttribute="trailing" id="dy5-fC-r8Q"/>
-                            <constraint firstItem="sN4-EG-8Dd" firstAttribute="bottom" secondItem="W0k-d4-1eq" secondAttribute="bottom" id="gVP-dE-1Oi"/>
+                            <constraint firstItem="sN4-EG-8Dd" firstAttribute="bottom" secondItem="mfx-AV-Hgz" secondAttribute="bottom" id="hqy-vW-I2V"/>
+                            <constraint firstItem="sN4-EG-8Dd" firstAttribute="trailing" secondItem="mfx-AV-Hgz" secondAttribute="trailing" id="pMX-Ge-2rk"/>
+                            <constraint firstItem="mfx-AV-Hgz" firstAttribute="leading" secondItem="sN4-EG-8Dd" secondAttribute="leading" id="pcz-f3-W2u"/>
                             <constraint firstItem="SIR-Ub-LI5" firstAttribute="leading" secondItem="sN4-EG-8Dd" secondAttribute="leading" id="pkc-gc-apc"/>
-                            <constraint firstItem="W0k-d4-1eq" firstAttribute="top" secondItem="sN4-EG-8Dd" secondAttribute="top" id="q1n-mN-RUf"/>
                             <constraint firstItem="sN4-EG-8Dd" firstAttribute="bottom" secondItem="SIR-Ub-LI5" secondAttribute="bottom" id="tof-pS-NYh"/>
-                            <constraint firstItem="sN4-EG-8Dd" firstAttribute="trailing" secondItem="W0k-d4-1eq" secondAttribute="trailing" id="w9o-du-7D3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="News" image="news1" id="vqn-G0-iFr"/>
                     <navigationItem key="navigationItem" id="WDb-6v-54L"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="W0k-d4-1eq" id="a0h-gA-yn4"/>
+                        <outlet property="tableView" destination="mfx-AV-Hgz" id="7rR-8G-pKm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifc-HK-Yhu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

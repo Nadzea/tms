@@ -73,7 +73,7 @@ class MapViewController1: UIViewController {
                 let info = "\(place.country ?? "") \(place.city ?? "") \(place.streetName ?? "") \(place.streetNumber ?? "")"
                 self.infoLabel.text = info
                 
-                HttpManager.shared.getWeatherData("", latitude: getLat, longitude: getLon) { weatherData in
+                HttpManager.shared.getWeatherData(nil, latitude: getLat, longitude: getLon) { weatherData in
                     self.weatherData = weatherData
                 }
                 UIView.animate(withDuration: 1, delay: 0) {
