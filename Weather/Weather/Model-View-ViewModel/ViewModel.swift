@@ -36,7 +36,7 @@ class ViewModel: ViewModelProtocol {
         
     }
     
-    private var model = WeatherData()
+    private var model: WeatherData? = nil
     private var forecast = WeatherDataForFiveDays()
     
     init() {
@@ -75,30 +75,40 @@ class ViewModel: ViewModelProtocol {
         }
         
         group.notify(queue: .main) {
-            self.didUpdateViewData?(.success(self.giveData(model: self.model), self.updateForecast(weatherDataForFiveDays: self.forecast)))
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            if self.model.name == ""{
+            guard let successModel = self.model else {
                 self.didUpdateViewData?(.failure)
+                return
             }
+            self.didUpdateViewData?(.success(self.giveData(model: successModel), self.updateForecast(weatherDataForFiveDays: self.forecast)))
         }
     }
     
     func giveData(model: WeatherData) -> ViewModel {
         let viewModel = getDate()
         
-        viewModel.cityName = "\(model.name), \(model.sys.country ?? "")"
+        viewModel.cityName = "\(model.name ?? "") \(model.sys.country ?? "")"
         
-        viewModel.descriptionLabel = model.weather[0].description
-        let tempC = Int(round(model.main.temp - 273.15))
-        viewModel.temperature = "\(tempC)°C"
-        let tempFeelLikes = Int(round(model.main.feels_like - 273.15))
-        viewModel.feelLikesLabel = "Fell likes \(tempFeelLikes)°C"
-        viewModel.weatherIcon = model.weather[0].icon
+        if let temp = model.main.temp {
+            let tempC = Int(round(temp - 273.15))
+            viewModel.temperature = "\(tempC)°C"
+        }
+       
+        if let feelTemp = model.main.feels_like {
+             let tempFeelLikes = Int(round(feelTemp - 273.15))
+            viewModel.feelLikesLabel = "Fell likes \(tempFeelLikes)°C"
+        }
         
-        viewModel.windLabel = model.wind.deg.typeOfWind() + "\(model.wind.speed)m/s"
-        viewModel.pathVideo = model.weather[0].id.typeOfVideo()
+        model.weather.forEach { value in
+            viewModel.weatherIcon = value.icon ?? ""
+            viewModel.descriptionLabel = value.description ?? ""
+            viewModel.pathVideo = value.id?.typeOfVideo() ?? ""
+        }
+        
+        viewModel.windLabel = model.wind.deg?.typeOfWind() ?? ""
+        
+        if let speedWind = model.wind.speed {
+            viewModel.windLabel += "\(speedWind)m/s"
+        }
         
         return viewModel
     }
@@ -135,18 +145,30 @@ class ViewModel: ViewModelProtocol {
         let dateFormater = DateFormatter()
         var dataSource: [TodayWeather] = []
         
-        for i in 0...16 {
+        for i in 0..<weatherDataForFiveDays.list.count {
             
-            if weatherDataForFiveDays.list[i].dt <= Int(dayAfterTommorrow) {
-                
-                let nextTime = Date(timeIntervalSince1970: TimeInterval(weatherDataForFiveDays.list[i].dt))
+            guard let today = weatherDataForFiveDays.list[i].dt else { return dataSource}
+            
+            if today <= Int(dayAfterTommorrow) {
+                var icon: String? = nil
+                let nextTime = Date(timeIntervalSince1970: TimeInterval(today))
                 dateFormater.dateFormat = "HH:mm"
                 let time = dateFormater.string(from: nextTime)
-                let tempC = Int(round(weatherDataForFiveDays.list[i].main.temp - 273.15))
-                let todayWeather = TodayWeather(time: time, imageName: weatherDataForFiveDays.list[i].weather[0].icon, temp: tempC)
+                
+                var tempC: Int? = nil
+                if let temp = weatherDataForFiveDays.list[i].main.temp {
+                    tempC = Int(round(temp - 273.15))
+                }
+                
+                let weather = weatherDataForFiveDays.list[i].weather
+                weather.forEach { value in
+                    icon = value.icon ?? ""
+                }
+                let todayWeather = TodayWeather(time: time, imageName: icon, temp: tempC)
                 dataSource.append(todayWeather)
             }
         }
+        
         return dataSource
     }
     

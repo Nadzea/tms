@@ -45,13 +45,23 @@ class MapViewController1: UIViewController {
     
     func updateView(weatherData: WeatherData) {
         
-        descriptionLabel.text = weatherData.weather[0].description
-        humidityLabel.text = "Humidity \(weatherData.main.humidity)%"
-        let tempC = Int(round(weatherData.main.temp - 273.15))
-        temperature.text = "Temperature: \(tempC)°C"
-        let tempFeelLikes = Int(round(weatherData.main.feels_like - 273.15))
-        feelLikesLabel.text = "Fell likes: \(tempFeelLikes)°C"
-        weatherIcon.image = UIImage(named: weatherData.weather[0].icon)
+        descriptionLabel.text = weatherData.weather[0].description ?? ""
+        
+        if let humidity = weatherData.main.humidity {
+            humidityLabel.text = "Humidity \(humidity)%"
+        }
+        
+        if let temp = weatherData.main.temp {
+            let tempC = Int(round(temp - 273.15))
+            temperature.text = "Temperature: \(tempC)°C"
+        }
+        
+        if let feelTemp = weatherData.main.feels_like {
+            let tempFeelLikes = Int(round(feelTemp - 273.15))
+            feelLikesLabel.text = "Fell likes \(tempFeelLikes)°C"
+        }
+
+        weatherIcon.image = UIImage(named: weatherData.weather[0].icon ?? "")
     }
     
     func getAdressAndWeather(getLat: CLLocationDegrees, getLon: CLLocationDegrees) {
@@ -74,7 +84,8 @@ class MapViewController1: UIViewController {
                 self.infoLabel.text = info
                 
                 HttpManager.shared.getWeatherData(nil, latitude: getLat, longitude: getLon) { weatherData in
-                    self.weatherData = weatherData
+                    guard let successWeatherData = weatherData else { return }
+                    self.weatherData = successWeatherData
                 }
                 UIView.animate(withDuration: 1, delay: 0) {
                     self.infoViewLeadingConstraint.constant = 0

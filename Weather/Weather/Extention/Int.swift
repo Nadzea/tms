@@ -44,7 +44,7 @@ extension Int {
             pathVideo = Bundle.main.path(forResource: "rain", ofType: "mp4") ?? ""
         case 503, 502, 520, 522:
             pathVideo = Bundle.main.path(forResource: "veryHeavyRain", ofType: "mp4") ?? ""
-        case 500:
+        case 500, 300, 301, 302, 310, 311, 312, 313, 314, 321:
             pathVideo = Bundle.main.path(forResource: "lightRain", ofType: "mp4") ?? ""
         case 800:
             pathVideo = Bundle.main.path(forResource: "clearSky", ofType: "mp4") ?? ""

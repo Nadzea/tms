@@ -14,7 +14,7 @@ class NewsTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func setData(with news: News_) {
+    func setData(with news: Articles) {
         titleLabel.text = news.title
     }
     

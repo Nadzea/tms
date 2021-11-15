@@ -13,10 +13,10 @@ enum ViewData {
     case failure
 }
 
-struct WeatherData: Codable {
+struct WeatherData {
     var weather: [Weather] = []
     var main: Main = Main()
-    var name: String = ""
+    var name: String?
     var sys: Sys = Sys()
     var wind: Wind = Wind()
     

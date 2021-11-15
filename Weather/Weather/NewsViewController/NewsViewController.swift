@@ -17,7 +17,7 @@ class NewsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var dataSource: [[News_]] = []
+    var dataSource: [[Articles]] = []
     
     var news = News()
     
@@ -61,14 +61,7 @@ class NewsViewController: UIViewController {
     }
     
     func updateNews(news: News) {
-        var mass1: [News_] = []
-
-        news.articles.forEach { someNews in
-            let someNews = News_(title: someNews.title ?? "", url: someNews.url)
-            mass1.append(someNews)
-        }
-    
-        dataSource.append(mass1)
+        dataSource.append(news.articles)
     }
     
     private func setupTableView() {
@@ -137,7 +130,7 @@ extension NewsViewController: UITableViewDelegate {
         
         guard let vc = storyboard.instantiateInitialViewController() as? FullNewsViewController else { return }
         
-        vc.url = dataSource[indexPath.section][indexPath.row].url
+        vc.url = dataSource[indexPath.section][indexPath.row].url ?? ""
         
         self.navigationController?.pushViewController(vc, animated: true)
     }

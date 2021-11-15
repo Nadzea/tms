@@ -17,6 +17,9 @@ target 'Weather' do
   pod 'RxSwift', '6.2.0'
   pod 'RxCocoa', '6.2.0'
   pod 'NVActivityIndicatorView'
+  pod 'SwiftyJSON', '~> 4.0'
+  
+
  
 
 end

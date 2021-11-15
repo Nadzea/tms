@@ -26,7 +26,6 @@ class WeatherInfoViewController: UIViewController {
     }
     
     func updateView() {
-        
         viewModel.didUpdateViewData = { viewData in
             
             self.testView.viewData = viewData

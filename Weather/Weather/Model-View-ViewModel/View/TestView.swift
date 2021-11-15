@@ -26,7 +26,7 @@ class TestView: UIView {
     var viewData: ViewData = .initial {
         didSet {
             DispatchQueue.main.async {
-                self.setNeedsLayout()
+                self.updateView()
             }
         }
     }
@@ -38,8 +38,25 @@ class TestView: UIView {
     var weatherDataForFiveDays = WeatherDataForFiveDays()
     var dataSource: [TodayWeather] = []
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+    
+    private func setup() {
+        Bundle(for: TestView.self).loadNibNamed("TestView", owner: self, options: nil) //bundle дерево проекта. то есть в дереве проекта ищем наш класс и загружаем
+        conteinerView.frame = self.bounds //инициализируем размер
+        self.addSubview(conteinerView)
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+    }
+    
+    func updateView() {
         collectionView.layer.cornerRadius = 30
         switch viewData {
         case .initial:
@@ -57,25 +74,7 @@ class TestView: UIView {
             activityIndicator.stopAnimating()
             activityIndicator.isHidden = true
             cityName.text = "City not found"
-            
         }
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setup()
-    }
-    
-    private func setup() {
-        Bundle(for: TestView.self).loadNibNamed("TestView", owner: self, options: nil) //bundle дерево проекта. то есть в дереве проекта ищем наш класс и загружаем
-        conteinerView.frame = self.bounds //инициализируем размер
-        self.addSubview(conteinerView)
-        
     }
     
     private func update(viewModel: ViewModel) {

@@ -7,39 +7,37 @@
 
 import Foundation
 
-struct Weather: Codable {
-    var id: Int
-    var main: String
-    var description: String
-    var icon: String
+struct Weather {
+    var id: Int?
+    var main: String?
+    var description: String?
+    var icon: String?
 }
 
-struct Main: Codable {
-    var temp: Double = 0.0
-    var feels_like: Double = 0.0
-    var pressure: Int = 0
-    var humidity: Int = 0
+struct Main {
+    var temp: Double?
+    var feels_like: Double?
+    var pressure: Int?
+    var humidity: Int?
 }
 
-struct Sys: Codable {
-    var country: String? = ""
+struct Sys {
+    var country: String?
 }
 
-struct Wind: Codable {
-    var speed: Float = 0
-    var deg: Int = 0
+struct Wind {
+    var speed: Float?
+    var deg: Int?
 }
 
-struct List: Codable {
+struct List  {
     var main: Main = Main()
     var weather: [Weather] = []
     var wind: Wind = Wind()
-    var dt: Int = 0
-    var dt_txt: String = ""
+    var dt: Int?
+    var dt_txt: String?
 }
 
-struct WeatherDataForFiveDays: Codable {
-    var message: Int = 0
-    var cod: String = ""
+struct WeatherDataForFiveDays {
     var list: [List] = []
 }

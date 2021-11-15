@@ -20,8 +20,9 @@ class TodayWeatherCollectionViewCell: UICollectionViewCell {
     
     func setData(with todayWeather: TodayWeather) {
         timeLabel.text = todayWeather.time
-        weatherIcon.image = UIImage(named: todayWeather.imageName)
-        tempLabel.text = "\(String(todayWeather.temp))°C"
+        weatherIcon.image = UIImage(named: todayWeather.imageName ?? "")
+        guard let temp = todayWeather.temp else { return }
+        tempLabel.text = "\(temp)°C"
     }
     
     override func prepareForReuse() {

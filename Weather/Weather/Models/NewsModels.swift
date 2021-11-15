@@ -7,13 +7,12 @@
 
 import Foundation
 
-struct Articles: Codable {
-    var title: String? = ""
-    var description: String? = ""
-    var url: String = ""
-    
+struct Articles {
+    var title: String?
+    var description: String?
+    var url: String?
 }
 
-struct News: Codable {
+struct News {
     var articles: [Articles] = []
 }
