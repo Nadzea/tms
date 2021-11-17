@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sy1-cf-Gnb">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Idt-KF-gS1">
+            <objects>
+                <navigationController id="Sy1-cf-Gnb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="2ah-aX-Xq4">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TSy-6M-fVQ" kind="relationship" relationship="rootViewController" id="FKx-Io-8Un"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFN-rX-8E2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1324" y="173"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OMD-ac-mMO">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="TSy-6M-fVQ" customClass="ViewController" customModule="homeworkLesson13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="deh-jI-AZJ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="shashki-1" translatesAutoresizingMaskIntoConstraints="NO" id="owW-ki-xBR">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zj6-mk-XA4" customClass="CustomButtonMainView" customModule="homeworkLesson13" customModuleProvider="target">
+                                <rect key="frame" x="122.66666666666669" y="710" width="145" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="boj-Dm-Kf0"/>
+                                    <constraint firstAttribute="width" constant="145" id="kaC-c6-pS6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="About"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="aboutButton"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mv-OE-FYQ">
+                                <rect key="frame" x="0.0" y="302" width="390" height="240"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNv-yk-1V4" customClass="CustomButtonMainView" customModule="homeworkLesson13" customModuleProvider="target">
+                                        <rect key="frame" x="127.66666666666669" y="30" width="135" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="Eyb-LZ-eby"/>
+                                            <constraint firstAttribute="height" constant="70" id="gg8-1b-70p"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" systemColor="systemGray4Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Play"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="myPlayButton"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPt-7B-cQf" customClass="CustomButtonMainView" customModule="homeworkLesson13" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="150" width="196" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="58f-Hh-g6G"/>
+                                            <constraint firstAttribute="width" constant="196" id="DPE-du-AmQ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Results"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="myResultsButton"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" systemColor="systemGray4Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C25-cv-rIN" customClass="CustomButtonMainView" customModule="homeworkLesson13" customModuleProvider="target">
+                                        <rect key="frame" x="200" y="150" width="190" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="190" id="Qqr-Uk-KYC"/>
+                                            <constraint firstAttribute="height" constant="70" id="cyc-uZ-hd9"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Settings"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="mySettingsButton"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" systemColor="systemGray4Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LPt-7B-cQf" firstAttribute="leading" secondItem="4mv-OE-FYQ" secondAttribute="leading" id="37T-M6-eTO"/>
+                                    <constraint firstAttribute="bottom" secondItem="C25-cv-rIN" secondAttribute="bottom" constant="20" id="9DQ-zn-fRr"/>
+                                    <constraint firstAttribute="trailing" secondItem="C25-cv-rIN" secondAttribute="trailing" id="NiY-If-RJj"/>
+                                    <constraint firstItem="rNv-yk-1V4" firstAttribute="top" secondItem="4mv-OE-FYQ" secondAttribute="top" constant="30" id="Qzt-qo-eRf"/>
+                                    <constraint firstAttribute="height" constant="240" id="Ygm-eN-6Rh"/>
+                                    <constraint firstAttribute="bottom" secondItem="LPt-7B-cQf" secondAttribute="bottom" constant="20" id="aky-AP-beP"/>
+                                    <constraint firstAttribute="width" constant="390" id="eKO-3Q-KBG"/>
+                                    <constraint firstItem="rNv-yk-1V4" firstAttribute="centerX" secondItem="4mv-OE-FYQ" secondAttribute="centerX" id="tdJ-8E-0KK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="118-dv-kzG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="owW-ki-xBR" firstAttribute="top" secondItem="deh-jI-AZJ" secondAttribute="top" id="4az-Hd-rWH"/>
+                            <constraint firstItem="118-dv-kzG" firstAttribute="trailing" secondItem="owW-ki-xBR" secondAttribute="trailing" id="5je-y6-094"/>
+                            <constraint firstItem="4mv-OE-FYQ" firstAttribute="centerY" secondItem="deh-jI-AZJ" secondAttribute="centerY" id="DXi-al-Dqe"/>
+                            <constraint firstItem="4mv-OE-FYQ" firstAttribute="centerX" secondItem="118-dv-kzG" secondAttribute="centerX" id="Ggg-Nt-fkb"/>
+                            <constraint firstItem="118-dv-kzG" firstAttribute="bottom" secondItem="Zj6-mk-XA4" secondAttribute="bottom" constant="30" id="Igh-MM-D9U"/>
+                            <constraint firstAttribute="bottom" secondItem="owW-ki-xBR" secondAttribute="bottom" id="hWN-Ok-ujQ"/>
+                            <constraint firstItem="owW-ki-xBR" firstAttribute="leading" secondItem="118-dv-kzG" secondAttribute="leading" id="ioi-0f-sA9"/>
+                            <constraint firstItem="Zj6-mk-XA4" firstAttribute="centerX" secondItem="118-dv-kzG" secondAttribute="centerX" id="uvQ-0a-yED"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Duz-RQ-FqY"/>
+                    <connections>
+                        <outlet property="aboutButton" destination="Zj6-mk-XA4" id="JPv-ee-9u3"/>
+                        <outlet property="playButton" destination="rNv-yk-1V4" id="Fl1-w5-8qa"/>
+                        <outlet property="resultsButton" destination="LPt-7B-cQf" id="JZw-vc-Rxs"/>
+                        <outlet property="settingsButton" destination="C25-cv-rIN" id="3CU-nd-HPW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iXS-Kh-Fr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106.15384615384615" y="172.74881516587678"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="aboutButton" width="225" height="225"/>
+        <image name="myPlayButton" width="225" height="225"/>
+        <image name="myResultsButton" width="216" height="233"/>
+        <image name="mySettingsButton" width="225" height="225"/>
+        <image name="shashki-1" width="720" height="496"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
